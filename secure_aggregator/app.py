@@ -2,7 +2,7 @@ from flask import Flask, request
 import requests, json
 import ast
 import argparse
-from sec_agg_2 import SecAgg
+from sec_agg import SecAgg
 
 
 parser = argparse.ArgumentParser(description='PyTorch FL MNIST Example')
@@ -49,27 +49,30 @@ def get_model():
 
 @app.route('/aggregate_models')
 def perform_model_aggregation():
-    import pudb; pudb.set_trace()
     sec_agg.aggregate_models()
     sec_agg.save_model()
-    return 'Model aggregation done!\nGlobal model written to persistent storage.'
+    return (
+        'Model aggregation done!\n'
+        'Global model written to persistent storage.'
+    )
 
 
 @app.route('/send_model_secagg')
 def send_agg_to_mainserver():
     fn = 'persistent_storage/{}'.format(sec_agg.get_model_location())
     with open(fn, 'rb') as f:
-        data = {'fname': 'agg_model.h5', 'id':'sec_agg'}
+        data = {'fname': sec_agg.get_model_location(), 'id': 'sec_agg'}
         files = {
             'json': ('json_data', json.dumps(data), 'application/json'),
             'model': ('agg_model.h5', f, 'application/octet-stream')
         }
 
-    print('aggmodel')
-    req = requests.post(url='http://localhost:8000/secagg_model', files=files)
-    print(req.status_code)
-
-    return "Aggregated model sent to main server!"
+    #print('aggmodel')
+    endpoint = 'http://localhost/{}/secagg_model'.format(main_server_port)
+    req = requests.post(url=endpoint, files=files)
+    if req.status_code == 200:
+        return "Aggregated model sent to main server!"
+    return "Something went wrong"
 
 
 app.run(host='localhost', port=sec_agg.port, debug=False, use_reloader=True)

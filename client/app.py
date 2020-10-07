@@ -41,7 +41,6 @@ def send_status():
     print(r, r.status_code, r.reason, r.text)
     if r.status_code == 200:
         print("Yeah")
-
     return "Status OK sent!"
 
 
@@ -86,5 +85,6 @@ def model_train():
     client.train()
     client.save_model()
     return "Model trained and saved successfully!"
+
 
 app.run(host='localhost', port=client.port, debug=False, use_reloader=True)

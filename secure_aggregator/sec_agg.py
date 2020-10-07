@@ -1,100 +1,102 @@
-import keras
-from keras.datasets import mnist
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Flatten
-from keras.layers import Conv2D, MaxPooling2D
+import os
+import torch
+import torch.optim as optim
+from model import Model, get_loaders
+import torch.nn.functional as F
+from torch.optim.lr_scheduler import StepLR
 
 import numpy as np
-import glob
 
-# batch_size = 128
-num_classes = 10
-# epochs = 1
-
-# input image dimensions
-img_rows, img_cols = 28, 28
-input_shape = (img_rows, img_cols, 1)
-
-def process_data():
-    (x_train, y_train), (x_test, y_test) = mnist.load_data()
-    x_train = x_train.reshape(x_train.shape[0], img_rows, img_cols, 1)
-    x_test = x_test.reshape(x_test.shape[0], img_rows, img_cols, 1)
-    x_train = x_train.astype('float32')
-    x_test = x_test.astype('float32')
-    x_train /= 255
-    x_test /= 255
-
-    print(x_test.shape[0], 'test samples')
-
-    y_train = keras.utils.to_categorical(y_train, num_classes)
-    y_test = keras.utils.to_categorical(y_test, num_classes)
-
-    return x_train, x_test, y_train, y_test
-
-def load_models():
-    arr = []
-    models = glob.glob("client_models/*.npy")
-    print(models)
-    for i in models:
-        arr.append(np.load(i, allow_pickle=True))
-
-    return np.array(arr)
-
-def fl_average():
-    # FL average
-    arr = load_models()
-    fl_avg = np.average(arr, axis=0)
-
-    for i in fl_avg:
-        print(i.shape)
-
-    return fl_avg
+#lr = 1.0
+#log_interval = 10
+#dry_run = True
+#gamma = 0.7
+#epochs = 1
+#save_model = True
 
 
-def build_model(avg):
-    model = Sequential()
-    model.add(Conv2D(32, kernel_size=(3, 3),
-                     activation='relu',
-                     input_shape=input_shape))
-    model.add(Conv2D(64, (3, 3), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Dropout(0.25))
-    model.add(Flatten())
-    model.add(Dense(128, activation='relu'))
-    model.add(Dropout(0.5))
-    model.add(Dense(num_classes, activation='softmax'))
+class SecAgg:
 
-    model.compile(loss=keras.losses.categorical_crossentropy,
-                  optimizer=keras.optimizers.Adadelta(),
-                  metrics=['accuracy'])
+    def __init__(self, port, use_cuda=True):
+        self.port = port
+        self.client_id = 'client_{}'.format(self.port)
+        use_cuda = use_cuda and torch.cuda.is_available()
+        if not use_cuda:
+            print('\nWARNING: Running without GPU acceleration\n')
+        self.use_cuda = use_cuda
+        self.init()
 
-    model.set_weights(avg)
+    def init(self):
+        torch.manual_seed(1)
+        self.device = torch.device("cuda" if self.use_cuda else "cpu")
+        _, self.test_loader = get_loaders(self.use_cuda)
+        self.model = Model().to(self.device)
+        #self.optimizer = optim.Adadelta(self.model.parameters(), lr=lr)
 
-    model.compile(loss=keras.losses.categorical_crossentropy,
-                  optimizer=keras.optimizers.Adadelta(),
-                  metrics=['accuracy'])
+    @staticmethod
+    def load_models():
+        print('Loading client models...')
+        arr = []
+        for root, dirs, files in os.walk("client_models/", topdown=False):
+            for name in files:
+                if name.endswith('.tar'):
+                    fn = os.path.join(root, name)
+                    data = torch.load(fn)
+                    #arr.append(np.load(fn, allow_pickle=True))
+                    arr.append(data)
+        models = np.array(arr)
+        print('Done')
+        return models
 
-    return model
-    # model.fit(x_train, y_train,
-    #           batch_size=batch_size,
-    #           epochs=epochs,
-    #           verbose=1,
-    #           validation_data=(x_test, y_test))
+    @staticmethod
+    def average_weights(models):
+        print('Averaging weights...')
+        # FL average
+        # TODO: Make this more efficient
+        avg_model = models[0].copy()
+        for k in avg_model:
+            tmp = [w[k] for w in models]
+            #avg_model[k] = np.average(tmp)
+            avg_model[k] = sum(tmp)/len(tmp)
 
+        ## FL average
+        #fl_avg = np.average(weights, axis=0)
+        #for i in fl_avg:
+        #    print(i.shape)
+        print('Done')
+        return avg_model
 
-def evaluate_model(model, x_test, y_test):
-    score = model.evaluate(x_test, y_test, verbose=0)
-    print('Test loss:', score[0])
-    print('Test accuracy:', score[1])
+    def aggregate_models(self):
+        model_weights = self.load_models()
+        avg_weights = self.average_weights(model_weights)
+        self.model.load_state_dict(avg_weights)
 
-def save_agg_model(model):
-    model.save("persistent_storage/agg_model.h5")
-    print("Model written to storage!")
+    def test(self):
+        self.model.eval()
+        test_loss = 0
+        correct = 0
+        with torch.no_grad():
+            for data, target in self.test_loader:
+                data, target = data.to(self.device), target.to(self.device)
+                output = self.model(data)
+                # sum up batch loss
+                test_loss += F.nll_loss(output, target, reduction='sum').item()
+                # get the index of the max log-probability
+                pred = output.argmax(dim=1, keepdim=True)
+                correct += pred.eq(target.view_as(pred)).sum().item()
 
-def model_aggregation():
-    _, x_test, _, y_test =  process_data()
-    avg = fl_average()
-    model = build_model(avg)
-    evaluate_model(model, x_test, y_test)
-    save_agg_model(model)
+        test_loss /= len(self.test_loader.dataset)
+
+        print('\nTest set: Average loss: {:.4f}, '
+              'Accuracy: {}/{} ({:.0f}%)\n'.format(
+                  test_loss, correct, len(self.test_loader.dataset),
+                  100. * correct / len(self.test_loader.dataset)))
+
+    def get_model_location(self):
+        return 'agg_model_{}.tar'.format(self.client_id)
+
+    def save_model(self):
+        filename = self.get_model_location()
+        print('Agg model saved to {}'.format(filename))
+        torch.save(self.model.state_dict(), filename)
 
