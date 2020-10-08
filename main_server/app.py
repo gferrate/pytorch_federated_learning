@@ -1,8 +1,6 @@
 import argparse
 from flask import Flask, request
 import requests, json
-import ast
-from fl_agg import model_aggregation
 
 
 parser = argparse.ArgumentParser(description='PyTorch FL MNIST Example')
@@ -11,7 +9,7 @@ parser.add_argument('-p', '--port', type=str, required=True,
 parser.add_argument('-s', '--secure-agg-port', type=int, metavar='N',
                     required=True,
                     help='Secure aggregator port. Example: 8003')
-parser.add_argument('-l', '--client-ports', nargs='+', type=int,
+parser.add_argument('-l', '--client-ports', nargs='+', type=int, required=True,
                     help='List of the clients\'s ports. Example: -l 8001 8002')
 
 args = parser.parse_args()
@@ -23,12 +21,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Server running!"
+    return (
+        'Server running!</br>'
+        'Clients: {}'.format(', '.join(map(str, client_ports)))
+    )
 
 
 @app.route('/clientstatus', methods=['GET','POST'])
 def client_status():
-    url = "http://localhost:8001/serverack"
+    url = 'http://localhost:8001/serverack'
 
     if request.method == 'POST':
         client_port = request.json['client_id']
@@ -43,9 +44,9 @@ def client_status():
             # response = requests.post( url, data=json.dumps(serverack), headers={'Content-Type': 'application/json'} )
             return str(serverack)
         else:
-            return "Client status not OK!"
+            return 'Client status not OK!'
     else:
-        return "Client GET request received!"
+        return 'Client GET request received!'
 
 
 @app.route('/secagg_model', methods=['POST'])
@@ -55,40 +56,34 @@ def get_secagg_model():
         fname = request.files['json'].read()
         # cli = request.files['id'].read()
 
-        fname = ast.literal_eval(fname.decode("utf-8"))
-        cli = fname['id']+'\n'
-        fname = fname['fname']
-
-        wfile = open("agg_model/"+fname, 'wb')
-        wfile.write(file)
-
-        return "Model received!"
+        # fname = json.loads(fname.decode('utf-8'))
+        # path = 'agg_model/{}'.format(fname['fname'])
+        path = 'agg_model/agg_model.tar'
+        with open(path, 'wb') as f:
+            f.write(file)
+        return 'Model received and saved to {}'.format(path)
     else:
-        return "No file received!"
+        return 'No file received!'
 
-
-# @app.route('/aggregate_models')
-# def perform_model_aggregation():
-# 	model_aggregation()
-# 	return 'Model aggregation done!\nGlobal model written to persistent storage.'
 
 @app.route('/send_model_clients')
 def send_agg_to_clients():
     for port in client_ports:
-        url = 'http://localhost/{}/aggmodel'.format(port)
-        print(url)
-        file = open("agg_model/agg_model.h5", 'rb')
-        data = {'fname': 'agg_model.h5'}
-        files = {
-            'json': ('json_data', json.dumps(data), 'application/json'),
-            'model': ('agg_model.h5', file, 'application/octet-stream')
-        }
-        req = requests.post(url=url, files=files)
+        url = 'http://localhost:{}/aggmodel'.format(port)
+        print('Sending agg model to {}'.format(url))
+        path = 'agg_model/agg_model.tar'
+        with open(path, 'rb') as file:
+            data = {'fname': 'agg_model.tar'}
+            files = {
+                'json': ('json_data', json.dumps(data), 'application/json'),
+                'model': ('agg_model.tar', file, 'application/octet-stream')
+            }
+            req = requests.post(url=url, files=files)
         if req.status_code != 200:
-            print('Something went wrong')
-            return 'Something went wrong'
-
-    return "Aggregated model sent !"
+            msg = 'Something went wrong'
+            print(msg)
+            return msg
+    return 'Aggregated model sent!'
 
 
 if __name__ == '__main__':

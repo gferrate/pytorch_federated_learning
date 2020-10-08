@@ -1,6 +1,5 @@
 from flask import Flask, request
 import requests, json
-import ast
 import argparse
 from sec_agg import SecAgg
 
@@ -31,15 +30,10 @@ def get_model():
     if request.method == 'POST':
         file = request.files['model'].read()
         fname = request.files['json'].read()
-        # cli = request.files['id'].read()
 
-        fname = ast.literal_eval(fname.decode("utf-8"))
-        cli = fname['id']+'\n'
+        fname = json.loads(fname.decode("utf-8"))
         fname = fname['fname']
-
-        print(fname)
         fname = 'client_models/{}'.format(fname)
-        #wfile = open(fname, 'wb')
         with open(fname, 'wb') as f:
             f.write(file)
         return "Model received! And saved to {}".format(fname)
@@ -59,17 +53,16 @@ def perform_model_aggregation():
 
 @app.route('/send_model_secagg')
 def send_agg_to_mainserver():
-    fn = 'persistent_storage/{}'.format(sec_agg.get_model_location())
-    with open(fn, 'rb') as f:
-        data = {'fname': sec_agg.get_model_location(), 'id': 'sec_agg'}
+    model_fn = sec_agg.get_model_filename()
+    path = 'persistent_storage/{}'.format(model_fn)
+    with open(path, 'rb') as f:
+        data = {'fname': model_fn, 'id': 'sec_agg'}
         files = {
             'json': ('json_data', json.dumps(data), 'application/json'),
-            'model': ('agg_model.h5', f, 'application/octet-stream')
+            'model': (model_fn, f, 'application/octet-stream')
         }
-
-    #print('aggmodel')
-    endpoint = 'http://localhost/{}/secagg_model'.format(main_server_port)
-    req = requests.post(url=endpoint, files=files)
+        endpoint = 'http://localhost:{}/secagg_model'.format(main_server_port)
+        req = requests.post(url=endpoint, files=files)
     if req.status_code == 200:
         return "Aggregated model sent to main server!"
     return "Something went wrong"

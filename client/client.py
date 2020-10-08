@@ -26,7 +26,7 @@ class Client:
 
     def init(self):
         torch.manual_seed(1)
-        self.device = torch.device("cuda" if self.use_cuda else "cpu")
+        self.device = torch.device('cuda' if self.use_cuda else 'cpu')
         self.train_loader, self.test_loader = get_loaders(self.num_clients,
                                                           self.use_cuda)
         self.model = Model().to(self.device)
@@ -55,6 +55,10 @@ class Client:
             self.test()
             scheduler.step()
 
+    def update_model(self, path):
+        self.model.load_state_dict(torch.load(path))
+        print('Client model updated')
+
     def test(self):
         self.model.eval()
         test_loss = 0
@@ -75,11 +79,11 @@ class Client:
             test_loss, correct, len(self.test_loader.dataset),
             100. * correct / len(self.test_loader.dataset)))
 
-    def get_model_location(self):
+    def get_model_filename(self):
         return 'model_{}.tar'.format(self.client_id)
 
     def save_model(self):
-        filename = self.get_model_location()
+        filename = self.get_model_filename()
         print('Saving model to {}'.format(filename))
         torch.save(self.model.state_dict(), filename)
         # TODO: Try with named_parameters instead of state dict since it is lighter

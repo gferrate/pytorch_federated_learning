@@ -2,7 +2,6 @@ import argparse
 from flask import Flask, request
 import json
 import requests
-import ast
 from client import Client
 
 parser = argparse.ArgumentParser(description='PyTorch FL MNIST Example')
@@ -40,27 +39,27 @@ def send_status():
     r = requests.post(url=api_url, json=data)
     print(r, r.status_code, r.reason, r.text)
     if r.status_code == 200:
-        print("Yeah")
-    return "Status OK sent!"
+        print('Yeah')
+    return 'Status OK sent!'
 
 
 @app.route('/sendmodel')
 def send_model():
-    file = open(client.get_model_location(), 'rb')
-    data = {
-        'fname': client.get_model_location(),
-        'id': 'http://localhost:{}/'.format(client.port)
-    }
-    files = {
-        'json': ('json_data', json.dumps(data), 'application/json'),
-        'model': ('model1.npy', file, 'application/octet-stream')
-    }
-
-    req = requests.post(
-        url='http://localhost:{}/cmodel'.format(secure_agg_port), files=files
-    )
-    # print(req.text)
-    return "Model sent!"
+    model_fn = client.get_model_filename()
+    with open(model_fn, 'rb') as file:
+        data = {
+            'fname': model_fn,
+            'id': 'http://localhost:{}/'.format(client.port)
+        }
+        files = {
+            'json': ('json_data', json.dumps(data), 'application/json'),
+            'model': (model_fn, file, 'application/octet-stream')
+        }
+        req = requests.post(
+            url='http://localhost:{}/cmodel'.format(secure_agg_port),
+            files=files
+        )
+    return 'Model sent!'
 
 
 @app.route('/aggmodel', methods=['POST'])
@@ -68,23 +67,25 @@ def get_agg_model():
     if request.method == 'POST':
         file = request.files['model'].read()
         fname = request.files['json'].read()
+        fname = json.loads(fname.decode('utf-8'))['fname']
 
-        fname = ast.literal_eval(fname.decode("utf-8"))
-        fname = fname['fname']
-        print(fname)
-
-        wfile = open("model_update/"+fname, 'wb')
-        wfile.write(file)
-        return "Model received!"
+        path = 'model_update/{}'.format(fname)
+        with open(path, 'wb') as wfile:
+            wfile.write(file)
+        print('Agg model saved to {}'.format(path))
+        # Update the client model
+        client.update_model(path)
+        return 'Model received!'
     else:
-        return "No file received!"
+        return 'No file received!'
 
 
 @app.route('/modeltrain')
 def model_train():
+
     client.train()
     client.save_model()
-    return "Model trained and saved successfully!"
+    return 'Model trained and saved successfully!'
 
 
 app.run(host='localhost', port=client.port, debug=False, use_reloader=True)

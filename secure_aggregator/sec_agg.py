@@ -28,7 +28,7 @@ class SecAgg:
 
     def init(self):
         torch.manual_seed(1)
-        self.device = torch.device("cuda" if self.use_cuda else "cpu")
+        self.device = torch.device('cuda' if self.use_cuda else 'cpu')
         _, self.test_loader = get_loaders(self.use_cuda)
         self.model = Model().to(self.device)
         #self.optimizer = optim.Adadelta(self.model.parameters(), lr=lr)
@@ -37,7 +37,7 @@ class SecAgg:
     def load_models():
         print('Loading client models...')
         arr = []
-        for root, dirs, files in os.walk("client_models/", topdown=False):
+        for root, dirs, files in os.walk('client_models/', topdown=False):
             for name in files:
                 if name.endswith('.tar'):
                     fn = os.path.join(root, name)
@@ -92,11 +92,12 @@ class SecAgg:
                   test_loss, correct, len(self.test_loader.dataset),
                   100. * correct / len(self.test_loader.dataset)))
 
-    def get_model_location(self):
+    def get_model_filename(self):
         return 'agg_model_{}.tar'.format(self.client_id)
 
     def save_model(self):
-        filename = self.get_model_location()
-        print('Agg model saved to {}'.format(filename))
-        torch.save(self.model.state_dict(), filename)
+        filename = self.get_model_filename()
+        path = 'persistent_storage/{}'.format(filename)
+        print('Agg model saved to {}'.format(path))
+        torch.save(self.model.state_dict(), path)
 
