@@ -6,11 +6,9 @@ from torch.optim.lr_scheduler import StepLR
 
 lr = 1.0
 log_interval = 10
-dry_run = True
+dry_run = False
 gamma = 0.7
-epochs = 1
-save_model = True
-
+epochs = 5
 
 class Client:
 

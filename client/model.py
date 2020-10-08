@@ -1,12 +1,9 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch.optim as optim
 from torchvision import datasets, transforms
 
 batch_size = 32
-epochs = 5
-
 
 class Model(nn.Module):
     def __init__(self):
@@ -65,9 +62,7 @@ def get_loaders(num_clients, use_cuda):
     train_dataset, split_dataset(train_dataset, num_clients)
     kwargs = {'batch_size': batch_size}
     if use_cuda:
-        kwargs.update({'num_workers': 1,
-                       'pin_memory': True,
-                       'shuffle': True})
+        kwargs.update({'num_workers': 1, 'pin_memory': True, 'shuffle': True})
 
     train_loader = torch.utils.data.DataLoader(train_dataset,**kwargs)
     test_loader = torch.utils.data.DataLoader(test_dataset, **kwargs)

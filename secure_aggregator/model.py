@@ -5,7 +5,6 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 
 batch_size = 32
-epochs = 5
 
 
 class Model(nn.Module):

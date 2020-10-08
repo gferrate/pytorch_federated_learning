@@ -1,18 +1,9 @@
 import os
 import torch
-import torch.optim as optim
 from model import Model, get_loaders
 import torch.nn.functional as F
-from torch.optim.lr_scheduler import StepLR
 
 import numpy as np
-
-#lr = 1.0
-#log_interval = 10
-#dry_run = True
-#gamma = 0.7
-#epochs = 1
-#save_model = True
 
 
 class SecAgg:
