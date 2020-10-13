@@ -1,17 +1,20 @@
-from flask import Flask, request
-import requests, json
+import sys; sys.path.insert(0, '.')
+from flask import Flask, request, jsonify
+
+import requests, json, os
 import argparse
+import ntpath
+
+from shared import utils
 from sec_agg import SecAgg
 
 
 parser = argparse.ArgumentParser(description='PyTorch FL MNIST Example')
-parser.add_argument('-p', '--port', type=str,
+parser.add_argument('-p', '--port', type=str, required=True,
                     help='Client port. Example: 8001')
-parser.add_argument('-m', '--main-server-port', type=int, metavar='N',
-                    help='Main server port. Example: 8000')
 
 args = parser.parse_args()
-main_server_port = args.main_server_port
+hosts = utils.read_hosts()
 
 use_cuda = True
 sec_agg = SecAgg(args.port, use_cuda)
@@ -22,18 +25,20 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Secure Aggregator running!'
+    return jsonify({'running': 1})
 
 
 @app.route('/cmodel', methods=['POST'])
 def get_model():
     if request.method == 'POST':
         file = request.files['model'].read()
-        fname = request.files['json'].read()
-
-        fname = json.loads(fname.decode("utf-8"))
-        fname = fname['fname']
-        fname = 'client_models/{}'.format(fname)
+        data = request.files['json'].read()
+        data = json.loads(data.decode("utf-8"))
+        client_id = data['client_id']
+        fname = '{}_{}'.format(client_id, 'model.tar')
+        fname = 'secure_aggregator/client_models/{}'.format(fname)
+        if not os.path.exists(os.path.dirname(fname)):
+            os.makedirs(os.path.dirname(fname))
         with open(fname, 'wb') as f:
             f.write(file)
         return "Model received! And saved to {}".format(fname)
@@ -44,29 +49,35 @@ def get_model():
 @app.route('/aggregate_models')
 def perform_model_aggregation():
     sec_agg.aggregate_models()
+    # TODO: Maybe we could save the model and continue the process before
+    # doing the test so the clients can do more work in less time
+    test_result = sec_agg.test()
     sec_agg.save_model()
-    return (
-        'Model aggregation done!\n'
-        'Global model written to persistent storage.'
-    )
+
+    return jsonify({
+        'msg': ('Model aggregation done!\n'
+                'Global model written to persistent storage.'),
+        'test_result': test_result
+    })
 
 
-@app.route('/send_model_secagg')
+@app.route('/send_model_to_main_server')
 def send_agg_to_mainserver():
-    model_fn = sec_agg.get_model_filename()
-    path = 'persistent_storage/{}'.format(model_fn)
+    path = sec_agg.get_model_filename()
     with open(path, 'rb') as f:
-        data = {'fname': model_fn, 'id': 'sec_agg'}
+        data = {'fname': path, 'id': 'sec_agg'}
         files = {
             'json': ('json_data', json.dumps(data), 'application/json'),
-            'model': (model_fn, f, 'application/octet-stream')
+            'model': (path, f, 'application/octet-stream')
         }
-        endpoint = 'http://localhost:{}/secagg_model'.format(main_server_port)
+        endpoint = 'http://{}:{}/secagg_model'.format(
+            hosts['main_server']['host'],
+            hosts['main_server']['port'])
         req = requests.post(url=endpoint, files=files)
     if req.status_code == 200:
         return "Aggregated model sent to main server!"
     return "Something went wrong"
 
 
-app.run(host='localhost', port=sec_agg.port, debug=False, use_reloader=True)
+app.run(host='0.0.0.0', port=sec_agg.port, debug=False, use_reloader=True)
 

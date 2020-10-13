@@ -3,3 +3,6 @@ torchvision
 tqdm
 flask
 requests
+sklearn
+pyyaml
+grequests

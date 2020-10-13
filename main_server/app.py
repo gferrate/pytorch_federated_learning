@@ -1,20 +1,18 @@
+import sys; sys.path.insert(0, '.')
+import os
 import argparse
 from flask import Flask, request
 import requests, json
 
+from shared import utils
 
-parser = argparse.ArgumentParser(description='PyTorch FL MNIST Example')
+
+parser = argparse.ArgumentParser(description='PyTorch FedLearn')
 parser.add_argument('-p', '--port', type=str, required=True,
                     help='Client port. Example: 8001')
-parser.add_argument('-s', '--secure-agg-port', type=int, metavar='N',
-                    required=True,
-                    help='Secure aggregator port. Example: 8003')
-parser.add_argument('-l', '--client-ports', nargs='+', type=int, required=True,
-                    help='List of the clients\'s ports. Example: -l 8001 8002')
 
 args = parser.parse_args()
-secure_agg_port = args.secure_agg_port
-client_ports = args.client_ports
+hosts = utils.read_hosts()
 
 app = Flask(__name__)
 
@@ -23,13 +21,13 @@ app = Flask(__name__)
 def hello():
     return (
         'Server running!</br>'
-        'Clients: {}'.format(', '.join(map(str, client_ports)))
+        'Clients: {}'.format(', '.join(map(str, hosts['clients'])))
     )
 
 
-@app.route('/clientstatus', methods=['GET','POST'])
+@app.route('/clientstatus', methods=['GET', 'POST'])
 def client_status():
-    url = 'http://localhost:8001/serverack'
+    # url = 'http://localhost:8001/serverack'
 
     if request.method == 'POST':
         client_port = request.json['client_id']
@@ -41,7 +39,9 @@ def client_status():
 
         if client_port:
             serverack = {'server_ack': '1'}
-            # response = requests.post( url, data=json.dumps(serverack), headers={'Content-Type': 'application/json'} )
+            # response = requests.post( url,
+            # data=json.dumps(serverack),
+            # headers={'Content-Type': 'application/json'} )
             return str(serverack)
         else:
             return 'Client status not OK!'
@@ -54,11 +54,9 @@ def get_secagg_model():
     if request.method == 'POST':
         file = request.files['model'].read()
         fname = request.files['json'].read()
-        # cli = request.files['id'].read()
-
-        # fname = json.loads(fname.decode('utf-8'))
-        # path = 'agg_model/{}'.format(fname['fname'])
-        path = 'agg_model/agg_model.tar'
+        path = 'main_server/agg_model/agg_model.tar'
+        if not os.path.exists(os.path.dirname(path)):
+            os.makedirs(os.path.dirname(path))
         with open(path, 'wb') as f:
             f.write(file)
         return 'Model received and saved to {}'.format(path)
@@ -68,10 +66,12 @@ def get_secagg_model():
 
 @app.route('/send_model_clients')
 def send_agg_to_clients():
-    for port in client_ports:
-        url = 'http://localhost:{}/aggmodel'.format(port)
+    for cl in hosts['clients']:
+        host = cl[list(cl.keys())[0]]['host']
+        port = cl[list(cl.keys())[0]]['port']
+        url = 'http://{}:{}/aggmodel'.format(host, port)
         print('Sending agg model to {}'.format(url))
-        path = 'agg_model/agg_model.tar'
+        path = 'main_server/agg_model/agg_model.tar'
         with open(path, 'rb') as file:
             data = {'fname': 'agg_model.tar'}
             files = {
@@ -87,5 +87,5 @@ def send_agg_to_clients():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=args.port, debug=False, use_reloader=True)
+    app.run(host='0.0.0.0', port=args.port, debug=False, use_reloader=True)
 
