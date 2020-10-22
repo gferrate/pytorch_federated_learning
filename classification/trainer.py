@@ -202,7 +202,12 @@ class Trainer(object):
                 )
               )
 
-        self.counters['test'] += 1
+        try:
+            self.counters['test'] = self.counters['test'] + 1
+        except AttributeError:
+            # The secure aggregator only tests without training
+            self.counters = {'train': 0, 'test': 1}
+
 
         return top1.avg, top3.avg
 
