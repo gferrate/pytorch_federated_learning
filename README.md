@@ -1,7 +1,7 @@
 # Pytorch Federated Learning
 This framework enables to use a FL system with Pytorch.
 
-It is been carried as my final thesis @ King's College London.
+It is being carried as my final thesis @ King's College London.
 
 It currently works with the [Human grasp dataset](http://stag.csail.mit.edu/). Repo [here](https://github.com/Erkil1452/touch).
 
