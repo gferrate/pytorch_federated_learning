@@ -22,7 +22,7 @@ def get_client_urls(endpoint):
 def main():
     # TODO: Configure epochs and everything from here
     num_iterations = 50
-    start = time.now()
+    start = time.time()
     for i in range(num_iterations):
         print('\n\n')
         print('-'*30)
@@ -32,13 +32,20 @@ def main():
         print('Sending /modeltrain request to clients...')
         client_urls = get_client_urls('modeltrain')
         rs = (grequests.get(u) for u in client_urls)
-        grequests.map(rs)
+        responses = grequests.map(rs)
+        for res in responses:
+            if res.status_code != 200:
+                raise Exception('Some of the responses was not OK')
+       
         print('Done')
 
         print('Sending /sendmodel command to clients...')
         client_urls = get_client_urls('sendmodel')
         rs = (grequests.get(u) for u in client_urls)
-        grequests.map(rs)
+        responses = grequests.map(rs)
+        for res in responses:
+            if res.status_code != 200:
+                raise Exception('Some of the responses was not OK')
         print('Done')
 
         print('Sending /aggregate_models command to secure aggregator...')
@@ -71,8 +78,10 @@ def main():
         print(test_result)
 
         print('\n')
-        print('Time elapsed:')
-        print(time.now() - start)
+        print('Elapsed time:')
+        end = time.time()
+        elapsed_time = end - start
+        print(time.strftime("%H:%M:%S", time.gmtime(elapsed_time)))
 
         print('\n\n')
         print('-'*30)
