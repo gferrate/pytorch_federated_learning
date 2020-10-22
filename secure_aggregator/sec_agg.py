@@ -1,39 +1,34 @@
+import sys; sys.path.insert(0, '.')
 import os
 import torch
-from model import Model, get_loaders
-import torch.nn.functional as F
-
 import numpy as np
+
+from classification import trainer
 
 
 class SecAgg:
 
     def __init__(self, port, use_cuda=True):
         self.port = port
+        # TODO: Num clients don't have to be in SecAgg
+        self.num_clients = 2
         self.client_id = 'client_{}'.format(self.port)
-        use_cuda = use_cuda and torch.cuda.is_available()
-        if not use_cuda:
-            print('\nWARNING: Running without GPU acceleration\n')
-        self.use_cuda = use_cuda
-        self.init()
+        self.init_model()
 
-    def init(self):
-        torch.manual_seed(1)
-        self.device = torch.device('cuda' if self.use_cuda else 'cpu')
-        _, self.test_loader = get_loaders(self.use_cuda)
-        self.model = Model().to(self.device)
-        #self.optimizer = optim.Adadelta(self.model.parameters(), lr=lr)
+    def init_model(self):
+        self.trainer = trainer.SecAggTrainer(self.client_id)
 
     @staticmethod
     def load_models():
         print('Loading client models...')
         arr = []
-        for root, dirs, files in os.walk('client_models/', topdown=False):
+        for root, dirs, files in os.walk('secure_aggregator/client_models/',
+                                         topdown=True):
             for name in files:
-                if name.endswith('.tar'):
+                if name.endswith('model.tar'):
                     fn = os.path.join(root, name)
                     data = torch.load(fn)
-                    #arr.append(np.load(fn, allow_pickle=True))
+                    # arr.append(np.load(fn, allow_pickle=True))
                     arr.append(data)
         models = np.array(arr)
         print('Done')
@@ -48,7 +43,7 @@ class SecAgg:
         for k in avg_model:
             tmp = [w[k] for w in models]
             #avg_model[k] = np.average(tmp)
-            avg_model[k] = sum(tmp)/len(tmp)
+            avg_model[k] = np.true_divide(sum(tmp), len(tmp))
 
         ## FL average
         #fl_avg = np.average(weights, axis=0)
@@ -60,35 +55,16 @@ class SecAgg:
     def aggregate_models(self):
         model_weights = self.load_models()
         avg_weights = self.average_weights(model_weights)
-        self.model.load_state_dict(avg_weights)
-
-    def test(self):
-        self.model.eval()
-        test_loss = 0
-        correct = 0
-        with torch.no_grad():
-            for data, target in self.test_loader:
-                data, target = data.to(self.device), target.to(self.device)
-                output = self.model(data)
-                # sum up batch loss
-                test_loss += F.nll_loss(output, target, reduction='sum').item()
-                # get the index of the max log-probability
-                pred = output.argmax(dim=1, keepdim=True)
-                correct += pred.eq(target.view_as(pred)).sum().item()
-
-        test_loss /= len(self.test_loader.dataset)
-
-        print('\nTest set: Average loss: {:.4f}, '
-              'Accuracy: {}/{} ({:.0f}%)\n'.format(
-                  test_loss, correct, len(self.test_loader.dataset),
-                  100. * correct / len(self.test_loader.dataset)))
+        self.trainer.update_model(avg_weights)
+        # TODO: Test here?
+        #self.trainer.test()
 
     def get_model_filename(self):
-        return 'agg_model_{}.tar'.format(self.client_id)
+        return self.trainer.get_best_model_path()
 
     def save_model(self):
-        filename = self.get_model_filename()
-        path = 'persistent_storage/{}'.format(filename)
-        print('Agg model saved to {}'.format(path))
-        torch.save(self.model.state_dict(), path)
+        self.trainer.save_model()
 
+    def test(self):
+        test_result = self.trainer.test()
+        return test_result

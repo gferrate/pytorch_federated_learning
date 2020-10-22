@@ -1,0 +1,55 @@
+version: "3.1"
+services:
+    main_server:
+        # build: .
+        container_name: "main_server"
+        image: "pytorch_fl"
+        ports:
+            - "8000:8000"
+        volumes:
+            - ./logs:/code/logs:rw
+        environment:
+            - TYPE=MAIN_SERVER
+            - PORT=8000
+
+    secure_aggregator:
+        container_name: "secure_aggregator"
+        image: "pytorch_fl"
+        ports:
+            - "8001:8001"
+        environment:
+            - TYPE=SECURE_AGGREGATOR
+            - PORT=8001
+        volumes:
+            - ./logs:/code/logs:rw
+        depends_on:
+            - main_server
+
+    client_1:
+        container_name: "client_1"
+        image: "pytorch_fl"
+        ports:
+            - "8003:8003"
+        environment:
+            - TYPE=CLIENT
+            - PORT=8003
+            - N_CLIENT=0
+        volumes:
+            - ./logs:/code/logs:rw
+        depends_on:
+            - secure_aggregator
+
+    client_2:
+        container_name: "client_2"
+        image: "pytorch_fl"
+        ports:
+            - "8004:8004"
+        environment:
+            - TYPE=CLIENT
+            - PORT=8004
+            - N_CLIENT=1
+        volumes:
+            - ./logs:/code/logs:rw
+        depends_on:
+            - secure_aggregator
+
