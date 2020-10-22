@@ -9,13 +9,13 @@ It currently works with the [Human grasp dataset](http://stag.csail.mit.edu/). R
 There are two main ways to run the program.
 
 1. Spawning Python processes manually.
-    1.1. Spawn the main server by running: `python main_server/app.py -p 8000`
-    1.2. Spawn the secure aggregator by running: `python secure_aggregator/app.py -p 8001`
-    1.3. Spawn N clients by running: `python client/app.py -p 800<i+3>` where i is the client number (from 0 to N)
+    - Spawn the main server by running: `python main_server/app.py -p 8000`
+    - Spawn the secure aggregator by running: `python secure_aggregator/app.py -p 8001`
+    - Spawn N clients by running: `python client/app.py -p 800<i+3>` where i is the client number (from 0 to N)
 
 2. Using Docker:
-    2.1. Create the image by running: `make build`.
-    2.2. Run the image: `make run`. This will spawn the main server, secure aggregator and two clients. In order to increase the number of clients, modify the docker-compose.yml and hosts.yml files.
+    - Create the image by running: `make build`.
+    - Run the image: `make run`. This will spawn the main server, secure aggregator and two clients. In order to increase the number of clients, modify the docker-compose.yml and hosts.yml files.
 
 
 ## TODO
