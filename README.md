@@ -8,6 +8,22 @@ It currently works with the [Human grasp dataset](http://stag.csail.mit.edu/). R
 ## How to run
 There are two main ways to run the program.
 
+0. Copy the dataset to the folder:
+    - Run the following commands:
+        ```
+        wget http://stag.csail.mit.edu/datasets/classification_lite.zip -O temp.zip
+        unzip temp.zip -d data/classification/
+        rm temp.zip
+        ```
+
+1. Split the dataset between clients:
+    - Open a python terminal and run the following instructions:
+        ```
+        from shared import dataset_tools
+        mf = 'data/classification/metadata.mat'
+        dataset_tools.split_dataset(mf, 'iid', <number_of_clients>)
+        ```
+
 1. Spawning Python processes manually.
     - Spawn the main server by running: `python main_server/app.py -p 8000`
     - Spawn the secure aggregator by running: `python secure_aggregator/app.py -p 8001`
