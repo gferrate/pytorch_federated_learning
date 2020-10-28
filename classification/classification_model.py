@@ -11,9 +11,6 @@ from shared.base_model import BaseModel
 from shared.resnet_3x3 import resnet18
 
 
-use_cuda = True
-
-
 ''' The final model '''
 
 
@@ -84,6 +81,7 @@ class ClassificationModel(BaseModel):
         self.model = torch.nn.DataParallel(self.model)
 
         # TODO: FIX THIS. NOT WORKING WITH MY MAC
+        use_cuda = True
         if use_cuda is True and not torch.cuda.is_available():
             print('WARNING: Cuda not available. Running on CPU')
             use_cuda = False
