@@ -64,23 +64,25 @@ class Trainer(object):
 
         # The self.train_split  will 'train_<client_num>' if a client
         # and 'train' if a secure aggregator
-        train_loader = self.loadDatasets(self.train_split , True, False)
+        print('[Trainer] Doing split: {}'.format(self.train_split))
+        train_loader = self.loadDatasets(self.train_split, True, False)
 
         for epoch in range(epochs):
             print('Epoch %d/%d....' % (epoch, epochs))
             self.model.updateLearningRate(epoch)
-
             self.step(train_loader, self.model.epoch, isTrain=True)
-            prec1, _ = self.step(self.val_loader, self.model.epoch,
-                                 isTrain=False, sinkName=None)
+            #prec1, _ = self.step(self.val_loader,
+            #                     self.model.epoch,
+            #                     isTrain=False,
+            #                     sinkName=None)
 
-            # remember best prec@1 and save checkpoint
-            is_best = prec1 > self.model.bestPrec
-            if is_best:
-                self.model.bestPrec = prec1
-            self.model.epoch = epoch + 1
-            if self.snapshotDir is not None:
-                self.saveCheckpoint(self.model.exportState(), is_best)
+            ## remember best prec@1 and save checkpoint
+            #is_best = prec1 > self.model.bestPrec
+            #if is_best:
+            #    self.model.bestPrec = prec1
+            #self.model.epoch = epoch + 1
+            #if self.snapshotDir is not None:
+            #    self.saveCheckpoint(self.model.exportState(), is_best)
 
         # Finally: We want to test it from the app to get the returned results
         #if self.type == 'secure_aggregator':
@@ -89,7 +91,7 @@ class Trainer(object):
         print('DONE')
 
     def test(self):
-        self.doSink()
+        return self.doSink()
 
     def doSink(self):
         res = {}

@@ -85,7 +85,7 @@ def get_agg_model():
 def model_train():
     client.train()
     # client.test()
-    # client.save_model()
+    client.save_model()
     return 'Model trained and saved successfully!'
 
 

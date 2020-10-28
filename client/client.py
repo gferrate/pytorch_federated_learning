@@ -20,6 +20,12 @@ class Client:
     def train(self):
         self.trainer.train()
 
+    def test(self):
+        return self.trainer.test()
+
+    def save_model(self):
+        self.trainer.save_model()
+
     def update_model(self, path):
         self.trainer.update_model_from_file(path)
 

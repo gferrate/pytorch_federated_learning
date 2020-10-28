@@ -11,7 +11,7 @@ from shared.base_model import BaseModel
 from shared.resnet_3x3 import resnet18
 
 
-use_cuda = False
+use_cuda = True
 
 
 ''' The final model '''
@@ -84,6 +84,9 @@ class ClassificationModel(BaseModel):
         self.model = torch.nn.DataParallel(self.model)
 
         # TODO: FIX THIS. NOT WORKING WITH MY MAC
+        if use_cuda is True and not torch.cuda.is_available():
+            print('WARNING: Cuda not available. Running on CPU')
+            use_cuda = False
         self.device = torch.device('cuda' if use_cuda else 'cpu')
 
         # self.model.cuda(self.device)
@@ -220,7 +223,8 @@ class ClassificationModel(BaseModel):
     def updateLearningRate(self, epoch):
         self.adjust_learning_rate_new(epoch, self.baseLr)
 
-    def adjust_learning_rate_new(self, epoch, base_lr, period=100): # train for 2x100 epochs
+    def adjust_learning_rate_new(self, epoch, base_lr, period=100):
+        # train for 2x100 epochs
         gamma = 0.1 ** (1.0/period)
         lr_default = base_lr * (gamma ** (epoch))
         print('New lr_default = %f' % lr_default)
