@@ -114,7 +114,6 @@ class ClassificationModel(BaseModel):
         else:
             self.model.eval()
 
-        # TODO: Make it asyncronous. Will be if cuda enabled
         image = torch.autograd.Variable(inputs['image'].to(
             self.device), requires_grad=(isTrain))
         pressure = torch.autograd.Variable(inputs['pressure'].to(

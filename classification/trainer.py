@@ -229,6 +229,7 @@ class ClientTrainer(Trainer):
         mf = 'data/classification'
         if data_split_type == 'iid':
             self.train_split = 'train_{}'.format(client_number)
+            # TODO: Split the metadata with the database_utils here
             self.metaFile = '{}/metadata_{}_clients.mat'.format(mf,
                                                                 num_clients)
         elif data_split_type == 'no_split':

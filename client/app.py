@@ -92,5 +92,13 @@ def model_train():
     return jsonify({'msg': 'Model trained and saved successfully'})
 
 
+@app.route('/experimental_test')
+def model_test():
+    res = client.test()
+    # client.test()
+    # client.save_model()
+    return jsonify(res)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=client.port, debug=False, use_reloader=True)
