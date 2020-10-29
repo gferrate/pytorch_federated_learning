@@ -1,8 +1,9 @@
 import sys; sys.path.insert(0, '.')
 import os
 import argparse
-from flask import Flask, request
-import requests, json
+from flask import Flask, request, jsonify
+import requests
+import json
 
 from shared import utils
 
@@ -19,24 +20,18 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return (
-        'Server running!</br>'
-        'Clients: {}'.format(', '.join(map(str, hosts['clients'])))
-    )
+    return jsonify({'msg': 'Server running', 'clients': hosts['clients']})
 
 
 @app.route('/clientstatus', methods=['GET', 'POST'])
 def client_status():
     # url = 'http://localhost:8001/serverack'
-
     if request.method == 'POST':
         client_port = request.json['client_id']
 
         with open('clients.txt', 'a+') as f:
             f.write('http://localhost:' + client_port + '/\n')
-
         print(client_port)
-
         if client_port:
             serverack = {'server_ack': '1'}
             # response = requests.post( url,
@@ -44,9 +39,9 @@ def client_status():
             # headers={'Content-Type': 'application/json'} )
             return str(serverack)
         else:
-            return 'Client status not OK!'
+            return jsonify({'msg': 'Client status not OK'})
     else:
-        return 'Client GET request received!'
+        return jsonify({'msg': 'Client GET request received'})
 
 
 @app.route('/secagg_model', methods=['POST'])
@@ -59,9 +54,9 @@ def get_secagg_model():
             os.makedirs(os.path.dirname(path))
         with open(path, 'wb') as f:
             f.write(file)
-        return 'Model received and saved to {}'.format(path)
+        return jsonify({'msg': 'Model received', 'location': path})
     else:
-        return 'No file received!'
+        return jsonify({'msg': 'No file received', 'location': None})
 
 
 @app.route('/send_model_clients')
@@ -83,7 +78,7 @@ def send_agg_to_clients():
             msg = 'Something went wrong'
             print(msg)
             return msg
-    return 'Aggregated model sent!'
+    return jsonify({'msg': 'Aggregated model sent'})
 
 
 if __name__ == '__main__':

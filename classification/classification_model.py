@@ -115,13 +115,6 @@ class ClassificationModel(BaseModel):
             self.model.eval()
 
         # TODO: Make it asyncronous. Will be if cuda enabled
-        # image = torch.autograd.Variable(
-        # inputs['image'].cuda(async=True), requires_grad=(isTrain))
-        # pressure = torch.autograd.Variable(
-        # inputs['pressure'].cuda(async=True), requires_grad = (isTrain))
-        # objectId = torch.autograd.Variable(
-        # inputs['objectId'].cuda(async=True), requires_grad=False
-        # ) if 'objectId' in inputs else None
         image = torch.autograd.Variable(inputs['image'].to(
             self.device), requires_grad=(isTrain))
         pressure = torch.autograd.Variable(inputs['pressure'].to(
@@ -179,44 +172,9 @@ class ClassificationModel(BaseModel):
     def importState(self, save):
         self.model.load_state_dict(save)
         print('Model imported')
-        #params = save['state_dict']
-        #if hasattr(self.model, 'module'):
-        #    try:
-        #        self.model.load_state_dict(params, strict=True)
-        #    except:
-        #        self.model.module.load_state_dict(params, strict=True)
-        #else:
-        #    params = self._clearState(params)
-        #    self.model.load_state_dict(params, strict=True)
-
-        #self.epoch = save['epoch'] if 'epoch' in save else 0
-        #self.bestPrec = save['best_prec1'] if 'best_prec1' in save else 1e20
-        #self.error = save['error'] if 'error' in save else 1e20
-        #print('Imported checkpoint for epoch %05d with loss = %.3f...' % (
-        #    self.epoch, self.bestPrec))
-
-    def _clearState(self, params):
-        res = dict()
-        for k, v in params.items():
-            kNew = re.sub('^module\.', '', k)
-            res[kNew] = v
-
-        return res
 
     def exportState(self):
         return self.model.state_dict()
-        #dt = datetime.datetime.now()
-        #state = self.model.state_dict()
-        #for k in state.keys():
-        #    # state[k] = state[k].share_memory_()
-        #    state[k] = state[k].cpu()
-        #return {
-        #    'state_dict': state,
-        #    'epoch': self.epoch,
-        #    'error': self.error,
-        #    'best_prec1': self.bestPrec,
-        #    'datetime': dt.strftime("%Y-%m-%d %H:%M:%S")
-        #}
 
     def updateLearningRate(self, epoch):
         self.adjust_learning_rate_new(epoch, self.baseLr)

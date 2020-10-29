@@ -1,6 +1,6 @@
 import sys; sys.path.insert(0, '.')
 import argparse
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import json
 import requests
 
@@ -24,10 +24,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return '{} Running'.format(client.client_id)
+    return jsonify({'msg': '{} Running'.format(client.client_id)})
 
 
-@app.route('/sendstatus', methods=['GET'])
+@app.route('/send_status', methods=['GET'])
 def send_status():
     api_url = 'http://{}:{}/clientstatus'.format(hosts['main_server']['host'],
                                                  hosts['main_server']['port'])
@@ -37,10 +37,10 @@ def send_status():
     print(r, r.status_code, r.reason, r.text)
     if r.status_code == 200:
         print('Yeah')
-    return 'Status OK sent!'
+    return jsonify({'msg': 'Status OK sent'})
 
 
-@app.route('/sendmodel')
+@app.route('/send_model')
 def send_model():
     model_fn = client.get_model_filename()
     with open(model_fn, 'rb') as file:
@@ -54,13 +54,13 @@ def send_model():
             'model': (model_fn, file, 'application/octet-stream')
         }
         req = requests.post(
-            url='http://{}:{}/cmodel'.format(
+            url='http://{}:{}/client_model'.format(
                 hosts['secure_aggregator']['host'],
                 hosts['secure_aggregator']['port']
             ),
             files=files
         )
-    return 'Model sent!'
+    return jsonify({'msg': 'Model sent'})
 
 
 @app.route('/aggmodel', methods=['POST'])
@@ -76,17 +76,17 @@ def get_agg_model():
         print('Agg model saved to {}'.format(path))
         # Update the client model
         client.update_model(path)
-        return 'Model received!'
+        return jsonify({'msg': 'Model received'})
     else:
-        return 'No file received!'
+        return jsonify({'msg': 'No file received'})
 
 
-@app.route('/modeltrain')
+@app.route('/train_model')
 def model_train():
     client.train()
     # client.test()
     client.save_model()
-    return 'Model trained and saved successfully!'
+    return jsonify({'msg': 'Model trained and saved successfully'})
 
 
 if __name__ == '__main__':

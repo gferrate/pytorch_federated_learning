@@ -38,8 +38,8 @@ def main():
         print('\n\n')
         print('Iteration {}...'.format(i))
 
-        print('Sending /modeltrain request to clients...')
-        client_urls = get_client_urls('modeltrain')
+        print('Sending /train_model request to clients...')
+        client_urls = get_client_urls('train_model')
         rs = (grequests.get(u) for u in client_urls)
         responses = grequests.map(rs)
         for res in responses:
@@ -49,8 +49,8 @@ def main():
         print('Done')
         print_elapsed_time(start)
 
-        print('Sending /sendmodel command to clients...')
-        client_urls = get_client_urls('sendmodel')
+        print('Sending /send_model command to clients...')
+        client_urls = get_client_urls('send_model')
         rs = (grequests.get(u) for u in client_urls)
         responses = grequests.map(rs)
         for res in responses:

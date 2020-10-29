@@ -28,12 +28,12 @@ def hello():
     return jsonify({'running': 1})
 
 
-@app.route('/cmodel', methods=['POST'])
-def get_model():
+@app.route('/client_model', methods=['POST'])
+def get_client_model():
     if request.method == 'POST':
         file = request.files['model'].read()
         data = request.files['json'].read()
-        data = json.loads(data.decode("utf-8"))
+        data = json.loads(data.decode('utf-8'))
         client_id = data['client_id']
         fname = '{}_{}'.format(client_id, 'model.tar')
         fname = 'secure_aggregator/client_models/{}'.format(fname)
@@ -41,18 +41,23 @@ def get_model():
             os.makedirs(os.path.dirname(fname))
         with open(fname, 'wb') as f:
             f.write(file)
-        return "Model received! And saved to {}".format(fname)
+        return jsonify({'msg': 'Model received', 'location': fname})
+
     else:
-        return "No file received!"
+        return jsonify({'msg': 'No file received', 'location': None})
 
 
 @app.route('/aggregate_models')
 def perform_model_aggregation():
+    # Test: Init model in each model aggregation to restart the epoch numbers
+    sec_agg.init_model()
     sec_agg.aggregate_models()
     # TODO: Maybe we could save the model and continue the process before
     # doing the test so the clients can do more work in less time
     test_result = sec_agg.test()
     sec_agg.save_model()
+    # This is only to make sure that no aggregation is repeated
+    sec_agg.delete_client_models()
 
     return jsonify({
         'msg': ('Model aggregation done!\n'
@@ -75,8 +80,8 @@ def send_agg_to_mainserver():
             hosts['main_server']['port'])
         req = requests.post(url=endpoint, files=files)
     if req.status_code == 200:
-        return "Aggregated model sent to main server!"
-    return "Something went wrong"
+        return jsonify({'msg': 'Aggregated model sent to main server'})
+    return jsonify({'msg': 'Something went wrong'})
 
 
 app.run(host='0.0.0.0', port=sec_agg.port, debug=False, use_reloader=True)

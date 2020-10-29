@@ -21,25 +21,13 @@ reset = False
 
 class Trainer(object):
     def __init__(self):
-        # __init__ overrided in child objects
+        # __init__ overrided in child classes
         pass
 
     def init(self):
         # Init model
         self.val_loader = self.loadDatasets('test', False, False)
         self.initModel()
-
-    #def splitDataset(self, dataset, splits=None):
-    #    # TODO: Redo this part because this doesn't ensure that all
-    #    # data will be trained between all clients
-    #    splits = splits or self.num_clients
-    #    print('Splitting dataset into {} parts'.format(splits))
-    #    ds_l = len(dataset)
-    #    lengths = [int(1/splits * ds_l) for _ in range(splits)]
-    #    remaining = ds_l - sum(lengths)
-    #    lengths[0] += remaining
-    #    tm = torch.utils.data.random_split(dataset, lengths)
-    #    return tm[0]
 
     def loadDatasets(self,
                      split='train', shuffle=True, useClusterSampling=False):
@@ -58,8 +46,8 @@ class Trainer(object):
         print('[Trainer - {}] Starting...'.format(self.client_id))
         self.counters = {'train': 0, 'test': 0}
         if test:
-            self.saveCheckpoint(self.model.exportState(), True)
-            self.doSink()
+            self.save_model()
+            #self.test()
             return
 
         # The self.train_split  will 'train_<client_num>' if a client
@@ -71,23 +59,6 @@ class Trainer(object):
             print('Epoch %d/%d....' % (epoch, epochs))
             self.model.updateLearningRate(epoch)
             self.step(train_loader, self.model.epoch, isTrain=True)
-            #prec1, _ = self.step(self.val_loader,
-            #                     self.model.epoch,
-            #                     isTrain=False,
-            #                     sinkName=None)
-
-            ## remember best prec@1 and save checkpoint
-            #is_best = prec1 > self.model.bestPrec
-            #if is_best:
-            #    self.model.bestPrec = prec1
-            #self.model.epoch = epoch + 1
-            #if self.snapshotDir is not None:
-            #    self.saveCheckpoint(self.model.exportState(), is_best)
-
-        # Finally: We want to test it from the app to get the returned results
-        #if self.type == 'secure_aggregator':
-        #    # Only test if it is a secure aggregator
-        #    self.test()
         print('DONE')
 
     def test(self):
@@ -126,20 +97,14 @@ class Trainer(object):
         cudnn.benchmark = True
 
         if large:
+            # TODO: Not implemented
             # for filter viz only
             from classification.classification_model_large_viz import \
                 ClassificationModelLargeViz as Model
-            #initShapshot = 'large_viz'
         else:
             # the main model
             from classification.classification_model import \
                 ClassificationModel as Model
-            #initShapshot = 'default'
-
-        #initShapshot = os.path.join('snapshots',
-        #                            'classification',
-        #                            '%s_%dx' % (initShapshot, nFrames),
-        #                            'checkpoint.pth.tar')
 
         self.model = Model(
             numClasses=len(self.val_loader.dataset.meta['objects']),
@@ -210,7 +175,6 @@ class Trainer(object):
             # The secure aggregator only tests without training
             self.counters = {'train': 0, 'test': 1}
 
-
         return top1.avg, top3.avg
 
     def get_checkpoint_path(self):
@@ -219,22 +183,14 @@ class Trainer(object):
     def get_best_model_path(self):
         return os.path.join(self.snapshotDir, 'model_best.tar')
 
-    def saveCheckpoint(self, state, is_best):
+    def save_model(self):
+        state = self.model.exportState()
         if not os.path.isdir(self.snapshotDir):
             os.makedirs(self.snapshotDir, 0o777)
-        #chckFile = os.path.join(self.snapshotDir, 'checkpoint.pth.tar')
-        chckFile = self.get_checkpoint_path()
-        print('Writing checkpoint to %s...' % chckFile)
-        torch.save(state, chckFile)
-        if is_best:
-            #bestFile = os.path.join(self.snapshotDir, 'model_best.pth.tar')
-            bestFile = self.get_best_model_path()
-            print('Copying best checkpoint file to {}'.format(bestFile))
-            shutil.copyfile(chckFile, bestFile)
+        filename = self.get_best_model_path()
+        print('Writing checkpoint to {}...'.format(filename))
+        torch.save(state, filename)
         print('\t...Done.')
-
-    def save_model(self):
-        self.saveCheckpoint(self.model.exportState(), True)
 
     #@staticmethod
     #def make():
@@ -250,7 +206,6 @@ class SecAggTrainer(Trainer):
     def __init__(self, client_id):
         self.snapshotDir = 'secure_aggregator/persistent_storage'
         self.client_id = client_id
-        self.num_clients = None
         self.client_number = None
         self.type = 'secure_aggregator'
         self.train_split = 'train'
@@ -270,10 +225,10 @@ class ClientTrainer(Trainer):
         self.snapshotDir = 'client/snapshots_{}'.format(client_id)
         self.client_id = client_id
         self.client_number = client_number
-        self.num_clients = num_clients
         self.train_split = 'train_{}'.format(client_number)
         self.type = 'client'
-        self.metaFile = 'data/classification/metadata_{}_clients.mat'.format(num_clients)
+        self.metaFile = 'data/classification/metadata_{}_clients.mat'.format(
+            num_clients)
         self.init()
         super(Trainer, self).__init__()
 
