@@ -5,7 +5,8 @@ from classification import trainer
 
 class Client:
 
-    def __init__(self, client_number, port, num_clients):
+    def __init__(self, client_number, port, num_clients, split_type):
+        self.split_type = split_type
         self.client_number = client_number
         self.port = port
         self.client_id = 'client_{}'.format(self.port)
@@ -13,8 +14,10 @@ class Client:
         self.init_model()
 
     def init_model(self):
-        self.trainer = trainer.ClientTrainer(
-            self.client_number, self.client_id, self.num_clients)
+        self.trainer = trainer.ClientTrainer(self.client_number,
+                                             self.client_id,
+                                             self.num_clients,
+                                             self.split_type)
 
     def train(self):
         self.trainer.train()

@@ -204,10 +204,10 @@ class Trainer(object):
 
 class SecAggTrainer(Trainer):
     def __init__(self, client_id):
+        self.type = 'secure_aggregator'
         self.snapshotDir = 'secure_aggregator/persistent_storage'
         self.client_id = client_id
         self.client_number = None
-        self.type = 'secure_aggregator'
         self.train_split = 'train'
         self.metaFile = 'data/classification/metadata.mat'
         self.init()
@@ -221,14 +221,19 @@ class SecAggTrainer(Trainer):
 
 
 class ClientTrainer(Trainer):
-    def __init__(self, client_number, client_id, num_clients):
+    def __init__(self, client_number, client_id, num_clients, data_split_type):
+        self.type = 'client'
         self.snapshotDir = 'client/snapshots_{}'.format(client_id)
         self.client_id = client_id
         self.client_number = client_number
-        self.train_split = 'train_{}'.format(client_number)
-        self.type = 'client'
-        self.metaFile = 'data/classification/metadata_{}_clients.mat'.format(
-            num_clients)
+        mf = 'data/classification'
+        if data_split_type == 'iid':
+            self.train_split = 'train_{}'.format(client_number)
+            self.metaFile = '{}/metadata_{}_clients.mat'.format(mf,
+                                                                num_clients)
+        elif data_split_type == 'no_split':
+            self.train_split = 'train'
+            self.metaFile = '{}/metadata.mat'.format(mf)
         self.init()
         super(Trainer, self).__init__()
 

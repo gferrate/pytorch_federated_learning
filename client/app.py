@@ -13,11 +13,14 @@ parser.add_argument('-p', '--port', type=str, required=True,
                     help='Client port. Example: 8001')
 parser.add_argument('-n', '--client-number', type=int, required=True,
                     help='Client number. Example: 1')
+parser.add_argument('-s', '--split-type', type=str, required=False,
+                    default='no_split',
+                    help='Metadata split type. Example: no_split, iid')
 
 args = parser.parse_args()
 hosts = utils.read_hosts()
 num_clients = len(hosts['clients'])
-client = Client(args.client_number, args.port, num_clients)
+client = Client(args.client_number, args.port, num_clients, args.split_type)
 
 app = Flask(__name__)
 
