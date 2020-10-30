@@ -18,7 +18,7 @@ class Client:
                                              self.num_clients)
 
     def train(self):
-        self.trainer.train()
+        return self.trainer.train()
 
     def test(self):
         return self.trainer.test()

@@ -67,7 +67,7 @@ class SecAgg:
         self.trainer.update_model(avg_weights)
 
     def get_model_filename(self):
-        return self.trainer.get_best_model_path()
+        return self.trainer.get_model_path()
 
     def save_model(self):
         self.trainer.save_model()
