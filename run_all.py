@@ -40,6 +40,11 @@ def check_response_ok(res):
         raise Exception('The response was not successful')
 
 
+def check_response_ok(res):
+    if res.status_code != 200:
+        raise Exception('The response was not successful')
+
+
 def main():
     # TODO: Configure epochs and everything from here
     num_iterations = 50
@@ -55,8 +60,7 @@ def main():
         responses = grequests.map(rs)
         logging.info('\nTrain acc:')
         for res in responses:
-            if res.status_code != 200:
-                raise Exception('Some of the responses was not OK')
+            check_response_ok(res)
             res_json = res.json()
             logging.info(res_json)
             train_accs.setdefault(res_json['client_id'], []).append(

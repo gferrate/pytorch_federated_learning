@@ -30,7 +30,7 @@ class Client:
         # TODO: This may not be necessary but it is to make sure that all
         # weights are set to start
         self.init_trainer()
-        self.trainer.update_model(path)
+        self.trainer.update_model_from_file(path)
 
     def get_model_filename(self):
         return self.trainer.get_model_path()

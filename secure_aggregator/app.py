@@ -50,7 +50,7 @@ def get_client_model():
 @app.route('/aggregate_models')
 def perform_model_aggregation():
     # Test: Init model in each model aggregation to restart the epoch numbers
-    sec_agg.init_model()
+    sec_agg.init_trainer()
     sec_agg.aggregate_models()
     # TODO: Maybe we could save the model and continue the process before
     # doing the test so the clients can do more work in less time

@@ -16,7 +16,7 @@ class SecAgg:
         # TODO: Num clients don't have to be in SecAgg
         self.client_id = 'client_{}'.format(self.port)
         self.client_models_folder = 'secure_aggregator/client_models'
-        self.init_model()
+        self.init_trainer()
 
     def init_logger(self):
         logging.basicConfig(
@@ -25,7 +25,7 @@ class SecAgg:
             level=logging.INFO
         )
 
-    def init_model(self):
+    def init_trainer(self):
         self.trainer = trainer.SecAggTrainer(self.client_id)
 
     def load_models(self):

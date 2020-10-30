@@ -135,8 +135,13 @@ class Trainer(object):
     def cuda_available():
         return torch.cuda.is_available()
 
-    def update_model(self, path):
-        self.model.load_state_dict(torch.load(path))
+    def update_model_from_file(self, path):
+        logging.info('Updating model from {}'.format(path))
+        state = torch.load(path)
+        self.update_model(state)
+
+    def update_model(self, state):
+        self.model.load_state_dict(state)
         logging.info('Client model updated')
 
     def get_model_path(self):
