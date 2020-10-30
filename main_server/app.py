@@ -1,7 +1,7 @@
 import sys; sys.path.insert(0, '.')
 import os
 import argparse
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 import requests
 import json
 import logging
@@ -83,7 +83,7 @@ def send_agg_to_clients():
         if req.status_code != 200:
             msg = 'Something went wrong'
             logging.info(msg)
-            return msg
+            abort(404)
     return jsonify({'msg': 'Aggregated model sent'})
 
 
