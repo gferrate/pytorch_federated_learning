@@ -3,6 +3,7 @@ import os
 import torch
 import logging
 import torch.nn.functional as F
+import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
 
@@ -33,6 +34,7 @@ class Trainer(object):
         if self.use_cuda and not self.cuda_available():
             logging.info('\nWARNING: Running without GPU acceleration\n')
             self.use_cuda = False
+
         self.init_dataset()
         self.init_model()
 
@@ -40,7 +42,8 @@ class Trainer(object):
         self.train_loader, self.test_loader = self.get_loaders()
 
     def init_model(self):
-        self.model = mnist_model.Model()
+        self.model = mnist_model.Model().to(self.device)
+        self.optimizer = optim.Adadelta(self.model.parameters(), lr=lr)
 
     def get_datasets(self):
         logging.info('Downloading datasets...')
