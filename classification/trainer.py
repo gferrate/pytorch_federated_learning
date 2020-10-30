@@ -34,7 +34,7 @@ class Trainer(object):
         if self.use_cuda and not self.cuda_available():
             logging.info('\nWARNING: Running without GPU acceleration\n')
             self.use_cuda = False
-
+        self.device = torch.device('cuda' if self.use_cuda else 'cpu')
         self.init_dataset()
         self.init_model()
 
