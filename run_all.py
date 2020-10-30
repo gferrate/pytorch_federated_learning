@@ -27,10 +27,16 @@ def print_elapsed_time(start):
     print(time.strftime("%H:%M:%S", time.gmtime(elapsed_time)))
 
 
+def check_response_ok(res):
+    if res.status_code != 200:
+        raise Exception('The response was not successful')
+
+
 def main():
     # TODO: Configure epochs and everything from here
     num_iterations = 50
     all_results = []
+    #train_accs = {}
     start = time.time()
     for i in range(num_iterations):
         print('\n\n')
@@ -42,10 +48,14 @@ def main():
         client_urls = get_client_urls('train_model')
         rs = (grequests.get(u) for u in client_urls)
         responses = grequests.map(rs)
+        print('\nTrain acc:')
         for res in responses:
-            if res.status_code != 200:
-                raise Exception('Some of the responses was not OK')
-
+            check_response_ok(res)
+            #res_json = res.json()
+            #print(res_json)
+            #print('\n')
+            #train_accs.setdefault(res_json['client_id'], []).append(
+            #    res_json['results'])
         print('Done')
         print_elapsed_time(start)
 
@@ -54,8 +64,7 @@ def main():
         rs = (grequests.get(u) for u in client_urls)
         responses = grequests.map(rs)
         for res in responses:
-            if res.status_code != 200:
-                raise Exception('Some of the responses was not OK')
+            check_response_ok(res)
         print('Done')
         print_elapsed_time(start)
 
@@ -65,6 +74,7 @@ def main():
             hosts['secure_aggregator']['port']
         )
         res = requests.get(url)
+        check_response_ok(res)
         test_result = res.json()
         all_results.append(test_result)
         print('Done')
@@ -75,16 +85,18 @@ def main():
             hosts['secure_aggregator']['host'],
             hosts['secure_aggregator']['port']
         )
-        requests.get(url)
+        res = requests.get(url)
+        check_response_ok(res)
         print('Done')
         print_elapsed_time(start)
 
         print('Sending /send_model_clients command to main server...')
-        url = 'http://{}:{}/aggregate_models'.format(
+        url = 'http://{}:{}/send_model_clients'.format(
             hosts['main_server']['host'],
             hosts['main_server']['port']
         )
-        requests.get(url)
+        res = requests.get(url)
+        check_response_ok(res)
         print('Done')
 
         print('\n')
@@ -96,6 +108,11 @@ def main():
         print('\n\n')
         print('-'*30)
         print('\n\n')
+    print('\n\n')
+    print('-'*30)
+    print('\n\n')
+    print('All train accuracies:')
+    #print(train_accs)
     print('\n\n')
     print('-'*30)
     print('\n\n')
