@@ -93,10 +93,14 @@ def get_agg_model():
 
 @app.route('/train_model')
 def model_train():
-    client.train()
+    train_accuracies = client.train()
     # client.test()
     client.save_model()
-    return jsonify({'msg': 'Model trained and saved successfully'})
+    return jsonify({
+        'msg': 'Model trained and saved successfully',
+        'results': train_accuracies,
+        'client_id': client.client_id
+    })
 
 
 @app.route('/experimental_test')

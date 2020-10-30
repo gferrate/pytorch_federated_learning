@@ -44,7 +44,7 @@ def main():
     # TODO: Configure epochs and everything from here
     num_iterations = 50
     all_results = []
-    #train_accs = {}
+    train_accs = {}
     start = time.time()
     for i in range(num_iterations):
         logging.info('Iteration {}...'.format(i))
@@ -53,14 +53,14 @@ def main():
         client_urls = get_client_urls('train_model')
         rs = (grequests.get(u) for u in client_urls)
         responses = grequests.map(rs)
-        # print('\nTrain acc:')
+        logging.info('\nTrain acc:')
         for res in responses:
-            check_response_ok(res)
-            #res_json = res.json()
-            #print(res_json)
-            #print('\n')
-            #train_accs.setdefault(res_json['client_id'], []).append(
-            #    res_json['results'])
+            if res.status_code != 200:
+                raise Exception('Some of the responses was not OK')
+            res_json = res.json()
+            logging.info(res_json)
+            train_accs.setdefault(res_json['client_id'], []).append(
+                res_json['results'])
         logging.info('Done')
         log_elapsed_time(start)
 
@@ -107,8 +107,8 @@ def main():
         logging.info('Test result: {}'.format(test_result))
         log_elapsed_time(start)
 
-    # logging.info('All train accuracies:')
-    # print(train_accs)
+    logging.info('All train accuracies:')
+    logging.info(train_accs)
     logging.info('All results:')
     logging.info(all_results)
 

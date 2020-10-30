@@ -5,19 +5,17 @@ from classification import trainer
 
 class Client:
 
-    def __init__(self, client_number, port, num_clients, split_type):
-        self.split_type = split_type
+    def __init__(self, client_number, port, num_clients):
         self.client_number = client_number
         self.port = port
         self.client_id = 'client_{}'.format(self.port)
         self.num_clients = num_clients
-        self.init_model()
+        self.init_trainer()
 
-    def init_model(self):
+    def init_trainer(self):
         self.trainer = trainer.ClientTrainer(self.client_number,
                                              self.client_id,
-                                             self.num_clients,
-                                             self.split_type)
+                                             self.num_clients)
 
     def train(self):
         self.trainer.train()
@@ -31,9 +29,9 @@ class Client:
     def update_model(self, path):
         # TODO: This may not be necessary but it is to make sure that all
         # weights are set to start
-        self.init_model()
-        self.trainer.update_model_from_file(path)
+        self.init_trainer()
+        self.trainer.update_model(path)
 
     def get_model_filename(self):
-        return self.trainer.get_best_model_path()
+        return self.trainer.get_model_path()
 
