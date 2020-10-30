@@ -27,7 +27,7 @@ logging.basicConfig(
     filename='logs/client_{}.log'.format(port),
     level=logging.INFO
 )
-client = Client(args.client_number, port, num_clients, args.split_type)
+client = Client(args.client_number, port, num_clients)
 
 app = Flask(__name__)
 
