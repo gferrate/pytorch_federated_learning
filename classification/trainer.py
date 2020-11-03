@@ -3,6 +3,7 @@ import os, shutil, time, random
 import torch
 import numpy as np
 import torch.backends.cudnn as cudnn
+import logging
 
 from classification.object_cluster_dataset import ObjectClusterDataset
 
@@ -12,7 +13,6 @@ nFrames = 1
 batch_size = 10
 workers = 0
 
-#metaFile = 'data/classification/out.mat'
 doFilter = True
 test = False
 large = False
@@ -23,6 +23,13 @@ class Trainer(object):
     def __init__(self):
         # __init__ overrided in child classes
         pass
+
+    def init_logger(self):
+        logging.basicConfig(
+            format='%(asctime)s %(message)s',
+            filename=self.logger,
+            level=logging.INFO
+        )
 
     def init(self):
         # Init model
@@ -43,7 +50,7 @@ class Trainer(object):
         )
 
     def train(self):
-        print('[Trainer - {}] Starting...'.format(self.client_id))
+        logging.info('[Trainer - {}] Starting...'.format(self.client_id))
         self.counters = {'train': 0, 'test': 0}
         if test:
             self.save_model()
@@ -52,14 +59,14 @@ class Trainer(object):
 
         # The self.train_split  will 'train_<client_num>' if a client
         # and 'train' if a secure aggregator
-        print('[Trainer] Doing split: {}'.format(self.train_split))
+        logging.info('[Trainer] Doing split: {}'.format(self.train_split))
         train_loader = self.loadDatasets(self.train_split, True, False)
 
         for epoch in range(epochs):
-            print('Epoch %d/%d....' % (epoch, epochs))
+            logging.info('Epoch %d/%d....' % (epoch, epochs))
             self.model.updateLearningRate(epoch)
             self.step(train_loader, self.model.epoch, isTrain=True)
-        print('DONE')
+        logging.info('DONE')
 
     def test(self):
         return self.doSink()
@@ -67,28 +74,28 @@ class Trainer(object):
     def doSink(self):
         res = {}
 
-        print('Running test...')
+        logging.info('Running test...')
         res['test-top1'], res['test-top3'] = self.step(
             self.val_loader, self.model.epoch,
             isTrain=False, sinkName='test')
 
-        print('Running test with clustering...')
+        logging.info('Running test with clustering...')
         val_loader_cluster = self.loadDatasets('test', False, True)
         res['test_cluster-top1'], res['test_cluster-top3'] = self.step(
             val_loader_cluster, self.model.epoch,
             isTrain=False, sinkName='test_cluster')
-        print('--------------\nResults:')
+        logging.info('--------------\nResults:')
         for k, v in res.items():
-            print('\t%s: %.3f %%' % (k, v))
+            logging.info('\t%s: %.3f %%' % (k, v))
         return res
 
     def update_model_from_file(self, path):
         state = torch.load(path)
         assert state is not None, \
             'Warning: Could not read checkpoint {}'.format(path)
-        print('Loading checkpoint {}...'.format(path))
+        logging.info('Loading checkpoint {}...'.format(path))
         self.update_model(state)
-        print('Client model updated')
+        logging.info('Client model updated')
 
     def update_model(self, state):
         self.model.importState(state)
@@ -155,7 +162,7 @@ class Trainer(object):
             if isTrain:
                 self.counters['train'] = self.counters['train'] + 1
 
-            print(
+            logging.info(
                 '{phase}: [{0}][{1}/{2}]\t'
                 'Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
                 'Data {data_time.val:.3f} ({data_time.avg:.3f})\t'
@@ -188,9 +195,9 @@ class Trainer(object):
         if not os.path.isdir(self.snapshotDir):
             os.makedirs(self.snapshotDir, 0o777)
         filename = self.get_best_model_path()
-        print('Writing checkpoint to {}...'.format(filename))
+        logging.info('Writing checkpoint to {}...'.format(filename))
         torch.save(state, filename)
-        print('\t...Done.')
+        logging.info('\t...Done.')
 
     #@staticmethod
     #def make():
@@ -204,9 +211,11 @@ class Trainer(object):
 
 class SecAggTrainer(Trainer):
     def __init__(self, client_id):
+        self.client_id = client_id
+        self.logger = 'logs/{}.log'.format(self.client_id)
+        self.init_logger()
         self.type = 'secure_aggregator'
         self.snapshotDir = 'secure_aggregator/persistent_storage'
-        self.client_id = client_id
         self.client_number = None
         self.train_split = 'train'
         self.metaFile = 'data/classification/metadata.mat'
@@ -222,9 +231,11 @@ class SecAggTrainer(Trainer):
 
 class ClientTrainer(Trainer):
     def __init__(self, client_number, client_id, num_clients, data_split_type):
-        self.type = 'client'
-        self.snapshotDir = 'client/snapshots_{}'.format(client_id)
         self.client_id = client_id
+        self.logger = 'logs/{}.log'.format(self.client_id)
+        self.init_logger()
+        self.type = 'client'
+        self.snapshotDir = 'client/snapshots_{}'.format(self.client_id)
         self.client_number = client_number
         mf = 'data/classification'
         if data_split_type == 'iid':

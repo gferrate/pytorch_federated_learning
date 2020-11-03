@@ -7,6 +7,7 @@ import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 import torch.optim
 import torch.utils.data
+import logging
 
 from shared.BaseModel import BaseModel
 from shared.resnet_9x9 import resnet18
@@ -182,7 +183,7 @@ class ClassificationModelLargeViz(BaseModel):
         self.epoch = save['epoch'] if 'epoch' in save else 0
         self.bestPrec = save['best_prec1'] if 'best_prec1' in save else 1e20
         self.error = save['error'] if 'error' in save else 1e20
-        print('Imported checkpoint for epoch %05d with loss = %.3f...' % (self.epoch, self.bestPrec))
+        logging.info('Imported checkpoint for epoch %05d with loss = %.3f...' % (self.epoch, self.bestPrec))
 
     def _clearState(self, params):
         res = dict()
@@ -214,7 +215,7 @@ class ClassificationModelLargeViz(BaseModel):
     def adjust_learning_rate_new(self, epoch, base_lr, period = 100): # train for 2x100 epochs
         gamma = 0.1 ** (1.0/period)
         lr_default = base_lr * (gamma ** (epoch))
-        print('New lr_default = %f' % lr_default)
+        logging.info('New lr_default = %f' % lr_default)
 
         for optimizer in self.optimizers:
             for param_group in optimizer.param_groups:

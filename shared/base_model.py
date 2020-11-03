@@ -1,3 +1,5 @@
+import logging
+
 class BaseModel(object):
 
     def __init__(self, *args, **kwargs):
@@ -40,13 +42,13 @@ class BaseModel(object):
         for scheduler in self.schedulers:
             scheduler.step()
         lr = self.optimizers[0].param_groups[0]['lr']
-        print('Updated learning rate = %.7f' % lr)
+        logging.info('Updated learning rate = %.7f' % lr)
 
     def update_learning_rate_manual(self, epoch, baseLr=0.001, period=30):
         """Sets the learning rate to the initial LR
         decayed by 10 every 30 epochs"""
         lr = baseLr * (0.1 ** (epoch // period))
-        print('\tNew lr = %.5f' % lr)
+        logging.info('\tNew lr = %.5f' % lr)
         for i, optimizer in enumerate(self.optimizers):
             for param_group in optimizer.param_groups:
                 param_group['lr'] = lr

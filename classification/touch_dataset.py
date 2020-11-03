@@ -1,6 +1,7 @@
 import torch.utils.data as data
 import torch
 import numpy as np
+import logging
 
 from shared import dataset_tools
 
@@ -53,12 +54,12 @@ class TouchDataset(data.Dataset):
         np.random.seed(157843)
         self.refresh()
 
-        print('Loaded "%s" - split "%s" with %d records...' % (
+        logging.info('Loaded "%s" - split "%s" with %d records...' % (
             self.getName(), self.split, len(self.indices)))
 
     def refresh(self):
         # Generate tuples
-        print('[TouchDataset] Refreshing tuples...')
+        logging.info('[TouchDataset] Refreshing tuples...')
         if self.indices is not None and self.sequenceLength <= 1:
             return
 

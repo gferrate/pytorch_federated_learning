@@ -3,6 +3,7 @@ import argparse
 from flask import Flask, request, jsonify
 import json
 import requests
+import logging
 
 from shared import utils
 from client import Client
@@ -20,7 +21,13 @@ parser.add_argument('-s', '--split-type', type=str, required=False,
 args = parser.parse_args()
 hosts = utils.read_hosts()
 num_clients = len(hosts['clients'])
-client = Client(args.client_number, args.port, num_clients, args.split_type)
+port = args.port
+logging.basicConfig(
+    format='%(asctime)s %(message)s',
+    filename='logs/client_{}.log'.format(port),
+    level=logging.INFO
+)
+client = Client(args.client_number, port, num_clients, args.split_type)
 
 app = Flask(__name__)
 
@@ -35,11 +42,11 @@ def send_status():
     api_url = 'http://{}:{}/clientstatus'.format(hosts['main_server']['host'],
                                                  hosts['main_server']['port'])
     data = {'client_id': client.client_id}
-    print(data)
+    logging.info(data)
     r = requests.post(url=api_url, json=data)
-    print(r, r.status_code, r.reason, r.text)
+    logging.info(r, r.status_code, r.reason, r.text)
     if r.status_code == 200:
-        print('Yeah')
+        logging.info('Yeah')
     return jsonify({'msg': 'Status OK sent'})
 
 
@@ -76,7 +83,7 @@ def get_agg_model():
         path = 'client/model_update/{}'.format(fname)
         with open(path, 'wb') as wfile:
             wfile.write(file)
-        print('Agg model saved to {}'.format(path))
+        logging.info('Agg model saved to {}'.format(path))
         # Update the client model
         client.update_model(path)
         return jsonify({'msg': 'Model received'})

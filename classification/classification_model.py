@@ -6,6 +6,7 @@ import torch.nn.parallel
 import torch.backends.cudnn as cudnn
 import torch.optim
 import torch.utils.data
+import logging
 
 from shared.base_model import BaseModel
 from shared.resnet_3x3 import resnet18
@@ -71,7 +72,7 @@ class ClassificationModel(BaseModel):
     def initialize(self, numClasses, sequenceLength=1, baseLr=1e-3):
         BaseModel.initialize(self)
 
-        print('Base LR = %e' % baseLr)
+        logging.info('Base LR = %e' % baseLr)
         self.baseLr = baseLr
         self.numClasses = numClasses
         self.sequenceLength = sequenceLength
@@ -83,7 +84,7 @@ class ClassificationModel(BaseModel):
         # TODO: FIX THIS. NOT WORKING WITH MY MAC
         use_cuda = True
         if use_cuda is True and not torch.cuda.is_available():
-            print('WARNING: Cuda not available. Running on CPU')
+            logging.info('WARNING: Cuda not available. Running on CPU')
             use_cuda = False
         self.device = torch.device('cuda' if use_cuda else 'cpu')
 
@@ -170,7 +171,7 @@ class ClassificationModel(BaseModel):
 
     def importState(self, save):
         self.model.load_state_dict(save)
-        print('Model imported')
+        logging.info('Model imported')
 
     def exportState(self):
         return self.model.state_dict()
@@ -182,7 +183,7 @@ class ClassificationModel(BaseModel):
         # train for 2x100 epochs
         gamma = 0.1 ** (1.0/period)
         lr_default = base_lr * (gamma ** (epoch))
-        print('New lr_default = %f' % lr_default)
+        logging.info('New lr_default = %f' % lr_default)
 
         for optimizer in self.optimizers:
             for param_group in optimizer.param_groups:

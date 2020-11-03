@@ -4,8 +4,15 @@ import argparse
 from flask import Flask, request, jsonify
 import requests
 import json
+import logging
 
 from shared import utils
+
+logging.basicConfig(
+    format='%(asctime)s %(message)s',
+    filename='logs/main_server.log',
+    level=logging.INFO
+)
 
 
 parser = argparse.ArgumentParser(description='PyTorch FedLearn')
@@ -31,7 +38,6 @@ def client_status():
 
         with open('clients.txt', 'a+') as f:
             f.write('http://localhost:' + client_port + '/\n')
-        print(client_port)
         if client_port:
             serverack = {'server_ack': '1'}
             # response = requests.post( url,
@@ -65,7 +71,7 @@ def send_agg_to_clients():
         host = cl[list(cl.keys())[0]]['host']
         port = cl[list(cl.keys())[0]]['port']
         url = 'http://{}:{}/aggmodel'.format(host, port)
-        print('Sending agg model to {}'.format(url))
+        logging.info('Sending agg model to {}'.format(url))
         path = 'main_server/agg_model/agg_model.tar'
         with open(path, 'rb') as file:
             data = {'fname': 'agg_model.tar'}
@@ -76,7 +82,7 @@ def send_agg_to_clients():
             req = requests.post(url=url, files=files)
         if req.status_code != 200:
             msg = 'Something went wrong'
-            print(msg)
+            logging.info(msg)
             return msg
     return jsonify({'msg': 'Aggregated model sent'})
 

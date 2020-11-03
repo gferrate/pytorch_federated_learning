@@ -3,8 +3,16 @@ import sys; sys.path.insert(0, '.')
 import grequests
 import requests
 import time
+import logging
 
 from shared import utils
+
+logging.basicConfig(
+    format='%(asctime)s %(message)s',
+    filename='logs/run.log',
+    level=logging.INFO
+)
+
 
 hosts = utils.read_hosts()
 
@@ -19,12 +27,12 @@ def get_client_urls(endpoint):
     return hp
 
 
-def print_elapsed_time(start):
-    print('\n')
-    print('Elapsed time:')
+def log_elapsed_time(start):
     end = time.time()
     elapsed_time = end - start
-    print(time.strftime("%H:%M:%S", time.gmtime(elapsed_time)))
+    elapsed_time = time.strftime("%H:%M:%S", time.gmtime(elapsed_time))
+    msg = 'Elapsed time: {}'.format(elapsed_time)
+    logging.info(msg)
 
 
 def check_response_ok(res):
@@ -39,16 +47,13 @@ def main():
     #train_accs = {}
     start = time.time()
     for i in range(num_iterations):
-        print('\n\n')
-        print('-'*30)
-        print('\n\n')
-        print('Iteration {}...'.format(i))
+        logging.info('Iteration {}...'.format(i))
 
-        print('Sending /train_model request to clients...')
+        logging.info('Sending /train_model request to clients...')
         client_urls = get_client_urls('train_model')
         rs = (grequests.get(u) for u in client_urls)
         responses = grequests.map(rs)
-        print('\nTrain acc:')
+        # print('\nTrain acc:')
         for res in responses:
             check_response_ok(res)
             #res_json = res.json()
@@ -56,19 +61,19 @@ def main():
             #print('\n')
             #train_accs.setdefault(res_json['client_id'], []).append(
             #    res_json['results'])
-        print('Done')
-        print_elapsed_time(start)
+        logging.info('Done')
+        log_elapsed_time(start)
 
-        print('Sending /send_model command to clients...')
+        logging.info('Sending /send_model command to clients...')
         client_urls = get_client_urls('send_model')
         rs = (grequests.get(u) for u in client_urls)
         responses = grequests.map(rs)
         for res in responses:
             check_response_ok(res)
-        print('Done')
-        print_elapsed_time(start)
+        logging.info('Done')
+        log_elapsed_time(start)
 
-        print('Sending /aggregate_models command to secure aggregator...')
+        logging.info('Sending /aggregate_models command to secure aggregator...')
         url = 'http://{}:{}/aggregate_models'.format(
             hosts['secure_aggregator']['host'],
             hosts['secure_aggregator']['port']
@@ -77,47 +82,35 @@ def main():
         check_response_ok(res)
         test_result = res.json()
         all_results.append(test_result)
-        print('Done')
-        print_elapsed_time(start)
+        logging.info('Done')
+        log_elapsed_time(start)
 
-        print('Sending /send_model_to_main_server command to secure aggregator...')
+        logging.info('Sending /send_model_to_main_server command to secure aggregator...')
         url = 'http://{}:{}/send_model_to_main_server'.format(
             hosts['secure_aggregator']['host'],
             hosts['secure_aggregator']['port']
         )
         res = requests.get(url)
         check_response_ok(res)
-        print('Done')
-        print_elapsed_time(start)
+        logging.info('Done')
+        log_elapsed_time(start)
 
-        print('Sending /send_model_clients command to main server...')
+        logging.info('Sending /send_model_clients command to main server...')
         url = 'http://{}:{}/send_model_clients'.format(
             hosts['main_server']['host'],
             hosts['main_server']['port']
         )
         res = requests.get(url)
         check_response_ok(res)
-        print('Done')
+        logging.info('Done')
 
-        print('\n')
-        print('Test result:')
-        print(test_result)
+        logging.info('Test result: {}'.format(test_result))
+        log_elapsed_time(start)
 
-        print_elapsed_time(start)
-
-        print('\n\n')
-        print('-'*30)
-        print('\n\n')
-    print('\n\n')
-    print('-'*30)
-    print('\n\n')
-    print('All train accuracies:')
-    #print(train_accs)
-    print('\n\n')
-    print('-'*30)
-    print('\n\n')
-    print('All results:')
-    print(all_results)
+    # logging.info('All train accuracies:')
+    # print(train_accs)
+    logging.info('All results:')
+    logging.info(all_results)
 
 
 if __name__ == '__main__':

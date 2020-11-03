@@ -3,6 +3,7 @@ import numpy as np
 import sklearn
 import sklearn.cluster
 import sklearn.decomposition
+import logging
 
 from classification.object_dataset import ObjectDataset
 
@@ -23,7 +24,7 @@ class ObjectClusterDataset(ObjectDataset):
         return 'ObjectClusterDataset'
 
     def init_clusters(self):
-        print('[ObjectClusterDataset] Initializing class clusters...')
+        logging.info('[ObjectClusterDataset] Initializing class clusters...')
 
         allIndices = np.argwhere(self.validN).flatten()
         recordingIds = self.meta['recordingId'][allIndices]
@@ -44,7 +45,7 @@ class ObjectClusterDataset(ObjectDataset):
             # Every object (though there is always just one per recording)
             recClusters = {}
             for j, objectId in enumerate(objects):
-                print('\tClustering %s / %s (#%d)...' % (
+                logging.info('\tClustering %s / %s (#%d)...' % (
                     self.meta['recordings'][recordingId],
                     self.meta['objects'][objectId], objectId))
                 oMask = objectIds == objectId
@@ -83,7 +84,7 @@ class ObjectClusterDataset(ObjectDataset):
         if self.clusters is None:
             self.init_clusters()
 
-        print('[ObjectClusterDataset] Refreshing tuples...')
+        logging.info('[ObjectClusterDataset] Refreshing tuples...')
         indices0 = np.argwhere(self.valid0).flatten()
         self.indices = np.zeros((len(indices0), self.sequenceLength), int)
         for i in range(len(indices0)):
