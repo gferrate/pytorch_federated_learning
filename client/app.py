@@ -22,10 +22,14 @@ args = parser.parse_args()
 hosts = utils.read_hosts()
 num_clients = len(hosts['clients'])
 port = args.port
+l_filename = 'logs/client_{}.log'.format(port)
 logging.basicConfig(
     format='%(asctime)s %(message)s',
-    filename='logs/client_{}.log'.format(port),
-    level=logging.INFO
+    level=logging.INFO,
+    handlers=[
+        logging.FileHandler(l_filename),
+        logging.StreamHandler()
+    ]
 )
 client = Client(args.client_number, port, num_clients, args.split_type)
 

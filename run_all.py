@@ -9,8 +9,12 @@ from shared import utils
 
 logging.basicConfig(
     format='%(asctime)s %(message)s',
-    filename='logs/run.log',
-    level=logging.INFO
+    # filename='logs/run.log',
+    level=logging.INFO,
+    handlers=[
+        logging.FileHandler('logs/run.log'),
+        logging.StreamHandler()
+    ]
 )
 
 

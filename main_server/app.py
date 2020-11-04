@@ -8,10 +8,14 @@ import logging
 
 from shared import utils
 
+l_filename = 'logs/main_server.log'
 logging.basicConfig(
     format='%(asctime)s %(message)s',
-    filename='logs/main_server.log',
-    level=logging.INFO
+    level=logging.INFO,
+    handlers=[
+        logging.FileHandler(l_filename),
+        logging.StreamHandler()
+    ]
 )
 
 

@@ -19,10 +19,14 @@ class SecAgg:
         self.init_model()
 
     def init_logger(self):
+        l_filename = 'logs/sec_agg.log'
         logging.basicConfig(
             format='%(asctime)s %(message)s',
-            filename='logs/sec_agg.log',
-            level=logging.INFO
+            level=logging.INFO,
+            handlers=[
+                logging.FileHandler(l_filename),
+                logging.StreamHandler()
+            ]
         )
 
     def init_model(self):
