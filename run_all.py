@@ -37,7 +37,9 @@ def log_elapsed_time(start):
 
 def check_response_ok(res):
     if res.status_code != 200:
-        raise Exception('The response was not successful')
+        raise Exception(
+            'The response was not successful. Code: {}, Msg: {}'.format(
+                res.status_code, res.text))
 
 
 def main():
