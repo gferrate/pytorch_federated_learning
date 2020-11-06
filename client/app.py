@@ -54,45 +54,45 @@ def send_status():
     return jsonify({'msg': 'Status OK sent'})
 
 
-@app.route('/send_model')
-def send_model():
-    model_fn = client.get_model_filename()
-    with open(model_fn, 'rb') as file:
-        data = {
-            'fname': model_fn,
-            'host': 'http://client:{}/'.format(client.port),
-            'client_id': client.client_id
-        }
-        files = {
-            'json': ('json_data', json.dumps(data), 'application/json'),
-            'model': (model_fn, file, 'application/octet-stream')
-        }
-        req = requests.post(
-            url='http://{}:{}/client_model'.format(
-                hosts['secure_aggregator']['host'],
-                hosts['secure_aggregator']['port']
-            ),
-            files=files
-        )
-    return jsonify({'msg': 'Model sent'})
+#@app.route('/send_model')
+#def send_model():
+#    model_fn = client.get_model_filename()
+#    with open(model_fn, 'rb') as file:
+#        data = {
+#            'fname': model_fn,
+#            'host': 'http://client:{}/'.format(client.port),
+#            'client_id': client.client_id
+#        }
+#        files = {
+#            'json': ('json_data', json.dumps(data), 'application/json'),
+#            'model': (model_fn, file, 'application/octet-stream')
+#        }
+#        req = requests.post(
+#            url='http://{}:{}/client_model'.format(
+#                hosts['secure_aggregator']['host'],
+#                hosts['secure_aggregator']['port']
+#            ),
+#            files=files
+#        )
+#    return jsonify({'msg': 'Model sent'})
 
 
-@app.route('/aggmodel', methods=['POST'])
-def get_agg_model():
-    if request.method == 'POST':
-        file = request.files['model'].read()
-        fname = request.files['json'].read()
-        fname = json.loads(fname.decode('utf-8'))['fname']
-
-        path = 'client/model_update/{}'.format(fname)
-        with open(path, 'wb') as wfile:
-            wfile.write(file)
-        logging.info('Agg model saved to {}'.format(path))
-        # Update the client model
-        client.update_model(path)
-        return jsonify({'msg': 'Model received'})
-    else:
-        return jsonify({'msg': 'No file received'})
+#@app.route('/aggmodel', methods=['POST'])
+#def get_agg_model():
+#    if request.method == 'POST':
+#        file = request.files['model'].read()
+#        fname = request.files['json'].read()
+#        fname = json.loads(fname.decode('utf-8'))['fname']
+#
+#        path = 'client/model_update/{}'.format(fname)
+#        with open(path, 'wb') as wfile:
+#            wfile.write(file)
+#        logging.info('Agg model saved to {}'.format(path))
+#        # Update the client model
+#        client.update_model(path)
+#        return jsonify({'msg': 'Model received'})
+#    else:
+#        return jsonify({'msg': 'No file received'})
 
 
 @app.route('/train_model')
@@ -103,12 +103,12 @@ def model_train():
     return jsonify({'msg': 'Model trained and saved successfully'})
 
 
-@app.route('/experimental_test')
+@app.route('/model_test')
 def model_test():
     res = client.test()
     # client.test()
     # client.save_model()
-    return jsonify(res)
+    return jsonify({'test_result': res})
 
 
 if __name__ == '__main__':
