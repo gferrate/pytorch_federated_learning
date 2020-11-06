@@ -1,11 +1,16 @@
 import matplotlib.pyplot as plt
+import numpy as np
 from results_2_raw import results
 
 types = ['test-top1', 'test-top3']#, 'test_cluster-top1', 'test_cluster-top3']
+types_interpolated = ['test-top1', 'test-top1 fit', 'test-top3', 'test-top3 fit']
 for t in types:
     y_values = [x['test_result'][t] for x in results]
-    x = range(len(y_values))
+    x = list(range(len(y_values)))
+    z = np.polyfit(x, y_values, 7)
+    p = np.poly1d(z)
     plt.plot(x, y_values, label=t)
+    plt.plot(x, p(x), linewidth=1, linestyle='dashed')
 
 times = [
     '00:05:30',
@@ -48,6 +53,6 @@ plt.title('Accuracy with two clients over 30 communication rounds.\nIID dataset 
 plt.ylabel('Accuracy')
 plt.xlabel('Communication round')
 
-plt.legend(types, bbox_to_anchor=(0.75, 0.3))
+plt.legend(types_interpolated, bbox_to_anchor=(0.7, 0.15))
 plt.savefig('result.png', dpi=400)
 
