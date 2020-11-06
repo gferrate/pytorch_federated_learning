@@ -128,6 +128,19 @@ def split_dataset(filename, split_type, num_clients):
         sio.savemat(fout, metadata)
         print('Saved to:', fout)
     elif split_type == 'non-iid-a':
+        metadata = MatReader().loadmat(filename)
+        distinct_object_ids = np.unique(metadata['objectId'])
+        n_objects = len(metadata['objects'])
+        oc = np.floor(n_objects/n_objects)
+        objects_per_client = [oc for oc in range(oc)]
+
+        import pudb; pudb.set_trace()
+        train_split_id = np.argwhere(metadata['splits'] == 'train').flatten()[0]
+        test_split_id = np.argwhere(metadata['splits'] == 'test').flatten()[0]
+
+        train_positions = np.argwhere(metadata['splitId']==train_split_id).flatten()
+        test_positions = np.argwhere(metadata['splitId']==test_split_id).flatten()
+
         pass
     elif split_type == 'non-iid-b':
         pass

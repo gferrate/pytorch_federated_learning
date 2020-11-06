@@ -87,6 +87,9 @@ def main():
         res = requests.get(url)
         check_response_ok(res)
         test_result = res.json()
+        end = time.time()
+        elapsed_time = end - start
+        test_result['elapsed_time'] = elapsed_time
         all_results.append(test_result)
         logging.info('Done')
         log_elapsed_time(start)
