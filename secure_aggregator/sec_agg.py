@@ -52,9 +52,9 @@ class SecAgg:
         logging.info('Averaging weights...')
         # FL average
         # TODO: Make this more efficient
-        avg_model = models[0].copy()
+        avg_model = models[0].copy().cpu()
         for k in avg_model:
-            tmp = [w[k] for w in models]
+            tmp = [w[k].cpu() for w in models]
             # avg_model[k] = np.average(tmp)
             avg_model[k] = np.true_divide(sum(tmp), len(tmp))
 
