@@ -1,6 +1,7 @@
 import numpy as np
 import os, shutil
 import scipy.io as sio
+import logging
 
 
 def loadMetadata(filename, silent=False):
@@ -10,11 +11,11 @@ def loadMetadata(filename, silent=False):
     try:
         # http://stackoverflow.com/questions/6273634/access-array-contents-from-a-mat-file-loaded-using-scipy-io-loadmat-python
         if not silent:
-            print('\tReading metadata from %s...' % filename)
+            logging.info('\tReading metadata from %s...' % filename)
         #metadata = sio.loadmat(filename, squeeze_me=True, struct_as_record=False)
         metadata = MatReader().loadmat(filename)
     except:
-        print('\tFailed to read the meta file "%s"!' % filename)
+        logging.info('\tFailed to read the meta file "%s"!' % filename)
         return
     return metadata
 
@@ -87,15 +88,14 @@ class MatReader(object):
 
 def split_dataset(filename, split_type, num_clients):
     # more info here: https://arxiv.org/pdf/1806.00582.pdf (section 2.1)
+    metadata = MatReader().loadmat(filename)
+    train_split_id = np.argwhere(metadata['splits'] == 'train').flatten()[0]
+    test_split_id = np.argwhere(metadata['splits'] == 'test').flatten()[0]
+    train_positions = np.argwhere(metadata['splitId']==train_split_id).flatten()
+    test_positions = np.argwhere(metadata['splitId']==test_split_id).flatten()
+
     if split_type == 'iid':
         # Split the dataset into <num_clients> uniformally distributed
-        metadata = MatReader().loadmat(filename)
-
-        train_split_id = np.argwhere(metadata['splits'] == 'train').flatten()[0]
-        test_split_id = np.argwhere(metadata['splits'] == 'test').flatten()[0]
-
-        train_positions = np.argwhere(metadata['splitId']==train_split_id).flatten()
-        test_positions = np.argwhere(metadata['splitId']==test_split_id).flatten()
 
         # Create the new positions for the new splits
         n_train = len(train_positions)
@@ -122,27 +122,50 @@ def split_dataset(filename, split_type, num_clients):
         metadata['splitId'] = new_split_ids
         unique, counts = np.unique(new_split_ids, return_counts=True)
         new_classes = dict(zip(new_splits, counts))
-        print('Split into these new classes', new_classes)
-
-        fout = 'data/classification/metadata_{}_clients.mat'.format(num_clients)
+        logging.info('Split into these new classes: {}'.format(new_classes))
+        fout = 'data/classification/metadata_{}_clients_iid.mat'.format(
+            num_clients)
         sio.savemat(fout, metadata)
-        print('Saved to:', fout)
+        logging.info('Saved to: {}'.format(fout))
+
     elif split_type == 'non-iid-a':
-        metadata = MatReader().loadmat(filename)
+        # Each client receives data partition from only a single class or
+        # multiple classes in case there are fewer clients than classes
         distinct_object_ids = np.unique(metadata['objectId'])
         n_objects = len(metadata['objects'])
-        oc = np.floor(n_objects/n_objects)
-        objects_per_client = [oc for oc in range(oc)]
+        assert n_objects >= num_clients, 'num_clients should be smaller than n_objects ({})'.format(n_objects)
+        oc = int(np.floor(n_objects/num_clients))
+        object_ids = np.unique(metadata['objectId'])
+        object_ids_per_client = np.split(object_ids, [oc])
 
-        import pudb; pudb.set_trace()
-        train_split_id = np.argwhere(metadata['splits'] == 'train').flatten()[0]
-        test_split_id = np.argwhere(metadata['splits'] == 'test').flatten()[0]
+        new_splits = np.array(
+            ['train_{}'.format(i) for i in range(num_clients)] + ['test'],
+            dtype=object
+        )
+        new_test_split_id = np.argwhere(new_splits == 'test').flatten()[0]
 
-        train_positions = np.argwhere(metadata['splitId']==train_split_id).flatten()
-        test_positions = np.argwhere(metadata['splitId']==test_split_id).flatten()
+        new_split_ids = metadata['splitId'].copy()
+        new_split_ids[new_split_ids == test_split_id] = new_test_split_id
 
-        pass
+        for i, object_ids in enumerate(object_ids_per_client):
+            for object_id in object_ids:
+                cond = np.logical_and(metadata['objectId'] == object_id,
+                                      new_split_ids == 0)
+                new_split_ids[cond] = i
+        metadata['splits'] = new_splits
+        metadata['splitId'] = new_split_ids
+
+        unique, counts = np.unique(new_split_ids, return_counts=True)
+        new_classes = dict(zip(new_splits, counts))
+        logging.info('Split into these new classes: {}'.format(new_classes))
+        fout = 'data/classification/metadata_{}_clients_non_iid_a.mat'.format(
+            num_clients)
+        sio.savemat(fout, metadata)
+        logging.info('Saved to: {}'.format(fout))
+
     elif split_type == 'non-iid-b':
+        # The sorted data is divided into 20 partitions and each client is
+        # randomly assigned 2 partitions from 2 classes.
         pass
     else:
         raise Exception('Not implemented')

@@ -190,6 +190,10 @@ class Trainer(object):
     def get_best_model_path(self):
         return os.path.join(self.snapshotDir, 'model_best.tar')
 
+    @staticmethod
+    def file_exists(fn):
+        return os.path.isfile(fn)
+
     def save_model(self):
         state = self.model.exportState()
         if not os.path.isdir(self.snapshotDir):
@@ -240,12 +244,26 @@ class ClientTrainer(Trainer):
         mf = 'data/classification'
         if data_split_type == 'iid':
             self.train_split = 'train_{}'.format(client_number)
-            # TODO: Split the metadata with the database_utils here
-            self.metaFile = '{}/metadata_{}_clients.mat'.format(mf,
-                                                                num_clients)
+            self.metaFile = '{}/metadata_{}_clients_iid.mat'.format(
+                mf, num_clients)
+        if data_split_type == 'non-iid-a':
+            self.train_split = 'train_{}'.format(client_number)
+            self.metaFile = '{}/metadata_{}_clients_non_iid_a.mat'.format(
+                mf, num_clients)
         elif data_split_type == 'no_split':
             self.train_split = 'train'
             self.metaFile = '{}/metadata.mat'.format(mf)
+        else:
+            raise Exception('Data split type not implemented')
+
+        # Split dataset if file does not exist
+        if data_split_type in ('iid', 'non-iid-a', 'non-iid-b'):
+            from shared import dataset_tools
+            if not self.file_exists(self.metaFile):
+                fn = '{}/metadata.mat'.format(mf)
+                dataset_tools.split_dataset(fn, data_split_type, num_clients)
+            else:
+                logging.info('File {} already exists'.format(self.metaFile))
         self.init()
         super(Trainer, self).__init__()
 
