@@ -6,10 +6,8 @@ It is being carried as my final thesis @ [King's College London](https://www.kcl
 It currently works with the [Human grasp dataset](http://stag.csail.mit.edu/). Repo [here](https://github.com/Erkil1452/touch).
 
 ## Scheme
-
-![Overall diagram](./documentation/img/diagram_0.png)
-
-![State diagram](./documentation/img/diagram_1.png)
+<img src="./documentation/img/diagram_0.png" width="500">
+<img src="./documentation/img/diagram_1.png" width="500">
 
 ## How to run
 
