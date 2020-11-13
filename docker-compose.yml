@@ -22,6 +22,7 @@ services:
             - PORT=8001
         volumes:
             - ./logs:/code/logs:rw
+            - ./data/classification:/code/data/classification:rw
         depends_on:
             - main_server
 
@@ -36,6 +37,7 @@ services:
             - N_CLIENT=0
         volumes:
             - ./logs:/code/logs:rw
+            - ./data/classification:/code/data/classification:rw
         depends_on:
             - secure_aggregator
 
@@ -50,6 +52,7 @@ services:
             - N_CLIENT=1
         volumes:
             - ./logs:/code/logs:rw
+            - ./data/classification:/code/data/classification:rw
         depends_on:
             - secure_aggregator
 
