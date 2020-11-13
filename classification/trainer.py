@@ -246,7 +246,7 @@ class ClientTrainer(Trainer):
             self.train_split = 'train_{}'.format(client_number)
             self.metaFile = '{}/metadata_{}_clients_iid.mat'.format(
                 mf, num_clients)
-        if data_split_type == 'non-iid-a':
+        elif data_split_type == 'non-iid-a':
             self.train_split = 'train_{}'.format(client_number)
             self.metaFile = '{}/metadata_{}_clients_non_iid_a.mat'.format(
                 mf, num_clients)
@@ -254,7 +254,8 @@ class ClientTrainer(Trainer):
             self.train_split = 'train'
             self.metaFile = '{}/metadata.mat'.format(mf)
         else:
-            raise Exception('Data split type not implemented')
+            raise Exception('Data split type "{}" not implemented'.format(
+                data_split_type))
 
         # Split dataset if file does not exist
         if data_split_type in ('iid', 'non-iid-a', 'non-iid-b'):
