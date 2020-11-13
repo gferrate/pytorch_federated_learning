@@ -5,29 +5,24 @@ It is being carried as my final thesis @ [King's College London](https://www.kcl
 
 It currently works with the [Human grasp dataset](http://stag.csail.mit.edu/). Repo [here](https://github.com/Erkil1452/touch).
 
+## Scheme
+
+![Overall diagram](./documentation/img/diagram_0.png)
+
+![State diagram](./documentation/img/diagram_1.png)
+
 ## How to run
 
-### Step 1
+### Step 1. Copy the dataset locally
 
-0. Copy the dataset to the folder:
-    - Run the following commands:
-        ```
-        wget http://stag.csail.mit.edu/datasets/classification_lite.zip -O temp.zip
-        unzip temp.zip -d data/classification/
-        rm temp.zip
-        ```
+- Run the following commands:
+    ```
+    wget http://stag.csail.mit.edu/datasets/classification_lite.zip -O temp.zip
+    unzip temp.zip -d data/classification/
+    rm temp.zip
+    ```
 
-1. Split the dataset between clients:
-    - Open a python terminal and run the following instructions:
-        ```
-        from shared import dataset_tools
-        mf = 'data/classification/metadata.mat'
-        dataset_tools.split_dataset(mf, 'iid', <number_of_clients>)
-        ```
-
-### Step 2
-
-There are two main ways to run the program.
+### Step 2. There are two main ways to run the program
 
 - Spawning Python processes manually.
     - Spawn the main server by running: `python main_server/app.py -p 8000`
@@ -41,3 +36,4 @@ There are two main ways to run the program.
 
 ## TODO
 - [ ] Create an 'orchestrator' with a frontend to manage all the connections and processes.
+- [ ] Make proper documentation explaining how to select *no split*, *IID* or *NON-IID* dataset distributions
