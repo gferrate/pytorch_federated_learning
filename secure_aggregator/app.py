@@ -1,5 +1,5 @@
 import sys; sys.path.insert(0, '.')
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 
 import requests, json, os
 import argparse
@@ -7,6 +7,12 @@ import ntpath
 
 from shared import utils
 from sec_agg import SecAgg
+from state import (
+    SEC_AGG_SEND_TO_MAIN_SERVER,
+    SEC_AGG_AGGREGATE_MODELS,
+    SEC_AGG_GET_CLIENT_MODEL,
+    State
+)
 
 
 parser = argparse.ArgumentParser(description='PyTorch FL MNIST Example')
@@ -18,37 +24,51 @@ hosts = utils.read_hosts()
 
 use_cuda = True
 sec_agg = SecAgg(args.port, use_cuda)
+state = State('secure_aggregator', sec_agg.client_id)
 
 
 app = Flask(__name__)
 
 
+def assert_idle_state(func):
+    def wrapper():
+        if not state.is_idle():
+            msg = (
+                'Application not in IDLE state. '
+                'Current state: {}'.format(state.current_state)
+            )
+            abort(404, description=msg)
+        return func()
+    return wrapper
+
+
 @app.route('/')
-def hello():
+def index():
     return jsonify({'running': 1})
 
 
+@assert_idle_state
 @app.route('/client_model', methods=['POST'])
 def get_client_model():
-    if request.method == 'POST':
-        file = request.files['model'].read()
-        data = request.files['json'].read()
-        data = json.loads(data.decode('utf-8'))
-        client_id = data['client_id']
-        fname = '{}_{}'.format(client_id, 'model.tar')
-        fname = 'secure_aggregator/client_models/{}'.format(fname)
-        if not os.path.exists(os.path.dirname(fname)):
-            os.makedirs(os.path.dirname(fname))
-        with open(fname, 'wb') as f:
-            f.write(file)
-        return jsonify({'msg': 'Model received', 'location': fname})
-
-    else:
-        return jsonify({'msg': 'No file received', 'location': None})
+    state.current_state = SEC_AGG_GET_CLIENT_MODEL
+    file = request.files['model'].read()
+    data = request.files['json'].read()
+    data = json.loads(data.decode('utf-8'))
+    client_id = data['client_id']
+    fname = '{}_{}'.format(client_id, 'model.tar')
+    fname = 'secure_aggregator/client_models/{}'.format(fname)
+    if not os.path.exists(os.path.dirname(fname)):
+        os.makedirs(os.path.dirname(fname))
+    with open(fname, 'wb') as f:
+        f.write(file)
+    state.idle()
+    return jsonify({'msg': 'Model received', 'location': fname})
 
 
+@assert_idle_state
 @app.route('/aggregate_models')
 def perform_model_aggregation():
+    state.current_state = SEC_AGG_AGGREGATE_MODELS
     # Test: Init model in each model aggregation to restart the epoch numbers
     sec_agg.init_model()
     sec_agg.aggregate_models()
@@ -58,7 +78,7 @@ def perform_model_aggregation():
     sec_agg.save_model()
     # This is only to make sure that no aggregation is repeated
     sec_agg.delete_client_models()
-
+    state.idle()
     return jsonify({
         'msg': ('Model aggregation done!\n'
                 'Global model written to persistent storage.'),
@@ -66,8 +86,10 @@ def perform_model_aggregation():
     })
 
 
+@assert_idle_state
 @app.route('/send_model_to_main_server')
 def send_agg_to_mainserver():
+    state.current_state = SEC_AGG_SEND_TO_MAIN_SERVER
     path = sec_agg.get_model_filename()
     with open(path, 'rb') as f:
         data = {'fname': path, 'id': 'sec_agg'}
@@ -81,8 +103,10 @@ def send_agg_to_mainserver():
         req = requests.post(url=endpoint, files=files)
     if req.status_code == 200:
         return jsonify({'msg': 'Aggregated model sent to main server'})
-    return jsonify({'msg': 'Something went wrong'})
+    state.idle()
+    return abort(404, description='Something went wrong')
 
 
-app.run(host='0.0.0.0', port=sec_agg.port, debug=False, use_reloader=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=sec_agg.port, debug=False, use_reloader=True)
 
