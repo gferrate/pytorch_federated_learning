@@ -7,7 +7,7 @@ import logging
 
 from shared import utils
 from client import Client
-from state import (
+from shared.state import (
     CLIENT_TRAIN_MODEL,
     CLIENT_GET_AGG_MODEL,
     CLIENT_SEND_MODEL,
@@ -39,7 +39,7 @@ logging.basicConfig(
 )
 
 client = Client(args.client_number, port, num_clients, args.split_type)
-state = State('client', client.client_id)
+state = State('client', client.client_id, port)
 
 app = Flask(__name__)
 

@@ -7,7 +7,7 @@ import ntpath
 
 from shared import utils
 from sec_agg import SecAgg
-from state import (
+from shared.state import (
     SEC_AGG_SEND_TO_MAIN_SERVER,
     SEC_AGG_AGGREGATE_MODELS,
     SEC_AGG_GET_CLIENT_MODEL,
@@ -24,7 +24,7 @@ hosts = utils.read_hosts()
 
 use_cuda = True
 sec_agg = SecAgg(args.port, use_cuda)
-state = State('secure_aggregator', sec_agg.client_id)
+state = State('secure_aggregator', sec_agg.client_id, args.port)
 
 
 app = Flask(__name__)

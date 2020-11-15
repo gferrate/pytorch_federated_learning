@@ -1,21 +1,87 @@
 import sys; sys.path.insert(0, '.')
 from time import sleep, time
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
-from flask import Flask, request, jsonify
+import random
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
-global_state = {
+init_global_state = {
     'clients': {},
     'iteration': -1,
     'started_training': False
 }
 
+KEEP_ALIVE_TIMEOUT = 120  # Seconds
+
+
+global_state = init_global_state.copy()
+
+
+def check_clients_ok():
+    for client_id, client in global_state['clients'].items():
+        td = timedelta(seconds=KEEP_ALIVE_TIMEOUT)
+        if datetime.now() - client['last_ping'] > td:
+            client['check_ok'] = False
+        else:
+            client['check_ok'] = True
+
 
 @app.route('/')
 def index():
+    check_clients_ok()
     return jsonify(global_state)
+
+
+@app.route('/restart')
+def restart():
+    global_state = init_global_state.copy()
+    return jsonify(global_state)
+
+
+@app.route('/fake')
+def fake_data():
+    client_types = ['main_server', 'secure_aggregator', 'client']
+    statuses = [
+        'IDLE', 'Training model', 'Getting aggregated model',
+        'Sending model to secure aggregator', 'Getting getting client models',
+        'Sending model to main server', 'Aggregating models',
+        'Getting model from sec agg', 'Sending model to clients'
+    ]
+    for port in range(8000, 8009):
+        client = random.choice(client_types)
+        status = random.choice(statuses)
+        check_ok = random.choice([True, False])
+        _id = 'client_{}'.format(port)
+        data = {
+            'client_type': client,
+            '_id': _id,
+            'state': status,
+            'port': port,
+            'joined_at': datetime.now().strftime('%Y-%m-%d %H:%M'),
+            'check_ok': check_ok,
+            'host': '127.0.0.1',
+            'last_ping': datetime.now()
+        }
+        global_state['clients'].setdefault(_id, {}).update(data)
+    return jsonify(global_state)
+
+
+@app.route('/frontend')
+def index_fe():
+    check_clients_ok()
+    return render_template('index.html', state=global_state)
+
+
+@app.route('/ping', methods=['POST'])
+def keep_alive():
+    data = json.loads(request.data)
+    _id = data['_id']
+    if _id not in global_state['clients']:
+        return jsonify({'msg': 'No client with matching ID'})
+    global_state['clients'][_id]['last_ping'] = datetime.now()
+    return jsonify({'msg': 'OK'})
 
 
 @app.route('/iteration', methods=['POST'])
@@ -33,13 +99,17 @@ def get_state():
     _id = data['_id']
     if _id not in global_state['clients']:
         global_state['clients'][_id] = {
-            'joined_at': datetime.now(),
-            'client_type': data['client_type']
+            'joined_at': datetime.now().strftime('%Y-%m-%d %H:%m'),
+            'client_type': data['client_type'],
+            'port': data['port'],
+            'check_ok': True,
+            'host': data['host'],
+            'last_ping': datetime.now()
         }
     global_state['clients'][_id].update({'state': data['state']})
     return jsonify({'msg': 'OK'})
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=8002, debug=False, use_reloader=True)
+    app.run(host='0.0.0.0', port=8002, debug=False, use_reloader=True)
 

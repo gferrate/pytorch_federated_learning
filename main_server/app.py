@@ -7,7 +7,7 @@ import json
 import logging
 
 from shared import utils
-from state import (
+from shared.state import (
     MAIN_SERVER_SEND_MODEL_TO_CLIENTS,
     MAIN_SERVER_GET_SECAGG_MODEL,
     State
@@ -31,7 +31,7 @@ parser.add_argument('-p', '--port', type=str, required=True,
 
 args = parser.parse_args()
 hosts = utils.read_hosts()
-state = State('main_server', '0')
+state = State('main_server', 'client_{}'.format(args.port), args.port)
 
 app = Flask(__name__)
 
