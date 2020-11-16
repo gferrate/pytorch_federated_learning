@@ -10,7 +10,6 @@ app = Flask(__name__)
 
 KEEP_ALIVE_TIMEOUT = 120  # Seconds
 
-
 global_state = {
     'clients': {},
     'iteration': -1,
@@ -18,6 +17,7 @@ global_state = {
 }
 
 def check_clients_ok():
+    global global_state
     for client_id, client in global_state['clients'].items():
         td = timedelta(seconds=KEEP_ALIVE_TIMEOUT)
         if datetime.now() - client['last_ping'] > td:
@@ -34,6 +34,7 @@ def index():
 
 @app.route('/restart')
 def restart():
+    global global_state
     global_state = {
         'clients': {},
         'iteration': -1,
@@ -44,6 +45,7 @@ def restart():
 
 @app.route('/fake')
 def fake_data():
+    global global_state
     client_types = ['main_server', 'secure_aggregator', 'client']
     statuses = [
         'IDLE', 'Training model', 'Getting aggregated model',
@@ -78,6 +80,7 @@ def index_fe():
 
 @app.route('/ping', methods=['POST'])
 def keep_alive():
+    global global_state
     data = json.loads(request.data)
     _id = data['_id']
     if _id not in global_state['clients']:
@@ -88,6 +91,7 @@ def keep_alive():
 
 @app.route('/iteration', methods=['POST'])
 def iteration():
+    global global_state
     data = json.loads(request.data)
     global_state['iteration'] = data['iteration']
     if not global_state['started_training'] and global_state['iteration'] > -1:
@@ -97,6 +101,7 @@ def iteration():
 
 @app.route('/send_state', methods=['POST'])
 def get_state():
+    global global_state
     data = json.loads(request.data)
     _id = data['_id']
     if _id not in global_state['clients']:
