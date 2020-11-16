@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="refresh" content="5">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inconsolata', monospace;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #CCCCCC;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #EEEEEE;
+        }
+
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cent-text {
+            text-align: center;
+        }
+
+        .cent {
+            width: 80%;
+        }
+
+        .pb-1 {
+            padding-bottom: 1rem;
+        }
+
+        .pb-2 {
+            padding-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <title>Pytorch Federated Learning</title>
+
+    <body>
+        <div class="center cent pb-1">
+            <h2 class="cent-text">Pytorch Federated Learning - Connections</h2>
+            {% if state.started_training %}
+            <h3 class="cent-text">Status: Training 🚀 - Communication round: {{ state.iteration }}</h3>
+            {% else %}
+            <h3 class="cent-text">Status: Not training ⏳</h3>
+            {% endif %}
+            <table class="center">
+                <tr>
+                    <th>Client ID</th>
+                    <th>Host</th>
+                    <th>Port</th>
+                    <th>Type</th>
+                    <th>Joined at</th>
+                    <th>State</th>
+                    <th>Checks</th>
+                </tr>
+                {% if not state.clients %}
+                <tr>
+                    <td>No clients</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                {% else %} {% for client_id, client in state.clients.items() %}
+                <tr>
+                    <td>{{ client_id }}</td>
+                    <td>{{ client['host'] }}</td>
+                    <td>{{ client['port'] }}</td>
+                    <td>{{ client['client_type'] }}</td>
+                    <td>{{ client['joined_at'] }}</td>
+                    {% if client.check_ok %}
+                    <td>{{ client['state'] }}</td>
+                    <td class="cent-text">✔️</td>
+                    {% else %}
+                    <td>-</td>
+                    <td class="cent-text">❌</td>
+                    {% endif %}
+                </tr>
+                {% endfor %} {% endif %}
+
+            </table>
+        </div>
+        <div class="center cent pb">
+            <p>Gabriel Ferraté - Federated Learning</p>
+        </div>
+    </body>
+
+</html>

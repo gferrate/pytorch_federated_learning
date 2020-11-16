@@ -46,6 +46,20 @@ def check_response_ok(res):
                 res.status_code, res.text))
 
 
+def send_iteration_to_frontend(i):
+    logging.info('Sending iteration number to frontend')
+    try:
+        requests.post(
+            url='http://{}:{}/iteration'.format(
+                hosts['frontend']['host'],
+                hosts['frontend']['port']
+            ),
+            json={'iteration': i}
+        )
+    except:
+        logging.warning('Frontend may be down')
+
+
 def main():
     # TODO: Configure epochs and everything from here
     num_iterations = 50
@@ -54,6 +68,7 @@ def main():
     start = time.time()
     for i in range(num_iterations):
         logging.info('Iteration {}...'.format(i))
+        send_iteration_to_frontend(i)
 
         logging.info('Sending /train_model request to clients...')
         client_urls = get_client_urls('train_model')
