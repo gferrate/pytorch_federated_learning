@@ -7,17 +7,15 @@ from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
-init_global_state = {
-    'clients': {},
-    'iteration': -1,
-    'started_training': False
-}
 
 KEEP_ALIVE_TIMEOUT = 120  # Seconds
 
 
-global_state = init_global_state.copy()
-
+global_state = {
+    'clients': {},
+    'iteration': -1,
+    'started_training': False
+}
 
 def check_clients_ok():
     for client_id, client in global_state['clients'].items():
@@ -36,7 +34,11 @@ def index():
 
 @app.route('/restart')
 def restart():
-    global_state = init_global_state.copy()
+    global_state = {
+        'clients': {},
+        'iteration': -1,
+        'started_training': False
+    }
     return jsonify(global_state)
 
 
