@@ -33,6 +33,6 @@ It currently works with the [Human grasp dataset](http://stag.csail.mit.edu/). R
 
 
 ## TODO
-- [ ] Create an 'orchestrator' with a frontend to manage all the connections and processes.
+- [X] Create an 'orchestrator' with a frontend to manage all the connections and processes.
 - [ ] Make proper documentation explaining how to select *no split*, *IID* or *NON-IID* dataset distributions
 - [ ] Repeat experiments with 10 clients
