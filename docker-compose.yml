@@ -56,3 +56,48 @@ services:
         depends_on:
             - secure_aggregator
 
+    client_3:
+        container_name: "client_3"
+        image: "pytorch_fl"
+        ports:
+            - "8005:8005"
+        environment:
+            - TYPE=CLIENT
+            - PORT=8005
+            - N_CLIENT=2
+        volumes:
+            - ./logs:/code/logs:rw
+            - ./data/classification:/code/data/classification:rw
+        depends_on:
+            - secure_aggregator
+
+    client_4:
+        container_name: "client_4"
+        image: "pytorch_fl"
+        ports:
+            - "8006:8006"
+        environment:
+            - TYPE=CLIENT
+            - PORT=8006
+            - N_CLIENT=3
+        volumes:
+            - ./logs:/code/logs:rw
+            - ./data/classification:/code/data/classification:rw
+        depends_on:
+            - secure_aggregator
+
+    client_5:
+        container_name: "client_5"
+        image: "pytorch_fl"
+        ports:
+            - "8007:8007"
+        environment:
+            - TYPE=CLIENT
+            - PORT=8007
+            - N_CLIENT=4
+        volumes:
+            - ./logs:/code/logs:rw
+            - ./data/classification:/code/data/classification:rw
+        depends_on:
+            - secure_aggregator
+
