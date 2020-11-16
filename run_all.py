@@ -18,7 +18,7 @@ logging.basicConfig(
 )
 
 
-hosts = utils.read_hosts()
+hosts = utils.read_hosts(is_docker=False)
 
 
 def get_client_urls(endpoint):

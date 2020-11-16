@@ -7,3 +7,4 @@ sklearn
 pyyaml
 grequests
 matplotlib
+pyyaml
