@@ -108,5 +108,5 @@ def send_agg_to_mainserver():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=sec_agg.port, debug=False, use_reloader=True)
+    app.run(host='0.0.0.0', port=sec_agg.port, debug=False, use_reloader=False)
 

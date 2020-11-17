@@ -1,9 +1,9 @@
 main_server:
-    host: localhost
+    host: main_server
     port: 8000
 
 secure_aggregator:
-    host: localhost
+    host: secure_aggregator
     port: 8001
 
 frontend:
@@ -12,17 +12,18 @@ frontend:
 
 clients:
     - 1:
-        host: localhost
+        host: client_1
         port: 8003
     - 2:
-        host: localhost
+        host: client_2
         port: 8004
     - 3:
-        host: localhost
+        host: client_3
         port: 8005
     - 4:
+        host: client_4
         port: 8006
     - 5:
-        host: localhost
+        host: client_5
         port: 8007
 

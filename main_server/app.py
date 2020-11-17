@@ -93,5 +93,5 @@ def send_agg_to_clients():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=args.port, debug=False, use_reloader=True)
+    app.run(host='0.0.0.0', port=args.port, debug=False, use_reloader=False)
 
