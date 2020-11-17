@@ -84,7 +84,15 @@ def keep_alive():
     data = json.loads(request.data)
     _id = data['_id']
     if _id not in global_state['clients']:
-        return jsonify({'msg': 'No client with matching ID'})
+        global_state['clients'][_id] = {
+            'joined_at': datetime.now().strftime('%Y-%m-%d %H:%m'),
+            'client_type': data['client_type'],
+            'port': data['port'],
+            'check_ok': True,
+            'host': data['host'],
+            'last_ping': datetime.now()
+        }
+    global_state['clients'][_id].update({'state': data['state']})
     global_state['clients'][_id]['last_ping'] = datetime.now()
     return jsonify({'msg': 'OK'})
 

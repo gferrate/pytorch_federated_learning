@@ -19,7 +19,7 @@ SEC_AGG_SEND_TO_MAIN_SERVER = 6
 MAIN_SERVER_SEND_MODEL_TO_CLIENTS = 7
 MAIN_SERVER_GET_SECAGG_MODEL = 8
 
-PING_CADENCE = 5  # Seconds
+PING_CADENCE = 20  # Seconds
 
 hosts = utils.read_hosts()
 
@@ -74,7 +74,13 @@ class State:
             sleep(PING_CADENCE)
 
     def send_ping(self):
-        payload = {'_id': self._id}
+        payload = {
+            'client_type': self.client_type,
+            '_id': self._id,
+            'state': self.get_state_string(self.current_state),
+            'port': self.port,
+            'host': self.host
+        }
         try:
             requests.post(
                 url='http://{}:{}/ping'.format(
@@ -90,15 +96,12 @@ class State:
     def get_state_string(state):
         strings = {
             IDLE: 'IDLE',
-
             CLIENT_TRAIN_MODEL: 'Training model',
             CLIENT_GET_AGG_MODEL: 'Getting aggregated model',
             CLIENT_SEND_MODEL: 'Sending model to secure aggregator',
-
             SEC_AGG_GET_CLIENT_MODEL: 'Getting getting client models',
             SEC_AGG_SEND_TO_MAIN_SERVER: 'Sending model to main server',
             SEC_AGG_AGGREGATE_MODELS: 'Aggregating models',
-
             MAIN_SERVER_GET_SECAGG_MODEL: 'Getting model from sec agg',
             MAIN_SERVER_SEND_MODEL_TO_CLIENTS: 'Sending model to clients',
         }
