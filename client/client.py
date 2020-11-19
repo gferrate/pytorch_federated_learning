@@ -14,6 +14,10 @@ class Client:
         self.init_model()
 
     def init_model(self):
+        try:
+            del self.trainer
+        except NameError:
+            pass
         self.trainer = trainer.ClientTrainer(self.client_number,
                                              self.client_id,
                                              self.num_clients,
@@ -29,9 +33,9 @@ class Client:
         self.trainer.save_model()
 
     def update_model(self, path):
-        # TODO: This may not be necessary but it is to make sure that all
-        # weights are set to start
-        self.init_model()
+        # TODO: init_model here may not be necessary but it is to
+        # make sure that all weights are set to start
+        # self.init_model()
         self.trainer.update_model_from_file(path)
 
     def get_model_filename(self):
