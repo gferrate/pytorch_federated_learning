@@ -34,6 +34,7 @@ It currently works with the [Human grasp dataset](http://stag.csail.mit.edu/). R
 
 ## TODO
 - [X] Create an 'orchestrator' with a frontend to manage all the connections and processes.
-- [ ] Make proper documentation explaining how to select *no split*, *IID* or *NON-IID* dataset distributions
-- [ ] Repeat experiments with 10 clients
-- [ ] RAM optimizations
+- [ ] Make proper documentation explaining how to select *no split*, *IID* or *NON-IID* dataset distributions.
+- [ ] Repeat experiments with 10 clients.
+- [ ] RAM optimizations.
+- [ ] Perform aggregation even if one client is down for a certain period of time.
