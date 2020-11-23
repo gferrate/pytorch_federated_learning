@@ -38,3 +38,5 @@ It currently works with the [Human grasp dataset](http://stag.csail.mit.edu/). R
 - [ ] Repeat experiments with 10 clients.
 - [ ] RAM optimizations.
 - [ ] Perform aggregation even if one client is down for a certain period of time.
+- [ ] HTTPS communications
+- [ ] Limit resources of each client in order to be able to perform comparisons
