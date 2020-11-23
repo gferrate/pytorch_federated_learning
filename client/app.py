@@ -13,6 +13,12 @@ from shared.state import (
     CLIENT_SEND_MODEL,
     State
 )
+from OpenSSL import SSL
+
+
+context = SSL.Context(SSL.PROTOCOL_TLSv1_2)
+context.use_privatekey_file('certs/host.key')
+context.use_certificate_file('certs/host.cert')
 
 
 parser = argparse.ArgumentParser(description='PyTorch FedLearn')
@@ -121,4 +127,4 @@ def get_state():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=client.port, debug=False, use_reloader=False)
+    app.run(host='0.0.0.0', port=client.port, debug=False, use_reloader=False, ssl_context=context)
