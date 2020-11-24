@@ -60,12 +60,26 @@ def send_iteration_to_frontend(i):
         logging.warning('Frontend may be down')
 
 
+def restart_frontend():
+    logging.info('Restarting frontend')
+    try:
+        requests.post(
+            url='http://{}:{}/restart'.format(
+                hosts['frontend']['host'],
+                hosts['frontend']['port']
+            )
+        )
+    except:
+        logging.warning('Frontend may be down')
+
+
 def main():
     # TODO: Configure epochs and everything from here
     num_iterations = 50
     all_results = []
     #train_accs = {}
     start = time.time()
+    restart_frontend()
     for i in range(num_iterations):
         logging.info('Iteration {}...'.format(i))
         send_iteration_to_frontend(i)
