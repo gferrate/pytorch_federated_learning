@@ -13,6 +13,7 @@ from shared.state import (
     CLIENT_SEND_MODEL,
     State
 )
+from shared import rsa_utils
 
 
 parser = argparse.ArgumentParser(description='PyTorch FedLearn')
@@ -24,6 +25,7 @@ parser.add_argument('-s', '--split-type', type=str, required=False,
                     default='no_split',
                     help='Metadata split type. Example: no_split, iid')
 
+rsa = rsa_utils.RSAUtils()
 args = parser.parse_args()
 hosts = utils.read_hosts()
 num_clients = len(hosts['clients'])
@@ -61,28 +63,33 @@ def hello():
     return jsonify({'msg': '{} Running'.format(client.client_id)})
 
 
+@app.route('/pub_key')
+def get_pub_key():
+    return jsonify({'pub_key': rsa.export_public_key()})
+
+
 @assert_idle_state
 @app.route('/send_model')
 def send_model():
     state.current_state = CLIENT_SEND_MODEL
     model_fn = client.get_model_filename()
-    with open(model_fn, 'rb') as file:
-        data = {
-            'fname': model_fn,
-            'host': 'http://client:{}/'.format(client.port),
-            'client_id': client.client_id
-        }
-        files = {
-            'json': ('json_data', json.dumps(data), 'application/json'),
-            'model': (model_fn, file, 'application/octet-stream')
-        }
-        requests.post(
-            url='http://{}:{}/client_model'.format(
-                hosts['secure_aggregator']['host'],
-                hosts['secure_aggregator']['port']
-            ),
-            files=files
-        )
+    host = hosts['secure_aggregator']['host']
+    port = hosts['secure_aggregator']['port']
+    model_byte_array = open(model_fn, "rb").read()
+    enc_session_key, nonce, tag, ciphertext = \
+        rsa.encrypt_bytes(model_byte_array, host=host, port=port)
+    data = {'client_id': client.client_id}
+    files = {
+        'json': ('json_data', json.dumps(data), 'application/json'),
+        # 'model': (model_fn, encrypted_model, 'application/octet-stream')
+        'enc_session_key': ('sk', enc_session_key, 'application/octet-stream'),
+        'nonce': ('nonce', nonce, 'application/octet-stream'),
+        'tag': ('tag', tag, 'application/octet-stream'),
+        'ciphertext': ('ciphertext', ciphertext, 'application/octet-stream'),
+    }
+    requests.post(
+        url='http://{}:{}/client_model'.format(host, port), files=files
+    )
     state.idle()
     return jsonify({'msg': 'Model sent'})
 

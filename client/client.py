@@ -16,7 +16,7 @@ class Client:
     def init_model(self):
         try:
             del self.trainer
-        except NameError:
+        except:
             pass
         self.trainer = trainer.ClientTrainer(self.client_number,
                                              self.client_id,

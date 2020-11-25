@@ -13,12 +13,14 @@ from shared.state import (
     SEC_AGG_GET_CLIENT_MODEL,
     State
 )
+from shared import rsa_utils
 
 
 parser = argparse.ArgumentParser(description='PyTorch FL MNIST Example')
 parser.add_argument('-p', '--port', type=str, required=True,
                     help='Client port. Example: 8001')
 
+rsa = rsa_utils.RSAUtils()
 args = parser.parse_args()
 hosts = utils.read_hosts()
 
@@ -47,11 +49,23 @@ def index():
     return jsonify({'running': 1})
 
 
+@app.route('/pub_key')
+def get_pub_key():
+    return jsonify({'pub_key': rsa.export_public_key()})
+
+
 @assert_idle_state
 @app.route('/client_model', methods=['POST'])
 def get_client_model():
     state.current_state = SEC_AGG_GET_CLIENT_MODEL
-    file = request.files['model'].read()
+    # file = request.files['model'].read()
+    enc_session_key = request.files['enc_session_key'].read()
+    nonce = request.files['nonce'].read()
+    tag = request.files['tag'].read()
+    ciphertext = request.files['ciphertext'].read()
+    enc_data = (enc_session_key, nonce, tag, ciphertext)
+    file = rsa.decrypt_bytes(enc_data)
+    import pudb; pudb.set_trace()
     data = request.files['json'].read()
     data = json.loads(data.decode('utf-8'))
     client_id = data['client_id']
