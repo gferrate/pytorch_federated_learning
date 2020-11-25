@@ -81,15 +81,13 @@ def send_model():
     data = {'client_id': client.client_id}
     files = {
         'json': ('json_data', json.dumps(data), 'application/json'),
-        # 'model': (model_fn, encrypted_model, 'application/octet-stream')
         'enc_session_key': ('sk', enc_session_key, 'application/octet-stream'),
         'nonce': ('nonce', nonce, 'application/octet-stream'),
         'tag': ('tag', tag, 'application/octet-stream'),
         'ciphertext': ('ciphertext', ciphertext, 'application/octet-stream'),
     }
-    requests.post(
-        url='http://{}:{}/client_model'.format(host, port), files=files
-    )
+    requests.post(url='http://{}:{}/client_model'.format(host, port),
+                  files=files)
     state.idle()
     return jsonify({'msg': 'Model sent'})
 
@@ -98,7 +96,8 @@ def send_model():
 @app.route('/aggmodel', methods=['POST'])
 def get_agg_model():
     state.current_state = CLIENT_GET_AGG_MODEL
-    file = request.files['model'].read()
+    enc_data = rsa.get_crypt_files_from_req(request)
+    file = rsa.decrypt_bytes(enc_data)
     fname = request.files['json'].read()
     fname = json.loads(fname.decode('utf-8'))['fname']
     path = 'client/model_update/{}'.format(fname)

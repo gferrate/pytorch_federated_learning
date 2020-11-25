@@ -92,3 +92,11 @@ class RSAUtils:
         # Else query it
         self.public_keys[dict_key] = self.get_pub_key(host, port)
         return self.public_keys[dict_key]
+
+    @staticmethod
+    def get_crypt_files_from_req(request):
+        enc_session_key = request.files['enc_session_key'].read()
+        nonce = request.files['nonce'].read()
+        tag = request.files['tag'].read()
+        ciphertext = request.files['ciphertext'].read()
+        return (enc_session_key, nonce, tag, ciphertext)
