@@ -8,3 +8,4 @@ pyyaml
 grequests
 matplotlib
 pyyaml
+pycryptodome

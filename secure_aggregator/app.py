@@ -13,12 +13,14 @@ from shared.state import (
     SEC_AGG_GET_CLIENT_MODEL,
     State
 )
+from shared import rsa_utils
 
 
 parser = argparse.ArgumentParser(description='PyTorch FL MNIST Example')
 parser.add_argument('-p', '--port', type=str, required=True,
                     help='Client port. Example: 8001')
 
+rsa = rsa_utils.RSAUtils()
 args = parser.parse_args()
 hosts = utils.read_hosts()
 
@@ -47,11 +49,18 @@ def index():
     return jsonify({'running': 1})
 
 
+@app.route('/pub_key')
+def get_pub_key():
+    return jsonify({'pub_key': rsa.export_public_key()})
+
+
 @assert_idle_state
 @app.route('/client_model', methods=['POST'])
 def get_client_model():
     state.current_state = SEC_AGG_GET_CLIENT_MODEL
-    file = request.files['model'].read()
+    # file = request.files['model'].read()
+    enc_data = rsa.get_crypt_files_from_req(request)
+    file = rsa.decrypt_bytes(enc_data)
     data = request.files['json'].read()
     data = json.loads(data.decode('utf-8'))
     client_id = data['client_id']
@@ -91,22 +100,26 @@ def perform_model_aggregation():
 def send_agg_to_mainserver():
     state.current_state = SEC_AGG_SEND_TO_MAIN_SERVER
     path = sec_agg.get_model_filename()
-    with open(path, 'rb') as f:
-        data = {'fname': path, 'id': 'sec_agg'}
-        files = {
-            'json': ('json_data', json.dumps(data), 'application/json'),
-            'model': (path, f, 'application/octet-stream')
-        }
-        endpoint = 'http://{}:{}/secagg_model'.format(
-            hosts['main_server']['host'],
-            hosts['main_server']['port'])
-        req = requests.post(url=endpoint, files=files)
+    model_byte_array = open(path, "rb").read()
+    host = hosts['main_server']['host']
+    port = hosts['main_server']['port']
+    enc_session_key, nonce, tag, ciphertext = \
+        rsa.encrypt_bytes(model_byte_array, host=host, port=port)
+    data = {'fname': path, 'id': 'sec_agg'}
+    files = {
+        'json': ('json_data', json.dumps(data), 'application/json'),
+        'enc_session_key': ('sk', enc_session_key, 'application/octet-stream'),
+        'nonce': ('nonce', nonce, 'application/octet-stream'),
+        'tag': ('tag', tag, 'application/octet-stream'),
+        'ciphertext': ('ciphertext', ciphertext, 'application/octet-stream'),
+    }
+    url = 'http://{}:{}/secagg_model'.format(host, port)
+    req = requests.post(url=url, files=files)
+    state.idle()
     if req.status_code == 200:
         return jsonify({'msg': 'Aggregated model sent to main server'})
-    state.idle()
     return abort(404, description='Something went wrong')
 
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=sec_agg.port, debug=False, use_reloader=False)
-

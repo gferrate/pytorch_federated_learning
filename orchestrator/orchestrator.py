@@ -9,7 +9,6 @@ from shared import utils
 
 logging.basicConfig(
     format='%(asctime)s %(message)s',
-    # filename='logs/run.log',
     level=logging.INFO,
     handlers=[
         logging.FileHandler('logs/run.log'),
@@ -79,7 +78,7 @@ def main():
     all_results = []
     #train_accs = {}
     start = time.time()
-    restart_frontend()
+    # restart_frontend()
     for i in range(num_iterations):
         logging.info('Iteration {}...'.format(i))
         send_iteration_to_frontend(i)
