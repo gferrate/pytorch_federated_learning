@@ -6,7 +6,9 @@ It is being carried as my final thesis @ [King's College London](https://www.kcl
 It currently works with the [Human grasp dataset](http://stag.csail.mit.edu/). Repo [here](https://github.com/Erkil1452/touch).
 
 ## Scheme
-<img src="./documentation/img/diagram_0.png" width="500">
+<img src="./documentation/img/diagram_0.png" width="550">
+
+### Orchestrator process
 <img src="./documentation/img/diagram_1.png" width="500">
 
 ## How to run
@@ -38,5 +40,5 @@ It currently works with the [Human grasp dataset](http://stag.csail.mit.edu/). R
 - [ ] Repeat experiments with 10 clients.
 - [ ] RAM optimizations.
 - [ ] Perform aggregation even if one client is down for a certain period of time.
-- [ ] HTTPS communications
-- [ ] Limit resources of each client in order to be able to perform comparisons
+- [X] RSA Encryption.
+- [ ] Limit resources of each client in order to be able to perform comparisons.
