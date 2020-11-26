@@ -55,6 +55,11 @@ def index():
     return jsonify({'msg': 'Server running', 'clients': hosts['clients']})
 
 
+@app.route('/pub_key')
+def get_pub_key():
+    return jsonify({'pub_key': rsa.export_public_key()})
+
+
 @assert_idle_state
 @app.route('/secagg_model', methods=['POST'])
 def get_secagg_model():
