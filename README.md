@@ -6,10 +6,11 @@ It is being carried as my final thesis @ [King's College London](https://www.kcl
 It currently works with the [Human grasp dataset](http://stag.csail.mit.edu/). Repo [here](https://github.com/Erkil1452/touch).
 
 ## Scheme
-<img src="./documentation/img/diagram_2.png" width="550">
+<img src="./documentation/img/diagram_2.png" width="930">
 
-Orchestrator process
-<img src="./documentation/img/diagram_1.png" width="500">
+Orchestrator process:
+
+<img src="./documentation/img/diagram_1.png" width="550">
 
 ## How to run
 
