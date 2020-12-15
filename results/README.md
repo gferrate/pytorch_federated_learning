@@ -11,3 +11,6 @@
 
 ## Experiment 4: Accuracy with 5 clients over 50 communication rounds. No dataset split and 1 epoch per CR
 <img src="./results_kcl_3/result.png" width="100%">
+
+## Experiment 5: Accuracy with 9 clients in 3 servers over 50 communication rounds. No dataset split and 1 epoch per CR
+<img src="./results_kcl_9_clients/result.png" width="100%">

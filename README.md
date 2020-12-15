@@ -44,4 +44,4 @@ Orchestrator process:
 - [X] RSA Encryption.
 - [ ] Limit resources of each client in order to be able to perform comparisons.
 - [ ] Documentation of the frontend.
-- [ ] Repeat experiments with multiple machines
+- [X] Repeat experiments with multiple machines
