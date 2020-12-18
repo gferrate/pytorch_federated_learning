@@ -6,6 +6,7 @@ import time
 import logging
 
 from shared import utils
+import client_handler
 
 logging.basicConfig(
     format='%(asctime)s %(message)s',
@@ -17,17 +18,8 @@ logging.basicConfig(
 )
 
 
-hosts = utils.read_hosts(is_docker=False)
-
-
-def get_client_urls(endpoint):
-    hp = []
-    for cl in hosts['clients']:
-        host = cl[list(cl.keys())[0]]['host']
-        port = cl[list(cl.keys())[0]]['port']
-        url = 'http://{}:{}/{}'.format(host, port, endpoint)
-        hp.append(url)
-    return hp
+hosts = utils.read_hosts(override_localhost=False)
+client_opertaions_history = {}
 
 
 def log_elapsed_time(start):
@@ -74,40 +66,30 @@ def restart_frontend():
 
 def main():
     # TODO: Configure epochs and everything from here
-    num_iterations = 50
+    NUM_ITERATIONS = 50
     all_results = []
+    ch = client_handler.ClientHandler(clients=hosts['clients'], n_firsts=4)
     #train_accs = {}
     start = time.time()
     # restart_frontend()
-    for i in range(num_iterations):
+    for i in range(NUM_ITERATIONS):
         logging.info('Iteration {}...'.format(i))
         send_iteration_to_frontend(i)
 
         logging.info('Sending /train_model request to clients...')
-        client_urls = get_client_urls('train_model')
-        rs = (grequests.get(u) for u in client_urls)
-        responses = grequests.map(rs)
-        # print('\nTrain acc:')
-        for res in responses:
-            check_response_ok(res)
-            #res_json = res.json()
-            #print(res_json)
-            #print('\n')
-            #train_accs.setdefault(res_json['client_id'], []).append(
-            #    res_json['results'])
+        performed_clients = ch.perform_requests_and_wait('train_model')
+        logging.info('Performed clients: {}'.format(performed_clients))
         logging.info('Done')
         log_elapsed_time(start)
 
         logging.info('Sending /send_model command to clients...')
-        client_urls = get_client_urls('send_model')
-        rs = (grequests.get(u) for u in client_urls)
-        responses = grequests.map(rs)
-        for res in responses:
-            check_response_ok(res)
+        performed_clients = ch.perform_requests_and_wait('train_model')
+        logging.info('Performed clients: {}'.format(performed_clients))
         logging.info('Done')
         log_elapsed_time(start)
 
-        logging.info('Sending /aggregate_models command to secure aggregator...')
+        logging.info('Sending /aggregate_models '
+                     'command to secure aggregator...')
         url = 'http://{}:{}/aggregate_models'.format(
             hosts['secure_aggregator']['host'],
             hosts['secure_aggregator']['port']
@@ -122,7 +104,9 @@ def main():
         logging.info('Done')
         log_elapsed_time(start)
 
-        logging.info('Sending /send_model_to_main_server command to secure aggregator...')
+        logging.info(
+            'Sending /send_model_to_main_server '
+            'command to secure aggregator...')
         url = 'http://{}:{}/send_model_to_main_server'.format(
             hosts['secure_aggregator']['host'],
             hosts['secure_aggregator']['port']
@@ -144,8 +128,6 @@ def main():
         logging.info('Test result: {}'.format(test_result))
         log_elapsed_time(start)
 
-    # logging.info('All train accuracies:')
-    # print(train_accs)
     logging.info('All results:')
     logging.info(all_results)
 
