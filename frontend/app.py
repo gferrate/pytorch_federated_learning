@@ -25,10 +25,6 @@ def check_clients_ok():
         else:
             client['check_ok'] = True
 
-def get_id(host, port):
-    return 'client_{}_{}'.format(host, port)
-
-
 @app.route('/')
 def index():
     check_clients_ok()
@@ -60,7 +56,7 @@ def fake_data():
         client = random.choice(client_types)
         status = random.choice(statuses)
         check_ok = random.choice([True, False])
-        _id = 'client_127.0.0.1_{}'.format(port)
+        _id = 'fake_client_{}'.format(port)
         data = {
             'client_type': client,
             '_id': _id,
@@ -87,7 +83,7 @@ def keep_alive():
     data = json.loads(request.data)
     host = request.remote_addr
     port = data['port']
-    _id = get_id(host, port)
+    _id = data['_id']
     if _id not in global_state['clients']:
         global_state['clients'][_id] = {
             'joined_at': datetime.now().strftime('%Y-%m-%d %H:%m'),
@@ -118,7 +114,7 @@ def get_state():
     host = request.remote_addr
     data = json.loads(request.data)
     port = data['port']
-    _id = get_id(host, port)
+    _id = data['_id']
     if _id not in global_state['clients']:
         global_state['clients'][_id] = {
             'joined_at': datetime.now().strftime('%Y-%m-%d %H:%m'),
