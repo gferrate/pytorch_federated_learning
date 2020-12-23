@@ -3,28 +3,38 @@ import requests
 from time import time, sleep
 import logging
 
-CLIENT_OPERATIONS = ('client_train', 'send_model')
-
 
 class ClientHandler:
-    """Performs concurrent requests with timeout"""
+    """Performs concurrent requests with timeout
 
-    def __init__(self, clients, operation_mode='n_firsts', **kwargs):
+    :OPERATION_MODE n_firsts, timeout or wait_all.
+    :clients list of clients' (host, port) tuples
+    """
+
+    def __init__(self, clients, OPERATION_MODE='n_firsts', **kwargs):
         self.clients = self.parse_clients(clients)
         self.n_clients = len(clients)
-        self.operation_mode = operation_mode
-        # Creates a pool with N_CLIENTS threads
+        self.OPERATION_MODE = OPERATION_MODE
+        # Set the pool as None, later on will be created
         self.pool = None
         logging.info(
-            '[Client Handler] Operation mode: {}'.format(self.operation_mode))
-        if self.operation_mode == 'n_firsts':
-            self.N_FIRSTS = kwargs.get('n_firsts', max(1, self.n_clients - 2))
+            '[Client Handler] Operation mode: {}'.format(self.OPERATION_MODE))
+        default_n_firsts = max(1, self.n_clients - 2)
+        if self.OPERATION_MODE == 'n_firsts':
+            self.N_FIRSTS = kwargs.get('n_firsts', default_n_firsts)
+            import pudb; pudb.set_trace()
             assert self.N_FIRSTS <= self.n_clients, \
                 'n_firsts must be <= than num clients'
             logging.info(
                 '[Client Handler] n_firsts: {}'.format(self.N_FIRSTS))
-        elif self.operation_mode == 'timeout':
-            pass
+        elif self.OPERATION_MODE == 'timeout':
+            self.WAIT_FROM_N_FIRSTS = kwargs.get('wait_from_n_firsts',
+                                                 default_n_firsts)
+            self.TIMEOUT = kwargs.get('timoeut', 60)  # Seconds
+        elif self.OPERATION_MODE == 'wait_all':
+            self.N_FIRSTS = self.n_clients
+            logging.info('[Client Handler] Will wait '
+                         'until {} clients'.format(self.N_FIRSTS))
         else:
             raise Exception('Operation mode not accepted')
         self.operations_history = {}
@@ -32,13 +42,16 @@ class ClientHandler:
 
     def perform_requests_and_wait(self, endpoint):
         self.perform_parallel_requests(endpoint)
-        if self.operation_mode == 'n_firsts':
+        if self.OPERATION_MODE == 'n_firsts':
             if endpoint == 'send_model':
+                # TODO: Do this part with redundancy
                 return self.wait_until_n_responses(wait_all=True)
             return self.wait_until_n_responses()
-        elif self.operation_mode == 'timeout':
-            # TODO
-            return
+        elif self.OPERATION_MODE == 'timeout':
+            self.started = time()
+            return self.wait_until_timeout()
+        elif self.OPERATION_MODE == 'wait_all':
+            return self.wait_until_n_responses(wait_all=True)
 
     def init_operations_history(self):
         for host, port in self.clients:
@@ -63,9 +76,37 @@ class ClientHandler:
                                       [host, port, endpoint]))
         self.pool.close()
 
+    def wait_until_timeout(self):
+        ended_clients = set()
+        completed = False
+        while not completed:
+            for key in self.clients:
+                try:
+                    last_operation = self.operations_history[key][-1]
+                except IndexError:
+                    # Last operation still not computed
+                    continue
+                if last_operation['ended']:
+                    # TODO: Handle exception when status code != 200
+                    assert last_operation['res'].status_code == 200
+                    logging.info(
+                        '[Client Handler] client {} '
+                        'finished performing operation {}'.format(
+                            key, last_operation['op']
+                        )
+                    )
+                    ended_clients.add(key)
+            elapsed = time() - self.started
+            if ((len(ended_clients) >= self.WAIT_FROM_N_FIRSTS) and
+                    elapsed > self.TIMEOUT):
+                self.pool.terminate()
+                completed = True
+            sleep(0.1)
+        return list(ended_clients)
+
     def wait_until_n_responses(self, wait_all=False):
         # TODO: What to do in send model?
-        ended_clients = []
+        ended_clients = set()
         completed = False
         while not completed:
             # Periodically check if the requests are ending
@@ -84,13 +125,13 @@ class ClientHandler:
                             key, last_operation['op']
                         )
                     )
-                    ended_clients.append(key)
+                    ended_clients.add(key)
                 if ((not wait_all and (len(ended_clients) >= self.N_FIRSTS))
                         or (wait_all and len(ended_clients) == self.N_FIRSTS)):
                     self.pool.terminate()
                     completed = True
             sleep(0.1)
-        return ended_clients
+        return list(ended_clients)
 
     @staticmethod
     def get_client_key(host, port):

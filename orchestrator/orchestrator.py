@@ -68,7 +68,7 @@ def main():
     # TODO: Configure epochs and everything from here
     NUM_ITERATIONS = 50
     all_results = []
-    ch = client_handler.ClientHandler(clients=hosts['clients'], n_firsts=4)
+    ch = client_handler.ClientHandler(clients=hosts['clients'])#, n_firsts4)
     #train_accs = {}
     start = time.time()
     # restart_frontend()
