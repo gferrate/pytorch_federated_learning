@@ -9,14 +9,13 @@ from classification.object_cluster_dataset import ObjectClusterDataset
 
 
 epochs = 1  # Before 30
-nFrames = 1
+n_frames = 7  # Optimal == 7
 batch_size = 10
 workers = 0
 
 doFilter = True
 test = False
 large = False
-reset = False
 
 
 class Trainer(object):
@@ -41,7 +40,7 @@ class Trainer(object):
         return torch.utils.data.DataLoader(
             ObjectClusterDataset(
                 split=split, doAugment=(split == 'train'),
-                doFilter=doFilter, sequenceLength=nFrames,
+                doFilter=doFilter, sequenceLength=n_frames,
                 metaFile=self.metaFile, useClusters=useClusterSampling
             ),
             batch_size=batch_size,
@@ -115,7 +114,7 @@ class Trainer(object):
 
         self.model = Model(
             numClasses=len(self.val_loader.dataset.meta['objects']),
-            sequenceLength=nFrames)
+            sequenceLength=n_frames)
         self.model.epoch = 0
         self.model.bestPrec = -1e20
 
