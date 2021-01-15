@@ -28,6 +28,7 @@ Orchestrator process:
 1. Spawning Python with the shell script (Recommended).
     - Note: [screen](https://www.gnu.org/software/screen/) must be installed.
     - Change the `PYTHON_PATH` in the `initialize.sh` file to point to your python where all the requirements are installed.
+    - Add or remove as many clients as desired in the `initialize.sh` file.
     - Run the command: `DELETE_OLD_LOGS=1 RESTART_SCREEN=1 ./initialize.sh`
         - There are two env variables which can be set:
             - `DELETE_OLD_LOGS`: if set to 1, removes all logs in `logs/` folder. Useful for new run.
