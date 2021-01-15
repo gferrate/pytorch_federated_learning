@@ -11,7 +11,7 @@ logging.basicConfig(
     format='%(asctime)s %(message)s',
     level=logging.INFO,
     handlers=[
-        logging.FileHandler('logs/run.log'),
+        logging.FileHandler('logs/orchestrator.log'),
         logging.StreamHandler()
     ]
 )
@@ -151,4 +151,8 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception:
+        logger.error("Fatal error in main loop", exc_info=True)
+
