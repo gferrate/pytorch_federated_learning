@@ -23,6 +23,10 @@ screen -dmS client_0 bash -c "$PYTHON_PATH client/app.py -p 8003 -n 0"
 screen -dmS client_1 bash -c "$PYTHON_PATH client/app.py -p 8004 -n 1"
 screen -dmS client_2 bash -c "$PYTHON_PATH client/app.py -p 8005 -n 2"
 screen -dmS client_3 bash -c "$PYTHON_PATH client/app.py -p 8006 -n 3"
+screen -dmS client_4 bash -c "$PYTHON_PATH client/app.py -p 8007 -n 4"
 
+echo "Waiting 3 minutes so all clients start"
+sleep 3m
+echo "Starting run"
 # Start the orchestrator (will start the training).
 screen -dmS orchestrator bash -c "$PYTHON_PATH orchestrator/orchestrator.py"
