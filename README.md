@@ -37,6 +37,7 @@ Orchestrator process:
     - If you want to attach to a running screen, run the command `screen -S <screen_name>`.
     - If you want to dettach from a screen, when attached, run the commands `ctrl+A ctrl+D`.
     - If you want to kill to an exiting screen, when attached, run the commands `ctrl+A ctrl+K Y`.
+    - All connections and training status will be visible (here)[http://104.197.103.25:8002/frontend].
 
 2. Spawning Python manually (If screen not installed or more control desired).
     - Induce the functionality from the `initialize.sh` file.
