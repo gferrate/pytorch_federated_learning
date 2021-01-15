@@ -154,5 +154,5 @@ if __name__ == '__main__':
     try:
         main()
     except Exception:
-        logger.error("Fatal error in main loop", exc_info=True)
+        logging.error("Fatal error in main loop", exc_info=True)
 
