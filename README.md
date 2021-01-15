@@ -23,10 +23,10 @@ Orchestrator process:
     rm temp.zip
     ```
 
-### Step 2. There are two main ways to run the program
+### Step 2. There are 3 main ways to run the program
 
-- Spawning Python with the shell script (Recommended).
-    - Note: [https://www.gnu.org/software/screen/](screen) must be installed.
+1. Spawning Python with the shell script (Recommended).
+    - Note: [screen](https://www.gnu.org/software/screen/) must be installed.
     - Change the `PYTHON_PATH` in the `initialize.sh` file to point to your python where all the requirements are installed.
     - Run the command: `DELETE_OLD_LOGS=1 RESTART_SCREEN=1 ./initialize.sh`
         - There are two env variables which can be set:
@@ -36,12 +36,12 @@ Orchestrator process:
     - If you want to dettach from a screen, when attached, run the commands `ctrl+A ctrl+D`.
     - If you want to kill to an exiting screen, when attached, run the commands `ctrl+A ctrl+K Y`.
 
-- Spawning Python manually (If screen not installed or more control desired).
+2. Spawning Python manually (If screen not installed or more control desired).
     - Induce the functionality from the `initialize.sh` file.
 
-- Using Docker (Currently not compatible with GPU acceleration):
+3. Using Docker (Currently not compatible with GPU acceleration):
     - Create the image by running: `make build`.
-    - Run the image: `make run`. This will spawn the main server, secure aggregator and two clients. In order to increase the number of clients, modify the docker-compose.yml and hosts.yml files.
+    - Run the image: `make run`. This will spawn the main server, secure aggregator and two clients. In order to increase the number of clients, modify the `docker-compose.yml` and `hosts.yml` files.
 
 
 ## TODO
