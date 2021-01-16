@@ -18,12 +18,28 @@ screen -dmS main_server bash -c "$PYTHON_PATH main_server/app.py -p 8000"
 # Start secure aggregator in a new screen.
 screen -dmS secure_aggregator bash -c "$PYTHON_PATH secure_aggregator/app.py -p 8001"
 
+# Split type
+if [[ "$SPLIT_TYPE" == "no_split" ]]
+then
+    echo "No split type"
+    TO_APPEND="-s no_split"
+elif [[ "$SPLIT_TYPE" == "iid" ]]
+    echo "Split type: iid"
+    TO_APPEND="-s iid"
+elif [[ "$SPLIT_TYPE" == "iid" ]]
+    echo "Split type: non-iid"
+    TO_APPEND="-s non-iid-a"
+else
+    echo "No split type"
+    TO_APPEND="-s no_split"
+fi
+
 # Start N clients in new screens. Add or comment lines as wanted.
-screen -dmS client_0 bash -c "$PYTHON_PATH client/app.py -p 8003 -n 0"
-screen -dmS client_1 bash -c "$PYTHON_PATH client/app.py -p 8004 -n 1"
-screen -dmS client_2 bash -c "$PYTHON_PATH client/app.py -p 8005 -n 2"
-screen -dmS client_3 bash -c "$PYTHON_PATH client/app.py -p 8006 -n 3"
-screen -dmS client_4 bash -c "$PYTHON_PATH client/app.py -p 8007 -n 4"
+screen -dmS client_0 bash -c "$PYTHON_PATH client/app.py -p 8003 -n 0 $TO_APPEND"
+screen -dmS client_1 bash -c "$PYTHON_PATH client/app.py -p 8004 -n 1 $TO_APPEND"
+screen -dmS client_2 bash -c "$PYTHON_PATH client/app.py -p 8005 -n 2 $TO_APPEND"
+screen -dmS client_3 bash -c "$PYTHON_PATH client/app.py -p 8006 -n 3 $TO_APPEND"
+screen -dmS client_4 bash -c "$PYTHON_PATH client/app.py -p 8007 -n 4 $TO_APPEND"
 
 echo "Waiting 3 minutes so all clients start"
 sleep 3m
