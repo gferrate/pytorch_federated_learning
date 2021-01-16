@@ -24,7 +24,7 @@ parser.add_argument('-n', '--client-number', type=int, required=True,
 parser.add_argument('-s', '--split-type', type=str, required=False,
                     default='no_split',
                     help=('Metadata split type. '
-                          'Example: no_split, iid, non-iid-a')
+                          'Example: no_split, iid, non-iid-a'))
 
 rsa = rsa_utils.RSAUtils()
 args = parser.parse_args()
