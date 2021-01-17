@@ -24,11 +24,11 @@ then
     echo "No split type"
     TO_APPEND="-s no_split"
 elif [[ "$SPLIT_TYPE" == "iid" ]]
-else
+then
     echo "Split type: iid"
     TO_APPEND="-s iid"
 elif [[ "$SPLIT_TYPE" == "iid" ]]
-else
+then
     echo "Split type: non-iid"
     TO_APPEND="-s non-iid-a"
 else
