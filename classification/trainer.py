@@ -259,6 +259,8 @@ class ClientTrainer(Trainer):
         # Split dataset if file does not exist
         if data_split_type in ('iid', 'non-iid-a', 'non-iid-b'):
             from shared import dataset_tools
+            # TODO: Reimplement this with a lock file.
+            # If multiple clients are spawned this can be a problem.
             if not self.file_exists(self.metaFile):
                 fn = '{}/metadata.mat'.format(mf)
                 dataset_tools.split_dataset(fn, data_split_type, num_clients)

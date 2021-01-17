@@ -98,7 +98,6 @@ def split_dataset(filename, split_type, num_clients):
         # Split the dataset into <num_clients> uniformally distributed
 
         # Create the new positions for the new splits
-        import pudb; pudb.set_trace()
         n_train = len(train_positions)
         times = int(np.ceil(n_train/num_clients))
         new_train_split_ids = np.repeat(np.arange(num_clients), times)
