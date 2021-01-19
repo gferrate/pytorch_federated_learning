@@ -12,6 +12,11 @@ Orchestrator process:
 
 <img src="./documentation/img/diagram_1.png" width="550">
 
+## Results
+
+You can see the results of the experiments done [here](results/README.md).
+
+
 ## How to run
 
 ### Step 1. Copy the dataset locally
