@@ -11,7 +11,7 @@ class ClientHandler:
     :clients list of clients' (host, port) tuples
     """
 
-    def __init__(self, clients, OPERATION_MODE='n_firsts', **kwargs):
+    def __init__(self, clients, OPERATION_MODE='wait_all', **kwargs):
         self.clients = self.parse_clients(clients)
         self.n_clients = len(clients)
         self.OPERATION_MODE = OPERATION_MODE

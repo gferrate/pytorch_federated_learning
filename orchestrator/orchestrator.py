@@ -4,6 +4,7 @@ import grequests
 import requests
 import time
 import logging
+import argparse
 
 from shared import utils
 import client_handler
@@ -64,11 +65,12 @@ def restart_frontend():
         logging.warning('Frontend may be down')
 
 
-def main():
+def main(op_mode):
     # TODO: Configure epochs and everything from here
     NUM_ITERATIONS = 50
     all_results = []
-    ch = client_handler.ClientHandler(clients=hosts['clients'])#, n_firsts4)
+    ch = client_handler.ClientHandler(clients=hosts['clients'],
+                                      OPERATION_MODE=op_mode)
     #train_accs = {}
     start = time.time()
     # restart_frontend()
@@ -133,8 +135,17 @@ def main():
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Orchestrator')
+    # TODO: Add configuration for Client handlers in other modes (timeout, etc)
+    parser.add_argument('-o', '--operation-mode', type=str, required=False,
+                        default='wait_all',
+                        help=(
+                            'Operation mode. '
+                            'Options: wait_all (default), n_firsts, timeout'
+                        ))
+    args = parser.parse_args()
     try:
-        main()
+        main(op_mode=args.operation_mode)
     except Exception:
         logging.error("Fatal error in main loop", exc_info=True)
 
