@@ -117,7 +117,9 @@ class ClientHandler:
                 except IndexError:
                     # Last operation still not computed
                     continue
-                if last_operation['ended']:
+                if key in ended_clients:
+                    continue
+                elif last_operation['ended']:
                     # TODO: Handle exception when status code != 200
                     assert last_operation['response'].status_code == 200
                     logging.info(

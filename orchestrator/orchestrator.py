@@ -20,7 +20,6 @@ logging.basicConfig(
 
 
 hosts = utils.read_hosts(override_localhost=False)
-client_opertaions_history = {}
 
 
 def log_elapsed_time(start):
