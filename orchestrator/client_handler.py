@@ -22,7 +22,6 @@ class ClientHandler:
         default_n_firsts = max(1, self.n_clients - 2)
         if self.OPERATION_MODE == 'n_firsts':
             self.N_FIRSTS = kwargs.get('n_firsts', default_n_firsts)
-            import pudb; pudb.set_trace()
             assert self.N_FIRSTS <= self.n_clients, \
                 'n_firsts must be <= than num clients'
             logging.info(
