@@ -35,3 +35,6 @@
 
 ## Experiment 11: Accuracy with 9 clients in 3 servers over 50 communication rounds and 7 input frames. No dataset split and 1 epoch per CR
 <img src="./results_kcl_9_clients_7_frames_no_split/result.png" width="100%">
+
+## Experiment 12: Accuracy with 9 clients in 3 servers over 50 communication rounds and 7 input frames. IID split and 1 epoch per CR
+<img src="./results_kcl_9_clients_7_frames_iid/result.png" width="100%">
