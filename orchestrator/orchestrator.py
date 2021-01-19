@@ -85,7 +85,7 @@ def main(op_mode):
         log_elapsed_time(start)
 
         logging.info('Sending /send_model command to clients...')
-        performed_clients = ch.perform_requests_and_wait('train_model')
+        performed_clients = ch.perform_requests_and_wait('send_model')
         logging.info('Performed clients: {}'.format(performed_clients))
         logging.info('Done')
         log_elapsed_time(start)
