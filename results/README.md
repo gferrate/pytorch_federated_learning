@@ -18,8 +18,6 @@
 ## Experiment 5: Accuracy with 9 clients in 3 servers over 50 communication rounds. No dataset split and 1 epoch per CR
 <img src="./results_kcl_9_clients/result.png" width="100%">
 
-## HERE
-
 ## Experiment 6: Accuracy with one client over 30 communication rounds and 7 input frames (No Federated Learning applied / control)
 <img src="./results_kcl_7_frames_non_fedlearn/result.png" width="100%">
 
@@ -34,3 +32,6 @@
 
 ## Experiment 10: Accuracy with 5 clients over 50 communication rounds and 7 input frames. Non-IID-a split and 1 epoch per CR
 <img src="./results_kcl_7_frames_non_iid_a_5_clients/result.png" width="100%">
+
+## Experiment 11: Accuracy with 9 clients in 3 servers over 50 communication rounds and 7 input frames. No dataset split and 1 epoch per CR
+<img src="./results_kcl_9_clients_7_frames_no_split/result.png" width="100%">
