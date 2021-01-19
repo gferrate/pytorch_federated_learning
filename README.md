@@ -57,7 +57,9 @@ You can see the results of the experiments done [here](results/README.md).
 
 
 ## Frontend
-To start the frontend just run the command: `python frontend/app.py`. It is recommended to attach it to a service file and deploy it to a server in order to be always running.
+To start the frontend just run the command: `python frontend/app.py`.
+It is recommended to attach it to a service file and deploy it to a server in order to be always running.
+To restart the frontend just perform the request: `http://104.197.103.25:8002/restart`.
 
 Here is a screenshot of the frontend currently running on http://104.197.103.25:8002/frontend.
 
