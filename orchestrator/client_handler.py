@@ -88,7 +88,7 @@ class ClientHandler:
                     continue
                 if last_operation['ended']:
                     # TODO: Handle exception when status code != 200
-                    assert last_operation['res'].status_code == 200
+                    assert last_operation['response'].status_code == 200
                     logging.info(
                         '[Client Handler] client {} '
                         'finished performing operation {}'.format(
@@ -118,7 +118,7 @@ class ClientHandler:
                     continue
                 if last_operation['ended']:
                     # TODO: Handle exception when status code != 200
-                    assert last_operation['res'].status_code == 200
+                    assert last_operation['response'].status_code == 200
                     logging.info(
                         '[Client Handler] client {} '
                         'finished performing operation {}'.format(
