@@ -36,7 +36,6 @@ class ClientHandler:
                          'until {} clients'.format(self.N_FIRSTS))
         else:
             raise Exception('Operation mode not accepted')
-        self.operations_history = {}
         self.init_operations_history()
 
     def perform_requests_and_wait(self, endpoint):
@@ -53,6 +52,7 @@ class ClientHandler:
             return self.wait_until_n_responses(wait_all=True)
 
     def init_operations_history(self):
+        self.operations_history = {}
         for host, port in self.clients:
             key = self.get_client_key(host, port)
             self.operations_history[key] = []
@@ -67,6 +67,7 @@ class ClientHandler:
         return p_clients
 
     def perform_parallel_requests(self, endpoint):
+        self.init_operations_history()
         futures = []
         self.pool = Pool(self.n_clients)
         for host, port in self.clients:
@@ -89,7 +90,10 @@ class ClientHandler:
                     continue
                 elif last_operation['ended']:
                     # TODO: Handle exception when status code != 200
-                    assert last_operation['response'].status_code == 200
+                    if last_operation['response'].status_code != 200:
+                        raise Exception(
+                            'Error in response. Error code: {}'.format(
+                                last_operation['response'].text))
                     logging.info(
                         '[Client Handler] client {} '
                         'finished performing operation {}'.format(
@@ -121,7 +125,10 @@ class ClientHandler:
                     continue
                 elif last_operation['ended']:
                     # TODO: Handle exception when status code != 200
-                    assert last_operation['response'].status_code == 200
+                    if last_operation['response'].status_code != 200:
+                        raise Exception(
+                            'Error in response. Error code: {}'.format(
+                                last_operation['response'].text))
                     logging.info(
                         '[Client Handler] client {} '
                         'finished performing operation {}'.format(
