@@ -4,6 +4,8 @@ import logging
 import socket
 from time import sleep
 import multiprocessing
+import random
+from string import ascii_uppercase, digits
 
 
 IDLE = 0
@@ -25,16 +27,20 @@ hosts = utils.read_hosts()
 
 
 class State:
-    def __init__(self, client_type, _id, port):
+    def __init__(self, client_type, port, _id=None):
         assert client_type in ('client', 'secure_aggregator', 'main_server')
         self.client_type = client_type
         self.host = socket.gethostbyname(socket.gethostname())
         self.port = port
-        self._id = _id
+        self._id = _id if _id else self.generate_random_id()
         self._current_state = IDLE
         self.current_state = IDLE
         p = multiprocessing.Process(target=self.send_ping_continuously)
         p.start()
+
+    @staticmethod
+    def generate_random_id(N=8):
+        return ''.join(random.choices(ascii_uppercase + digits, k=N))
 
     @property
     def current_state(self):

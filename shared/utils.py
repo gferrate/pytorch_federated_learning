@@ -1,10 +1,10 @@
 import yaml
 
 
-def read_hosts(is_docker=True):
+def read_hosts(override_localhost=False):
     with open('hosts.yml', 'r') as f:
         hosts = yaml.safe_load(f)
-    if not is_docker:
+    if override_localhost:
         # Change to hosts to localhost
         for x, vals in hosts.items():
             if x != 'frontend' and x != 'clients':

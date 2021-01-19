@@ -25,7 +25,6 @@ def check_clients_ok():
         else:
             client['check_ok'] = True
 
-
 @app.route('/')
 def index():
     check_clients_ok()
@@ -57,7 +56,7 @@ def fake_data():
         client = random.choice(client_types)
         status = random.choice(statuses)
         check_ok = random.choice([True, False])
-        _id = 'client_{}'.format(port)
+        _id = 'fake_client_{}'.format(port)
         data = {
             'client_type': client,
             '_id': _id,
@@ -82,14 +81,16 @@ def index_fe():
 def keep_alive():
     global global_state
     data = json.loads(request.data)
+    host = request.remote_addr
+    port = data['port']
     _id = data['_id']
     if _id not in global_state['clients']:
         global_state['clients'][_id] = {
             'joined_at': datetime.now().strftime('%Y-%m-%d %H:%m'),
             'client_type': data['client_type'],
-            'port': data['port'],
+            'port': port,
             'check_ok': True,
-            'host': data['host'],
+            'host': host,
             'last_ping': datetime.now()
         }
     global_state['clients'][_id].update({'state': data['state']})
@@ -110,15 +111,17 @@ def iteration():
 @app.route('/send_state', methods=['POST'])
 def get_state():
     global global_state
+    host = request.remote_addr
     data = json.loads(request.data)
+    port = data['port']
     _id = data['_id']
     if _id not in global_state['clients']:
         global_state['clients'][_id] = {
             'joined_at': datetime.now().strftime('%Y-%m-%d %H:%m'),
             'client_type': data['client_type'],
-            'port': data['port'],
+            'port': port,
             'check_ok': True,
-            'host': data['host'],
+            'host': host,
             'last_ping': datetime.now()
         }
     global_state['clients'][_id].update({'state': data['state']})
