@@ -10,7 +10,7 @@ PYTHON_PATH="/Users/Gabrieljr./.virtualenvs/pytorch_fl/bin/python"
 [[ ! -z "$DELETE_OLD_LOGS" && "$DELETE_OLD_LOGS" != 0  ]] && echo "Deleting old logs" && rm logs/*.log || echo "Not deleting old logs"
 
 # Restart the frontend
-curl http://104.197.103.25:8002/restart
+curl http://95.179.192.253:8002/restart
 
 # Start main server in a new screen.
 screen -dmS main_server bash -c "$PYTHON_PATH main_server/app.py -p 8000"

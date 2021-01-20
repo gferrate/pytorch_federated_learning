@@ -46,7 +46,7 @@ You can see the results of the experiments done [here](results/README.md).
     - If you want to attach to a running screen, run the command `screen -S <screen_name>`.
     - If you want to dettach from a screen, when attached, run the commands `ctrl+A ctrl+D`.
     - If you want to kill to an exiting screen, when attached, run the commands `ctrl+A ctrl+K Y`.
-    - All connections and training status will be visible [here](http://104.197.103.25:8002/frontend).
+    - All connections and training status will be visible [here](http://95.179.192.253:8002/frontend).
 
 2. Spawning Python manually (If screen not installed or more control desired).
     - Induce the functionality from the `initialize.sh` file.
@@ -59,9 +59,9 @@ You can see the results of the experiments done [here](results/README.md).
 ## Frontend
 To start the frontend just run the command: `python frontend/app.py`.
 It is recommended to attach it to a service file and deploy it to a server in order to be always running.
-To restart the frontend just perform the request: `http://104.197.103.25:8002/restart`.
+To restart the frontend just perform the request: `http://95.179.192.253:8002/restart`.
 
-Here is a screenshot of the frontend currently running on http://104.197.103.25:8002/frontend.
+Here is a screenshot of the frontend currently running on http://95.179.192.253:8002/frontend.
 
 <img src="./documentation/img/frontend_failed.png" width="930">
 
