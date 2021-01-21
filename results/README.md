@@ -1,5 +1,9 @@
 # Experimental results
 
+## Experiment 1: 7 frames comparison
+<img src="./results/results_join_7_frames/result.png" width="100%">
+
+<!--
 ## Experiment 0: Accuracy with one client over 30 communication rounds (No Federated Learning applied / control)
 <img src="./results_kcl_non_fedlearn/result.png" width="100%">
 
@@ -38,3 +42,4 @@
 
 ## Experiment 12: Accuracy with 9 clients in 3 servers over 50 communication rounds and 7 input frames. IID split and 1 epoch per CR
 <img src="./results_kcl_9_clients_7_frames_iid/result.png" width="100%">
+-->
