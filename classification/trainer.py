@@ -213,15 +213,26 @@ class Trainer(object):
 
 
 class SecAggTrainer(Trainer):
-    def __init__(self, client_id):
+    def __init__(self, client_id, num_clients, data_split_type):
         self.client_id = client_id
         self.logger = 'logs/{}.log'.format(self.client_id)
         self.init_logger()
         self.type = 'secure_aggregator'
         self.snapshotDir = 'secure_aggregator/persistent_storage'
         self.client_number = None
-        self.train_split = 'train'
-        self.metaFile = 'data/classification/metadata.mat'
+        self.train_split = 'train' # Shouldn't be needed since it doesn't train
+        mf = 'data/classification'
+        if data_split_type == 'iid':
+            self.metaFile = '{}/metadata_{}_clients_iid.mat'.format(
+                mf, num_clients)
+        elif data_split_type == 'non-iid-a':
+            self.metaFile = '{}/metadata_{}_clients_non_iid_a.mat'.format(
+                mf, num_clients)
+        elif data_split_type == 'no_split':
+            self.metaFile = '{}/metadata.mat'.format(mf)
+        else:
+            raise Exception('Data split type "{}" not implemented'.format(
+                data_split_type))
         self.init()
         super(Trainer, self).__init__()
 

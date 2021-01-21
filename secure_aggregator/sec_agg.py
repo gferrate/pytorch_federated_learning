@@ -10,7 +10,7 @@ from classification import trainer
 
 class SecAgg:
 
-    def __init__(self, port, use_cuda=True):
+    def __init__(self, port):
         self.init_logger()
         self.port = port
         # TODO: Num clients don't have to be in SecAgg
@@ -30,7 +30,9 @@ class SecAgg:
         )
 
     def init_model(self):
-        self.trainer = trainer.SecAggTrainer(self.client_id)
+        self.trainer = trainer.SecAggTrainer(self.client_id,
+                                             self.num_clients,
+                                             self.split_type)
 
     def load_models(self):
         logging.info('Loading client models...')
