@@ -47,6 +47,7 @@ class SecAgg:
                     data = torch.load(fn)
                     # arr.append(np.load(fn, allow_pickle=True))
                     arr.append(data)
+                    logging.info('Loaded {}'.format(fn))
         models = np.array(arr)
         logging.info('Done')
         return models
@@ -66,7 +67,7 @@ class SecAgg:
         #fl_avg = np.average(weights, axis=0)
         #for i in fl_avg:
         #    logging.info(i.shape)
-        logging.info('\tDone')
+        logging.info('\tDone. Averaged {} models'.format(len(models)))
         return avg_model
 
     def aggregate_models(self):
