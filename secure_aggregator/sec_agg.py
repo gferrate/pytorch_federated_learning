@@ -10,9 +10,11 @@ from classification import trainer
 
 class SecAgg:
 
-    def __init__(self, port):
+    def __init__(self, port, num_clients, split_type):
         self.init_logger()
         self.port = port
+        self.num_clients = num_clients
+        self.split_type = split_type
         # TODO: Num clients don't have to be in SecAgg
         self.client_id = 'client_{}'.format(self.port)
         self.client_models_folder = 'secure_aggregator/client_models'
