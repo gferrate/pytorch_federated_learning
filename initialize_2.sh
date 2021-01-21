@@ -18,7 +18,7 @@ elif [[ "$SPLIT_TYPE" == "iid" ]]
 then
     echo "Split type: iid"
     TO_APPEND="-s iid"
-elif [[ "$SPLIT_TYPE" == "iid" ]]
+elif [[ "$SPLIT_TYPE" == "non-iid" ]]
 then
     echo "Split type: non-iid"
     TO_APPEND="-s non-iid-a"
