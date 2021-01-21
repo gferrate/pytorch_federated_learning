@@ -39,6 +39,7 @@ You can see the results of the experiments done [here](results/README.md).
         - There are 3 env variables which can be set:
             - `DELETE_OLD_LOGS`: if set to 1, removes all logs in `logs/` folder. Useful for new run.
             - `RESTART_SCREEN`: if set to 1, kills all current screens. Useful for new run.
+            - `N_FRAMES`: Number of input frames.
             - `SPLIT_TYPE`: Can be set to 3 values (more information in dissemination):
                 - `no_split`: No split in the dataset is performed.
                 - `iid`: IID split type is performed.

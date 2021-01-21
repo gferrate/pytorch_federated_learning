@@ -27,6 +27,16 @@ else
     TO_APPEND="-s no_split"
 fi
 
+# N frames
+if [[ -z "$N_FRAMES" ]]
+then
+    echo "No N_FRAMES DEFINED. DEFAULT = 1"
+    N_FRAMES_APPEND=""
+else
+    echo "N_FRAMES DEFINED: $N_FRAMES"
+    N_FRAMES_APPEND=" -f $N_FRAMES"
+fi
+
 # Restart the frontend
 curl http://95.179.192.253:8002/restart
 
@@ -34,14 +44,14 @@ curl http://95.179.192.253:8002/restart
 screen -dmS main_server bash -c "$PYTHON_PATH main_server/app.py -p 8000"
 
 # Start secure aggregator in a new screen.
-screen -dmS secure_aggregator bash -c "$PYTHON_PATH secure_aggregator/app.py -p 8001 $TO_APPEND"
+screen -dmS secure_aggregator bash -c "$PYTHON_PATH secure_aggregator/app.py -p 8001 $TO_APPEND $N_FRAMES_APPEND"
 
 # Start N clients in new screens. Add or comment lines as wanted.
-screen -dmS client_0 bash -c "$PYTHON_PATH client/app.py -p 8003 -n 0 $TO_APPEND"
-screen -dmS client_1 bash -c "$PYTHON_PATH client/app.py -p 8004 -n 1 $TO_APPEND"
-screen -dmS client_2 bash -c "$PYTHON_PATH client/app.py -p 8005 -n 2 $TO_APPEND"
-screen -dmS client_3 bash -c "$PYTHON_PATH client/app.py -p 8006 -n 3 $TO_APPEND"
-screen -dmS client_4 bash -c "$PYTHON_PATH client/app.py -p 8007 -n 4 $TO_APPEND"
+screen -dmS client_0 bash -c "$PYTHON_PATH client/app.py -p 8003 -n 0 $TO_APPEND $N_FRAMES_APPEND"
+screen -dmS client_1 bash -c "$PYTHON_PATH client/app.py -p 8004 -n 1 $TO_APPEND $N_FRAMES_APPEND"
+screen -dmS client_2 bash -c "$PYTHON_PATH client/app.py -p 8005 -n 2 $TO_APPEND $N_FRAMES_APPEND"
+screen -dmS client_3 bash -c "$PYTHON_PATH client/app.py -p 8006 -n 3 $TO_APPEND $N_FRAMES_APPEND"
+screen -dmS client_4 bash -c "$PYTHON_PATH client/app.py -p 8007 -n 4 $TO_APPEND $N_FRAMES_APPEND"
 
 # Start the orchestrator (will start the training).
 echo "Waiting 1 minutes so all clients start"

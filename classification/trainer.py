@@ -9,7 +9,6 @@ from classification.object_cluster_dataset import ObjectClusterDataset
 
 
 epochs = 1  # Before 30
-n_frames = 7  # Optimal == 7
 batch_size = 10
 workers = 0
 
@@ -19,9 +18,31 @@ large = False
 
 
 class Trainer(object):
-    def __init__(self):
-        # __init__ overrided in child classes
-        pass
+
+    def __init__(self, port, n_frames, client_id, num_clients, data_split_type):
+        # Common init in both childs
+        self.port = port
+        self.n_frames = n_frames  # Optimal frames == 7
+        self.client_id = client_id
+        self.num_clients = num_clients
+        self.data_split_type = data_split_type
+        self.logger = 'logs/{}.log'.format(self.client_id)
+        self.init_logger()
+        self.metaFile = self.get_meta_file()
+
+    def get_meta_file(self):
+        mf = 'data/classification'
+        if self.data_split_type == 'iid':
+            return '{}/metadata_{}_clients_iid.mat'.format(mf,
+                                                           self.num_clients)
+        elif self.data_split_type == 'non-iid-a':
+            return '{}/metadata_{}_clients_non_iid_a.mat'.format(
+                mf, self.num_clients)
+        elif self.data_split_type == 'no_split':
+            return '{}/metadata.mat'.format(mf)
+        else:
+            raise Exception('Data split type "{}" not implemented'.format(
+                self.data_split_type))
 
     def init_logger(self):
         logging.basicConfig(
@@ -40,7 +61,7 @@ class Trainer(object):
         return torch.utils.data.DataLoader(
             ObjectClusterDataset(
                 split=split, doAugment=(split == 'train'),
-                doFilter=doFilter, sequenceLength=n_frames,
+                doFilter=doFilter, sequenceLength=self.n_frames,
                 metaFile=self.metaFile, useClusters=useClusterSampling
             ),
             batch_size=batch_size,
@@ -114,7 +135,7 @@ class Trainer(object):
 
         self.model = Model(
             numClasses=len(self.val_loader.dataset.meta['objects']),
-            sequenceLength=n_frames)
+            sequenceLength=self.n_frames)
         self.model.epoch = 0
         self.model.bestPrec = -1e20
 
@@ -213,28 +234,21 @@ class Trainer(object):
 
 
 class SecAggTrainer(Trainer):
-    def __init__(self, client_id, num_clients, data_split_type):
-        self.client_id = client_id
-        self.logger = 'logs/{}.log'.format(self.client_id)
-        self.init_logger()
+    def __init__(self,
+                 port,
+                 n_frames,
+                 num_clients,
+                 data_split_type):
+        client_id = 'sec_agg'
+        super().__init__(port,
+                         n_frames,
+                         client_id,
+                         num_clients,
+                         data_split_type)
         self.type = 'secure_aggregator'
         self.snapshotDir = 'secure_aggregator/persistent_storage'
-        self.client_number = None
         self.train_split = 'train' # Shouldn't be needed since it doesn't train
-        mf = 'data/classification'
-        if data_split_type == 'iid':
-            self.metaFile = '{}/metadata_{}_clients_iid.mat'.format(
-                mf, num_clients)
-        elif data_split_type == 'non-iid-a':
-            self.metaFile = '{}/metadata_{}_clients_non_iid_a.mat'.format(
-                mf, num_clients)
-        elif data_split_type == 'no_split':
-            self.metaFile = '{}/metadata.mat'.format(mf)
-        else:
-            raise Exception('Data split type "{}" not implemented'.format(
-                data_split_type))
         self.init()
-        super(Trainer, self).__init__()
 
     def get_checkpoint_path(self):
         return os.path.join(self.snapshotDir, 'checkpoint.tar')
@@ -244,31 +258,25 @@ class SecAggTrainer(Trainer):
 
 
 class ClientTrainer(Trainer):
-    def __init__(self, client_number, client_id, num_clients, data_split_type):
-        self.client_id = client_id
-        self.logger = 'logs/{}.log'.format(self.client_id)
-        self.init_logger()
+    def __init__(self,
+                 port,
+                 n_frames,
+                 client_number,
+                 num_clients,
+                 data_split_type,
+                 client_id):
+        super().__init__(port,
+                         n_frames,
+                         client_id,
+                         num_clients,
+                         data_split_type)
         self.type = 'client'
-        self.snapshotDir = 'client/snapshots_{}'.format(self.client_id)
-        self.client_number = client_number
-        mf = 'data/classification'
-        if data_split_type == 'iid':
-            self.train_split = 'train_{}'.format(client_number)
-            self.metaFile = '{}/metadata_{}_clients_iid.mat'.format(
-                mf, num_clients)
-        elif data_split_type == 'non-iid-a':
-            self.train_split = 'train_{}'.format(client_number)
-            self.metaFile = '{}/metadata_{}_clients_non_iid_a.mat'.format(
-                mf, num_clients)
-        elif data_split_type == 'no_split':
-            self.train_split = 'train'
-            self.metaFile = '{}/metadata.mat'.format(mf)
-        else:
-            raise Exception('Data split type "{}" not implemented'.format(
-                data_split_type))
+        self.snapshotDir = 'client/snapshots_{}'.format(self.port)
+        # Dont do it with the client_id to avoid tons of folders generated
+        self.train_split = self.get_train_split()
 
         # Split dataset if file does not exist
-        if data_split_type in ('iid', 'non-iid-a', 'non-iid-b'):
+        if self.data_split_type in ('iid', 'non-iid-a', 'non-iid-b'):
             from shared import dataset_tools
             # TODO: Reimplement this with a lock file.
             # If multiple clients are spawned this can be a problem.
@@ -287,7 +295,14 @@ class ClientTrainer(Trainer):
                 logging.info('File {} already exists. '
                              'Not creating.'.format(self.metaFile))
         self.init()
-        super(Trainer, self).__init__()
+
+    def get_train_split(self):
+        if self.data_split_type == 'iid':
+            return 'train_{}'.format(self.client_number)
+        elif self.data_split_type == 'non-iid-a':
+            return 'train_{}'.format(self.client_number)
+        elif self.data_split_type == 'no_split':
+            return 'train'
 
 
 class AverageMeter(object):
