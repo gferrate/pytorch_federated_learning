@@ -26,8 +26,8 @@ class Trainer(object):
         self.client_id = client_id
         self.num_clients = num_clients
         self.data_split_type = data_split_type
-        self.logger = 'logs/{}.log'.format(self.client_id)
-        self.init_logger()
+        #self.logger = 'logs/{}.log'.format(self.client_id)
+        #self.init_logger() # Logged from parent
         self.metaFile = self.get_meta_file()
 
     def get_meta_file(self):
@@ -238,8 +238,8 @@ class SecAggTrainer(Trainer):
                  port,
                  n_frames,
                  num_clients,
+                 client_id,
                  data_split_type):
-        client_id = 'sec_agg'
         super().__init__(port,
                          n_frames,
                          client_id,

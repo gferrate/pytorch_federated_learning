@@ -5,7 +5,9 @@ from classification import trainer
 
 class Client:
 
-    def __init__(self, client_number, port, num_clients, split_type, client_id):
+    def __init__(self, port, n_frames,
+                 client_number, num_clients, split_type, client_id):
+        self.n_frames = n_frames
         self.split_type = split_type
         self.client_number = client_number
         self.port = port
@@ -18,10 +20,12 @@ class Client:
             del self.trainer
         except:
             pass
-        self.trainer = trainer.ClientTrainer(self.client_number,
-                                             self.client_id,
+        self.trainer = trainer.ClientTrainer(self.port,
+                                             self.n_frames,
+                                             self.client_number,
                                              self.num_clients,
-                                             self.split_type)
+                                             self.split_type,
+                                             self.client_id)
 
     def train(self):
         self.trainer.train()
