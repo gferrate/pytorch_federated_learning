@@ -135,9 +135,8 @@ def split_dataset(filename, split_type, num_clients):
         distinct_object_ids = np.unique(metadata['objectId'])
         n_objects = len(metadata['objects'])
         assert n_objects >= num_clients, 'num_clients should be smaller than n_objects ({})'.format(n_objects)
-        oc = int(np.floor(n_objects/num_clients))
         object_ids = np.unique(metadata['objectId'])
-        object_ids_per_client = np.split(object_ids, [oc])
+        object_ids_per_client = np.array_split(object_ids, num_clients)
 
         new_splits = np.array(
             ['train_{}'.format(i) for i in range(num_clients)] + ['test'],
