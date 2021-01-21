@@ -1,4 +1,15 @@
 from shared import dataset_tools
+import logging, sys
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        #logging.FileHandler("debug.log"),
+        logging.StreamHandler()
+    ]
+)
+
 
 num_clients = 9
 data_split_type = 'non-iid-a'
