@@ -270,6 +270,7 @@ class ClientTrainer(Trainer):
                          client_id,
                          num_clients,
                          data_split_type)
+        self.client_number = client_number
         self.type = 'client'
         self.snapshotDir = 'client/snapshots_{}'.format(self.port)
         # Dont do it with the client_id to avoid tons of folders generated
