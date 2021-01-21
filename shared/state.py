@@ -40,7 +40,8 @@ class State:
 
     @staticmethod
     def generate_random_id(N=8):
-        return ''.join(random.choices(ascii_uppercase + digits, k=N))
+        rand = ''.join(random.choices(ascii_uppercase + digits, k=N))
+        return '{}_{}_{}'.format(self.client_type, self.port, rand)
 
     @property
     def current_state(self):

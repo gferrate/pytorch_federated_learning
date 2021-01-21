@@ -155,6 +155,13 @@ def split_dataset(filename, split_type, num_clients):
         metadata['splits'] = new_splits
         metadata['splitId'] = new_split_ids
 
+        #classes = {}
+        #for ns in new_splits:
+        #    _id = np.argwhere(new_splits == ns).flatten()[0]
+        #    args = np.argwhere(metadata['splitId'] == _id).flatten()
+        #    b = metadata['objectId'][args]
+        #    classes[ns] = np.unique(b)
+
         unique, counts = np.unique(new_split_ids, return_counts=True)
         new_classes = dict(zip(new_splits, counts))
         logging.info('Split into these new classes: {}'.format(new_classes))

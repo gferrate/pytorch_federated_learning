@@ -5,11 +5,11 @@ from classification import trainer
 
 class Client:
 
-    def __init__(self, client_number, port, num_clients, split_type):
+    def __init__(self, client_number, port, num_clients, split_type, client_id):
         self.split_type = split_type
         self.client_number = client_number
         self.port = port
-        self.client_id = 'client_{}'.format(self.port)
+        self.client_id = client_id
         self.num_clients = num_clients
         self.init_model()
 
