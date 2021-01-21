@@ -76,3 +76,4 @@ Here is a screenshot of the frontend currently running on http://95.179.192.253:
 - [X] Documentation of the frontend.
 - [X] Repeat experiments with multiple machines
 - [ ] Limit resources of each client in order to be able to perform comparisons.
+- [ ] Split dataset in multiple clients doesn't work for iid and non-iid

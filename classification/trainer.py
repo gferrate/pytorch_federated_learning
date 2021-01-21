@@ -92,9 +92,9 @@ class Trainer(object):
         state = torch.load(path)
         assert state is not None, \
             'Warning: Could not read checkpoint {}'.format(path)
-        logging.info('Loading checkpoint {}...'.format(path))
+        logging.info('[Trainer] Loading checkpoint {}...'.format(path))
         self.update_model(state)
-        logging.info('Client model updated')
+        logging.info('[Trainer] Client model updated')
 
     def update_model(self, state):
         self.model.importState(state)
@@ -262,10 +262,19 @@ class ClientTrainer(Trainer):
             # TODO: Reimplement this with a lock file.
             # If multiple clients are spawned this can be a problem.
             if not self.file_exists(self.metaFile):
+                logging.info('[Client Trainer] File {} '
+                             'does not exist.'.format(self.metaFile))
+                logging.warning(
+                    '[Client Trainer] Will attempt to split dataset from '
+                    "{}/metadata.mat. THIS WON'T WORK if running in multiple "
+                    'servers. If so, please split the file manually '
+                    '(using shared/dataset_utils.py) and copy it into '
+                    'the different servers manually.'.format(mf))
                 fn = '{}/metadata.mat'.format(mf)
                 dataset_tools.split_dataset(fn, data_split_type, num_clients)
             else:
-                logging.info('File {} already exists'.format(self.metaFile))
+                logging.info('File {} already exists. '
+                             'Not creating.'.format(self.metaFile))
         self.init()
         super(Trainer, self).__init__()
 
