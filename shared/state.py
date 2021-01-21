@@ -38,8 +38,7 @@ class State:
         p = multiprocessing.Process(target=self.send_ping_continuously)
         p.start()
 
-    @staticmethod
-    def generate_random_id(N=8):
+    def generate_random_id(self, N=8):
         rand = ''.join(random.choices(ascii_uppercase + digits, k=N))
         return '{}_{}_{}'.format(self.client_type, self.port, rand)
 
