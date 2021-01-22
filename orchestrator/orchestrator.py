@@ -78,14 +78,14 @@ def main(op_mode):
         send_iteration_to_frontend(i)
 
         logging.info('Sending /train_model request to clients...')
-        performed_clients = ch.perform_requests_and_wait('train_model')
-        logging.info('Performed clients: {}'.format(performed_clients))
+        ch.perform_requests_and_wait('train_model')
+        #logging.info('Performed clients: {}'.format(performed_clients))
         logging.info('Done')
         log_elapsed_time(start)
 
         logging.info('Sending /send_model command to clients...')
-        performed_clients = ch.perform_requests_and_wait('send_model')
-        logging.info('Performed clients: {}'.format(performed_clients))
+        ch.perform_requests_and_wait('send_model')
+        #logging.info('Performed clients: {}'.format(performed_clients))
         logging.info('Done')
         log_elapsed_time(start)
 
