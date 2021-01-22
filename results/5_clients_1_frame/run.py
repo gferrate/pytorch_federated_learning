@@ -1,0 +1,58 @@
+import matplotlib
+matplotlib.use('agg')
+import matplotlib.pyplot as plt
+
+
+MARKER_SIZE=2
+
+# Init
+plt.figure()
+
+epochs = 50
+# Add vertical Lines
+for i in range(epochs):
+    plt.axvline(
+        i+1, linewidth=0.5, color='black', linestyle='dotted', alpha=0.5)
+
+# No FL results
+from raw_non_fedlearn_1_frame import results
+types = ['test-top1', 'test-top3']
+legend = {'test-top1': 'no-fl-top-1', 'test-top3': 'no-fl-top-3'}
+### IMPORTANT!!!!!!! LAST EPOCH IS LAST TEST WITH BEST RESULT AND CLUSTERING
+epochs = len(results) - 1
+X_AXIS = list(map(lambda x: x+1, range(epochs)))
+for t in types:
+    y_values = [(e, x[t]) for e, x in results.items()][:-1]
+    y_values = list(sorted(y_values, key=lambda t: t[0])) # Order by epoch asc
+    y_values = [x[1] for x in y_values]
+    plt.plot(X_AXIS, y_values, linewidth=1, label=legend[t], marker='o', markersize=MARKER_SIZE)
+    plt.legend(loc="lower right")
+
+# NON IID results:
+from raw_5_clients_non_iid_1_frame import results
+epochs = len(results)
+X_AXIS = list(map(lambda x: x+1, range(epochs)))
+types = ['test-top1', 'test-top3']
+legend = {'test-top1': '5-clients-non-iid-top-1',
+          'test-top3': '5-clients-non-iid-top-3'}
+for t in types:
+    y_values = [x['test_result'][t] for x in results]
+    plt.plot(X_AXIS,
+             y_values,
+             linewidth=1,
+             label=legend[t],
+             linestyle='solid',
+             marker="^",
+             markersize=MARKER_SIZE)
+    plt.legend(loc="lower right")
+
+# Limits
+plt.axis(xmin=0, xmax=epochs+1, ymin=0, ymax=100)
+
+# Labels
+plt.title('7 input frames comparison')
+plt.ylabel('Accuracy')
+plt.xlabel('Epoch / Communication Round')
+
+# Save
+plt.savefig('result.png', dpi=400)
