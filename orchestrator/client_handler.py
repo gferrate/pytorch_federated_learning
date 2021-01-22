@@ -107,6 +107,7 @@ class ClientHandler:
                 self.pool.terminate()
                 completed = True
             sleep(0.1)
+        self.terminate_pool()
         return list(ended_clients)
 
     def wait_until_n_responses(self, wait_all=False):
@@ -141,7 +142,15 @@ class ClientHandler:
                     self.pool.terminate()
                     completed = True
             sleep(0.1)
+        self.terminate_pool()
         return list(ended_clients)
+
+    def terminate_pool(self):
+        try:
+            logging.info('[Client Handler] Terminating pool')
+            self.pool.terminate()
+        except Exception:
+            pass
 
     @staticmethod
     def get_client_key(host, port):
