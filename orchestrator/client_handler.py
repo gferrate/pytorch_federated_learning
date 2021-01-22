@@ -1,4 +1,4 @@
-from multiprocessing.dummy import Pool
+from multiprocessing import Process
 import requests
 from time import time, sleep
 import logging
@@ -15,8 +15,7 @@ class ClientHandler:
         self.clients = self.parse_clients(clients)
         self.n_clients = len(clients)
         self.OPERATION_MODE = OPERATION_MODE
-        # Set the pool as None, later on will be created
-        self.pool = None
+        self.processes = []
         logging.info(
             '[Client Handler] Operation mode: {}'.format(self.OPERATION_MODE))
         default_n_firsts = max(1, self.n_clients - 2)
@@ -68,13 +67,11 @@ class ClientHandler:
 
     def perform_parallel_requests(self, endpoint):
         self.init_operations_history()
-        futures = []
-        self.pool = Pool(self.n_clients)
         for host, port in self.clients:
-            futures.append(
-                self.pool.apply_async(self.perform_request,
-                                      [host, port, endpoint]))
-        self.pool.close()
+            p = Process(target=self.perform_request,
+                        args=(host, port, endpoint))
+            p.start()
+            self.processes.append(p)
 
     def wait_until_timeout(self):
         ended_clients = set()
@@ -104,10 +101,9 @@ class ClientHandler:
             elapsed = time() - self.started
             if ((len(ended_clients) >= self.WAIT_FROM_N_FIRSTS) and
                     elapsed > self.TIMEOUT):
-                self.pool.terminate()
                 completed = True
             sleep(0.1)
-        self.terminate_pool()
+        self.terminate_processes()
         return list(ended_clients)
 
     def wait_until_n_responses(self, wait_all=False):
@@ -137,20 +133,17 @@ class ClientHandler:
                         )
                     )
                     ended_clients.add(key)
-                if ((not wait_all and (len(ended_clients) >= self.N_FIRSTS))
-                        or (wait_all and len(ended_clients) == self.N_FIRSTS)):
-                    self.pool.terminate()
-                    completed = True
+            if ((not wait_all and (len(ended_clients) >= self.N_FIRSTS))
+                    or (wait_all and len(ended_clients) == self.N_FIRSTS)):
+                completed = True
             sleep(0.1)
-        self.terminate_pool()
+        self.terminate_processes()
         return list(ended_clients)
 
-    def terminate_pool(self):
-        try:
-            logging.info('[Client Handler] Terminating pool')
-            self.pool.terminate()
-        except Exception:
-            pass
+    def terminate_processes(self):
+        for p in self.processes:
+            p.join()
+        self.processes = []
 
     @staticmethod
     def get_client_key(host, port):
