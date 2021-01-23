@@ -29,6 +29,24 @@ for t in types:
     plt.legend(loc="lower right")
 
 # NON IID results:
+from raw_5_clients_iid_1_frame import results
+epochs = len(results)
+X_AXIS = list(map(lambda x: x+1, range(epochs)))
+types = ['test-top1', 'test-top3']
+legend = {'test-top1': '5-clients-iid-top-1',
+          'test-top3': '5-clients-iid-top-3'}
+for t in types:
+    y_values = [x['test_result'][t] for x in results]
+    plt.plot(X_AXIS,
+             y_values,
+             linewidth=1,
+             label=legend[t],
+             linestyle='solid',
+             marker="^",
+             markersize=MARKER_SIZE)
+    plt.legend(loc="lower right")
+
+# IID results:
 from raw_5_clients_non_iid_1_frame import results
 epochs = len(results)
 X_AXIS = list(map(lambda x: x+1, range(epochs)))
@@ -45,6 +63,7 @@ for t in types:
              marker="^",
              markersize=MARKER_SIZE)
     plt.legend(loc="lower right")
+
 
 # Limits
 plt.axis(xmin=0, xmax=epochs+1, ymin=0, ymax=100)
