@@ -37,6 +37,16 @@ else
     N_FRAMES_APPEND=" -f $N_FRAMES"
 fi
 
+# CR
+if [[ -z "$COMM_ROUNDS" ]]
+then
+    echo "No Comm. Rounds not defined. DEFAULT = 50"
+    N_COMM_ROUNDS_APPEND=""
+else
+    echo "Comm rounds DEFINED: $COMM_ROUNDS"
+    N_COMM_ROUNDS_APPEND="-c $COMM_ROUNDS"
+fi
+
 # Restart the frontend
 curl http://95.179.192.253:8002/restart
 
@@ -57,4 +67,4 @@ screen -dmS client_4 bash -c "$PYTHON_PATH client/app.py -p 8007 -n 4 $TO_APPEND
 echo "Waiting 1 minutes so all clients start"
 sleep 1m
 echo "Starting run"
-screen -dmS orchestrator bash -c "$PYTHON_PATH orchestrator/orchestrator.py"
+screen -dmS orchestrator bash -c "$PYTHON_PATH orchestrator/orchestrator.py $N_COMM_ROUNDS_APPEND"

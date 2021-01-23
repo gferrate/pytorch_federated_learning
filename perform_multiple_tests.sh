@@ -1,45 +1,72 @@
-ITERATIONS=49
+FINISHED=false
 
 waitfortest()
 {
-    ITERATION=-1
-    while [ $ITERATION != $ITERATIONS ]
+    while [ $FINISHED != "true" ]
     do
-        ITERATION=$(curl -s http://95.179.192.253:8002/ | jq '. | {iteration}.iteration')
-        echo "$ITERATION of $ITERATIONS"
-        sleep 10
+        FINISHED=$(curl -s http://95.179.192.253:8002/ | jq '. | {finished_training}.finished_training')
+        echo "Still not finished..."
+        sleep 30
     done
-    echo "Reached $ITERATIONS iterations"
+    echo "Finished training"
     echo "Waiting 3 mins"
     sleep 3m
 }
 
-###############################################################################
+################################################################################
+echo "Doing non-iid 1 frame 5 clients 200 CR"
+DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=non-iid N_FRAMES=1 COMM_ROUNDS=200 ./initialize.sh
 waitfortest
 echo "Compressing results"
-tar -czvf 5_clients_non-iid_1_frame.tar.gz logs/*.log
-###############################################################################
+tar -czvf 5_clients_non-iid_1_frame_200_cr.tar.gz logs/*.log
+################################################################################
+
+################################################################################
+echo "Doing non-iid 7 frame 5 clients 200 CR"
+DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=non-iid N_FRAMES=7 COMM_ROUNDS=200 ./initialize.sh
+waitfortest
+echo "Compressing results"
+tar -czvf 5_clients_non-iid_7_frames_200_cr.tar.gz logs/*.log
+################################################################################
+
+################################################################################
+#echo "Doing iid 1 frame 1 clients"
+#DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=iid N_FRAMES=1 ./initialize.sh
+#waitfortest
+#echo "Compressing results"
+#tar -czvf 1_clients_iid_1_frame.tar.gz logs/*.log
+################################################################################
 
 ###############################################################################
-echo "Doing iid 1 frame 5 clients"
-DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=iid N_FRAMES=1 ./initialize.sh
-waitfortest
-echo "Compressing results"
-tar -czvf 5_clients_iid_1_frame.tar.gz logs/*.log
-###############################################################################
+#echo "Doing iid 7 frame 1 clients"
+##DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=iid N_FRAMES=7 ./initialize.sh
+#waitfortest
+#echo "Compressing results"
+#tar -czvf 1_clients_iid_7_frames.tar.gz logs/*.log
+################################################################################
 
-###############################################################################
-echo "Doing iid 7 frame 5 clients"
-DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=iid N_FRAMES=7 ./initialize.sh
-waitfortest
-echo "Compressing results"
-tar -czvf 5_clients_iid_7_frames.tar.gz logs/*.log
-###############################################################################
+################################################################################
+#echo "Doing non-iid 7 frame 1 clients"
+#DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=non-iid N_FRAMES=7 ./initialize.sh
+#waitfortest
+#echo "Compressing results"
+#tar -czvf 1_clients_non-iid_7_frames.tar.gz logs/*.log
+################################################################################
+#
+################################################################################
+#echo "Doing no split 7 frame 1 clients"
+#DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=no_split N_FRAMES=7 ./initialize.sh
+#waitfortest
+#echo "Compressing results"
+#tar -czvf 1_clients_no_split_7_frames.tar.gz logs/*.log
+################################################################################
+#
+################################################################################
+#echo "Doing no split 1 frame 1 clients"
+#DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=no_split N_FRAMES=1 ./initialize.sh
+#waitfortest
+#echo "Compressing results"
+#tar -czvf 1_clients_no_split_1_frames.tar.gz logs/*.log
+################################################################################
 
-###############################################################################
-echo "Doing non-iid 7 frame 5 clients"
-DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=non-iid N_FRAMES=7 ./initialize.sh
-waitfortest
-echo "Compressing results"
-tar -czvf 5_clients_non-iid_7_frames.tar.gz logs/*.log
-###############################################################################
+echo "DONE"
