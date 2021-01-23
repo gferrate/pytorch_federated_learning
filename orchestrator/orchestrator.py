@@ -156,10 +156,10 @@ if __name__ == '__main__':
                         type=int,
                         required=False,
                         default=50,
-                        help='Number of communication rounds. Default: 50)
+                        help='Number of communication rounds. Default: 50')
     args = parser.parse_args()
     try:
-        main(op_mode=args.operation_mode, args.communication_rounds)
+        main(args.operation_mode, args.communication_rounds)
     except Exception:
         logging.error("Fatal error in main loop", exc_info=True)
 

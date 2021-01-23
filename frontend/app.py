@@ -45,7 +45,7 @@ def restart():
     return jsonify(global_state)
 
 
-@app.route('/finish')
+@app.route('/finish', methods=['POST'])
 def finish():
     global global_state
     global_state['finished_training'] = True
