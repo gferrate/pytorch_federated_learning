@@ -13,7 +13,7 @@ KEEP_ALIVE_TIMEOUT = 120  # Seconds
 global_state = {
     'clients': {},
     'iteration': -1,
-    'started_training': False
+    'started_training': False,
     'finished_training': False
 }
 
@@ -39,7 +39,7 @@ def restart():
     global_state = {
         'clients': {},
         'iteration': -1,
-        'started_training': False
+        'started_training': False,
         'finished_training': False
     }
     return jsonify(global_state)
