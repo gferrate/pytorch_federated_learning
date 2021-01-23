@@ -15,7 +15,7 @@ for i in range(epochs):
         i+1, linewidth=0.5, color='black', linestyle='dotted', alpha=0.5)
 
 # No FL results
-from raw_non_fedlearn_1_frame import results
+from raw_7_frames_non_fedlearn import results
 types = ['test-top1', 'test-top3']
 legend = {'test-top1': 'no-fl-top-1', 'test-top3': 'no-fl-top-3'}
 ### IMPORTANT!!!!!!! LAST EPOCH IS LAST TEST WITH BEST RESULT AND CLUSTERING
@@ -29,7 +29,7 @@ for t in types:
     plt.legend(loc="lower right")
 
 # IID results:
-from raw_5_clients_iid_1_frame import results
+from raw_5_clients_iid_7_frames import results
 epochs = len(results)
 X_AXIS = list(map(lambda x: x+1, range(epochs)))
 types = ['test-top1', 'test-top3']
@@ -47,7 +47,7 @@ for t in types:
     plt.legend(loc="lower right")
 
 # NON-IID results:
-from raw_5_clients_non_iid_1_frame import results
+from raw_5_clients_non_iid_7_frames import results
 epochs = len(results)
 X_AXIS = list(map(lambda x: x+1, range(epochs)))
 types = ['test-top1', 'test-top3']
@@ -64,11 +64,12 @@ for t in types:
              markersize=MARKER_SIZE)
     plt.legend(loc="lower right")
 
+
 # Limits
 plt.axis(xmin=0, xmax=epochs+1, ymin=0, ymax=100)
 
 # Labels
-plt.title('1 input frame comparison')
+plt.title('7 input frames comparison')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch / Communication Round')
 
