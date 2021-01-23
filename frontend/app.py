@@ -14,6 +14,7 @@ global_state = {
     'clients': {},
     'iteration': -1,
     'started_training': False
+    'finished_training': False
 }
 
 def check_clients_ok():
@@ -24,6 +25,7 @@ def check_clients_ok():
             client['check_ok'] = False
         else:
             client['check_ok'] = True
+
 
 @app.route('/')
 def index():
@@ -38,7 +40,15 @@ def restart():
         'clients': {},
         'iteration': -1,
         'started_training': False
+        'finished_training': False
     }
+    return jsonify(global_state)
+
+
+@app.route('/finish')
+def finish():
+    global global_state
+    global_state['finished_training'] = True
     return jsonify(global_state)
 
 

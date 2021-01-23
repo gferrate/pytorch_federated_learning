@@ -48,10 +48,11 @@ class State:
 
     @current_state.setter
     def current_state(self, state):
+        self._current_state = state
         payload = {
             'client_type': self.client_type,
             '_id': self._id,
-            'state': self.get_state_string(self.current_state),
+            'state': self.get_state_string(self._current_state),
             'port': self.port,
             'host': self.host
         }
@@ -65,8 +66,6 @@ class State:
             )
         except Exception as e:
             logging.warning('Frontend not reachable.\n{}'.format(e))
-
-        self._current_state = state
 
     def idle(self):
         self.current_state = IDLE

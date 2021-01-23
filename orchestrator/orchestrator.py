@@ -51,6 +51,16 @@ def send_iteration_to_frontend(i):
         logging.warning('Frontend may be down')
 
 
+def end_frontend():
+    logging.info('Sending end signal to frontend')
+    try:
+        requests.post(
+            url='http://{}:{}/finish'.format(hosts['frontend']['host'],
+                                             hosts['frontend']['port']))
+    except:
+        logging.warning('Frontend may be down')
+
+
 def restart_frontend():
     logging.info('Restarting frontend')
     try:
@@ -64,16 +74,14 @@ def restart_frontend():
         logging.warning('Frontend may be down')
 
 
-def main(op_mode):
-    # TODO: Configure epochs and everything from here
-    NUM_ITERATIONS = 50
+def main(op_mode, communication_rounds):
     all_results = []
     ch = client_handler.ClientHandler(clients=hosts['clients'],
                                       OPERATION_MODE=op_mode)
     #train_accs = {}
     start = time.time()
     # restart_frontend()
-    for i in range(NUM_ITERATIONS):
+    for i in range(communication_rounds):
         logging.info('Iteration {}...'.format(i))
         send_iteration_to_frontend(i)
 
@@ -131,6 +139,7 @@ def main(op_mode):
 
     logging.info('All results:')
     logging.info(all_results)
+    end_frontend()
 
 
 if __name__ == '__main__':
@@ -142,9 +151,15 @@ if __name__ == '__main__':
                             'Operation mode. '
                             'Options: wait_all (default), n_firsts, timeout'
                         ))
+    parser.add_argument('-c',
+                        '--communication-rounds',
+                        type=int,
+                        required=False,
+                        default=50,
+                        help='Number of communication rounds. Default: 50)
     args = parser.parse_args()
     try:
-        main(op_mode=args.operation_mode)
+        main(op_mode=args.operation_mode, args.communication_rounds)
     except Exception:
         logging.error("Fatal error in main loop", exc_info=True)
 
