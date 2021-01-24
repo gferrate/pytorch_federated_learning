@@ -10,4 +10,4 @@
 <img src="./5_clients_7_frames/result.png" width="100%">
 
 ## Experiment 4: As the non-iid seemed like it was following a trend, here are the non-iid results with 200 CR
-<img src="./5_clients_7_frame/result_200.png" width="100%">
+<img src="./5_clients_7_frames/result_200.png" width="100%">
