@@ -1,0 +1,11 @@
+scp kcl:/home/gabriel/projects/pytorch_federated_learning/9_clients_iid_7_frames_200_cr.tar.gz     .
+scp kcl:/home/gabriel/projects/pytorch_federated_learning/9_clients_non_iid_7_frames_200_cr.tar.gz .
+
+scp kcl_2:/home/gabriel/pytorch_federated_learning/9_clients_iid_7_frames_200_cr_kcl2.tar.gz     .
+scp kcl_2:/home/gabriel/pytorch_federated_learning/9_clients_non_iid_7_frames_200_cr_kcl2.tar.gz .
+
+scp kcl_3:/home/gabriel/pytorch_federated_learning/9_clients_iid_7_frames_200_cr_kcl3.tar.gz     .
+scp kcl_3:/home/gabriel/pytorch_federated_learning/9_clients_non_iid_7_frames_200_cr_kcl3.tar.gz .
+
+#9_clients_non_iid_7_frames_200_cr.tar.gz
+#9_clients_iid_7_frames_200_cr.tar.gz
