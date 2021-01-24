@@ -13,13 +13,13 @@ waitfortest()
     sleep 1m
 }
 
-################################################################################
-echo "Doing iid 1 frame 9 clients 200 CR"
-DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=iid N_FRAMES=1 COMM_ROUNDS=200 ./initialize_2.sh
-waitfortest
-echo "Compressing results"
-tar -czvf 9_clients_iid_1_frames_200_cr_kcl2.tar.gz logs/*.log
-################################################################################
+#################################################################################
+#echo "Doing iid 1 frame 9 clients 200 CR"
+#DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=iid N_FRAMES=1 COMM_ROUNDS=200 ./initialize_2.sh
+#waitfortest
+#echo "Compressing results"
+#tar -czvf 9_clients_iid_1_frames_200_cr_kcl2.tar.gz logs/*.log
+#################################################################################
 
 ################################################################################
 echo "Doing non-iid 1 frame 9 clients 200 CR"
