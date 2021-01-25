@@ -1,6 +1,6 @@
+
 def extract_results(fn):
     data = {}
-    last_epoch = -1
     clustering = False
     with open(fn, 'r') as f:
         for l in f:
@@ -11,15 +11,19 @@ def extract_results(fn):
                 epoch = int(s[0].split('[')[1].split(']')[0])
                 top_1 = float(s[-2].split(' ')[1].split(' ')[0])
                 top_3 = float(s[-1].split(' ')[1].split(' ')[0])
+                time = float(s[1].split(' ')[1].split(' ')[0])
                 if clustering:
                     data.setdefault(epoch, {}).setdefault('test-top1-clustering', []).append(top_1)
                     data[epoch].setdefault('test-top3-clustering', []).append(top_3)
                 else:
                     data.setdefault(epoch, {}).setdefault('test-top1', []).append(top_1)
                     data[epoch].setdefault('test-top3', []).append(top_3)
-                if last_epoch != epoch:
-                    print('Extracting epoch', epoch)
-                    last_epoch = epoch
+            if l.startswith('Test') or l.startswith('Train'):
+                s = l.split('\t')
+                epoch = int(s[0].split('[')[1].split(']')[0])
+                time = float(s[1].split(' ')[1].split(' ')[0])
+                data.setdefault(epoch, {}).setdefault('time', 0.0)
+                data[epoch]['time'] += time
     return data
 
 def avg(_list):

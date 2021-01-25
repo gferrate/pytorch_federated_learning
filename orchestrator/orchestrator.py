@@ -85,6 +85,15 @@ def main(op_mode, communication_rounds):
         logging.info('Iteration {}...'.format(i))
         send_iteration_to_frontend(i)
 
+        logging.info('Deleting client models...')
+        url = 'http://{}:{}/del_client_models'.format(
+            hosts['secure_aggregator']['host'],
+            hosts['secure_aggregator']['port']
+        )
+        res = requests.post(url)
+        check_response_ok(res)
+        logging.info('Done')
+
         logging.info('Sending /train_model request to clients...')
         ch.perform_requests_and_wait('train_model')
         #logging.info('Performed clients: {}'.format(performed_clients))

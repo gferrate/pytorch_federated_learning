@@ -64,6 +64,13 @@ def get_pub_key():
 
 
 @assert_idle_state
+@app.route('/del_client_models', methods=['POST'])
+def del_client_models():
+    sec_agg.delete_client_models()
+    return jsonify({'ok': 1})
+
+
+@assert_idle_state
 @app.route('/client_model', methods=['POST'])
 def get_client_model():
     state.current_state = SEC_AGG_GET_CLIENT_MODEL
