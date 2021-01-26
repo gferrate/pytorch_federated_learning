@@ -37,10 +37,10 @@ echo "Compressing results"
 tar -czvf 9_clients_iid_7_frames_200_cr_kcl3.tar.gz logs/*.log
 ################################################################################
 
-################################################################################
-echo "Doing non-iid 7 frame 9 clients 200 CR"
-DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=non-iid N_FRAMES=7 COMM_ROUNDS=200 ./initialize_3.sh
-waitfortest
-echo "Compressing results"
-tar -czvf 9_clients_non_iid_7_frames_200_cr_kcl3.tar.gz logs/*.log
-################################################################################
+#################################################################################
+#echo "Doing non-iid 7 frame 9 clients 200 CR"
+#DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=non-iid N_FRAMES=7 COMM_ROUNDS=200 ./initialize_3.sh
+#waitfortest
+#echo "Compressing results"
+#tar -czvf 9_clients_non_iid_7_frames_200_cr_kcl3.tar.gz logs/*.log
+#################################################################################
