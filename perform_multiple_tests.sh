@@ -13,29 +13,29 @@ waitfortest()
     sleep 3m
 }
 
-################################################################################
-echo "Doing non-iid 1 frame 5 clients 200 CR"
-DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=non-iid N_FRAMES=1 COMM_ROUNDS=200 ./initialize.sh
-waitfortest
-echo "Compressing results"
-tar -czvf 5_clients_non-iid_1_frame_200_cr.tar.gz logs/*.log
-################################################################################
-
-################################################################################
-echo "Doing non-iid 7 frame 5 clients 200 CR"
-DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=non-iid N_FRAMES=7 COMM_ROUNDS=200 ./initialize.sh
-waitfortest
-echo "Compressing results"
-tar -czvf 5_clients_non-iid_7_frames_200_cr.tar.gz logs/*.log
-################################################################################
-
-################################################################################
-#echo "Doing iid 1 frame 1 clients"
-#DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=iid N_FRAMES=1 ./initialize.sh
+#################################################################################
+#echo "Doing non-iid 1 frame 5 clients 200 CR"
+#DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=non-iid N_FRAMES=1 COMM_ROUNDS=200 ./initialize.sh
 #waitfortest
 #echo "Compressing results"
-#tar -czvf 1_clients_iid_1_frame.tar.gz logs/*.log
+#tar -czvf 5_clients_non-iid_1_frame_200_cr.tar.gz logs/*.log
+#################################################################################
+
 ################################################################################
+echo "Doing iid 7 frame 5 clients 200 CR"
+DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=iid N_FRAMES=7 COMM_ROUNDS=200 ./initialize.sh
+waitfortest
+echo "Compressing results"
+tar -czvf 5_clients_iid_7_frames_200_cr.tar.gz logs/*.log
+################################################################################
+
+###############################################################################
+echo "Doing iid 1 frame 5 clients 200 CR"
+DELETE_OLD_LOGS=1 RESTART_SCREEN=1 SPLIT_TYPE=iid N_FRAMES=1 COMM_ROUNDS=200 ./initialize.sh
+waitfortest
+echo "Compressing results"
+tar -czvf 5_clients_iid_1_frame_200_cr.tar.gz logs/*.log
+###############################################################################
 
 ###############################################################################
 #echo "Doing iid 7 frame 1 clients"
