@@ -5,36 +5,50 @@ import sys
 sys.path.insert(0,'..')
 
 
-MARKER_SIZE=1
+MARKER_SIZE = 1
+USE_MARKERS = False
+LEGEND_POS  = 'lower right'
+LEGEND_SIZE = 7
+AVG_CLUSTERING_TIME = 17  # 53: 7 frames; 17: 1 frame
+
+def remove_clustering_time(timings):
+    diffs = [timings[0]]
+    for i in range(1, len(timings)):
+        diffs.append(timings[i] - timings[i-1])
+
+    diffs = [d - AVG_CLUSTERING_TIME for d in diffs]
+    timings = [diffs[0]]
+    for i in range(1, len(diffs)):
+        timings.append(diffs[i] + timings[i-1])
+    return timings
+
 
 # Init
 plt.figure()
 
-#epochs = 50
-## Add vertical Lines
-#for i in range(epochs):
-#    plt.axvline(
-#        i+1, linewidth=0.5, color='black', linestyle='dotted', alpha=0.5)
-
 # No FL results
 from non_fedlearn_1_frame.raw_non_fedlearn_1_frame_200 import results
 
-timings = [(e, x['time']) for e, x in results.items()][:-1]
-timings = list(sorted(timings, key=lambda t: t[0])) # Order by epoch asc
-timings = [x[1] for x in timings]
-last = 0
-for i in range(len(timings)):
-    timings[i] += last
-    last = timings[i]
+diffs = [(e, x['time']) for e, x in results.items()][:-1]
+diffs = list(sorted(diffs, key=lambda t: t[0])) # Order by epoch asc
+diffs = [x[1] for x in diffs]
+timings = [diffs[0]]
+for i in range(1, len(diffs)):
+    timings.append(diffs[i] + timings[i-1])
 
 types = ['test-top1', 'test-top3']
 legend = {'test-top1': 'no-fl-top-1', 'test-top3': 'no-fl-top-3'}
+marker = 'o' if USE_MARKERS else None
 for t in types:
     y_values = [(e, x[t]) for e, x in results.items()][:-1]
     y_values = list(sorted(y_values, key=lambda t: t[0])) # Order by epoch asc
     y_values = [x[1] for x in y_values]
-    plt.plot(timings, y_values, linewidth=1, label=legend[t], marker='o', markersize=MARKER_SIZE)
-    plt.legend(loc="upper right")
+    plt.plot(timings,
+             y_values,
+             linewidth=1,
+             label=legend[t],
+             marker=marker,
+             markersize=MARKER_SIZE)
 
 # IID results:
 from raw_9_clients_iid_1_frames import results
@@ -42,6 +56,9 @@ types = ['test-top1', 'test-top3']
 legend = {'test-top1': '5-clients-iid-top-1',
           'test-top3': '5-clients-iid-top-3'}
 timings = [x['elapsed_time'] for x in results]
+timings = remove_clustering_time(timings)
+
+marker = '^' if USE_MARKERS else None
 for t in types:
     y_values = [x['test_result'][t] for x in results]
     plt.plot(timings,
@@ -49,16 +66,17 @@ for t in types:
              linewidth=1,
              label=legend[t],
              linestyle='solid',
-             marker="^",
+             marker=marker,
              markersize=MARKER_SIZE)
-    plt.legend(loc="upper right")
 
 # NON-IID results:
 from raw_9_clients_non_iid_1_frames import results
 types = ['test-top1', 'test-top3']
 legend = {'test-top1': '5-clients-non-iid-top-1',
           'test-top3': '5-clients-non-iid-top-3'}
+marker = 's' if USE_MARKERS else None
 timings = [x['elapsed_time'] for x in results]
+timings = remove_clustering_time(timings)
 for t in types:
     y_values = [x['test_result'][t] for x in results]
     plt.plot(timings,
@@ -66,9 +84,11 @@ for t in types:
              linewidth=1,
              label=legend[t],
              linestyle='solid',
-             marker="s",
+             marker=marker,
              markersize=MARKER_SIZE)
-    plt.legend(loc="upper right")
+
+# Legend
+plt.legend(loc=LEGEND_POS, prop={'size': LEGEND_SIZE})
 
 # Limits
 plt.axis(ymin=0, ymax=100)

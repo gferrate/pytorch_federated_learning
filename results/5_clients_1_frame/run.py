@@ -1,18 +1,21 @@
 import matplotlib
 matplotlib.use('agg')
 import matplotlib.pyplot as plt
+import sys
+sys.path.insert(0,'..')
 
 
-MARKER_SIZE=2
+
+MARKER_SIZE=0
 
 # Init
 plt.figure()
 
-epochs = 50
-# Add vertical Lines
-for i in range(epochs):
-    plt.axvline(
-        i+1, linewidth=0.5, color='black', linestyle='dotted', alpha=0.5)
+#epochs = 50
+## Add vertical Lines
+#for i in range(epochs):
+#    plt.axvline(
+#        i+1, linewidth=0.5, color='black', linestyle='dotted', alpha=0.5)
 
 # No FL results
 from raw_non_fedlearn_1_frame import results
@@ -33,8 +36,8 @@ from raw_5_clients_iid_1_frame import results
 epochs = len(results)
 X_AXIS = list(map(lambda x: x+1, range(epochs)))
 types = ['test-top1', 'test-top3']
-legend = {'test-top1': '5-clients-iid-top-1',
-          'test-top3': '5-clients-iid-top-3'}
+legend = {'test-top1': '9-clients-iid-top-1',
+          'test-top3': '9-clients-iid-top-3'}
 for t in types:
     y_values = [x['test_result'][t] for x in results]
     plt.plot(X_AXIS,
@@ -51,8 +54,8 @@ from raw_5_clients_non_iid_1_frame import results
 epochs = len(results)
 X_AXIS = list(map(lambda x: x+1, range(epochs)))
 types = ['test-top1', 'test-top3']
-legend = {'test-top1': '5-clients-non-iid-top-1',
-          'test-top3': '5-clients-non-iid-top-3'}
+legend = {'test-top1': '9-clients-non-iid-top-1',
+          'test-top3': '9-clients-non-iid-top-3'}
 for t in types:
     y_values = [x['test_result'][t] for x in results]
     plt.plot(X_AXIS,
@@ -68,7 +71,7 @@ for t in types:
 plt.axis(xmin=0, xmax=epochs+1, ymin=0, ymax=100)
 
 # Labels
-plt.title('1 input frame comparison')
+#plt.title('1 input frame comparison with 9 clients')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch / Communication Round')
 

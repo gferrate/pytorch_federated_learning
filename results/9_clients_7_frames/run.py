@@ -9,6 +9,7 @@ sys.path.insert(0,'..')
 MARKER_SIZE = 1
 USE_MARKERS = False
 LEGEND_POS  = 'lower right'
+LEGEND_SIZE = 7
 
 # Init
 plt.figure()
@@ -20,7 +21,7 @@ plt.figure()
 #        i+1, linewidth=0.5, color='black', linestyle='dotted', alpha=0.5)
 
 # No FL results
-from non_fedlearn_1_frame.raw_non_fedlearn_1_frame_200 import results
+from non_fedlearn_7_frames.raw_non_fedlearn_7_frames_200 import results
 types = ['test-top1', 'test-top3']
 legend = {'test-top1': 'no-fl-top-1', 'test-top3': 'no-fl-top-3'}
 ### IMPORTANT!!!!!!! LAST EPOCH IS LAST TEST WITH BEST RESULT AND CLUSTERING
@@ -42,9 +43,11 @@ for t in types:
 from raw_9_clients_iid_7_frames_200 import results
 epochs = len(results)
 X_AXIS = list(map(lambda x: x+1, range(epochs)))
-types = ['test-top1', 'test-top3']
+types = ['test-top1', 'test-top3']#, 'test_cluster-top1', 'test_cluster-top3']
 legend = {'test-top1': '9-clients-iid-top-1',
-          'test-top3': '9-clients-iid-top-3'}
+          'test-top3': '9-clients-iid-top-3',
+          'test_cluster-top1': '9-clients-iid-cluster-top-1',
+          'test_cluster-top3': '9-clients-iid-cluster-top-3'}
 for t in types:
     y_values = [x['test_result'][t] for x in results]
     marker = '^' if USE_MARKERS else None
@@ -65,7 +68,7 @@ legend = {'test-top1': '9-clients-non-iid-top-1',
           'test-top3': '9-clients-non-iid-top-3'}
 for t in types:
     y_values = [x['test_result'][t] for x in results]
-    marker = '^' if USE_MARKERS else None
+    marker = 's' if USE_MARKERS else None
     plt.plot(X_AXIS,
              y_values,
              linewidth=1,
@@ -75,7 +78,7 @@ for t in types:
              markersize=MARKER_SIZE)
 
 # Legend
-plt.legend(loc=LEGEND_POS, prop={'size': 7})
+plt.legend(loc=LEGEND_POS, prop={'size': LEGEND_SIZE})
 
 
 # Limits
