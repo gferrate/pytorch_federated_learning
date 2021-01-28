@@ -9,7 +9,7 @@ MARKER_SIZE = 1
 USE_MARKERS = False
 LEGEND_POS  = 'lower right'
 LEGEND_SIZE = 7
-DEDUCT_AVG_TIME = True
+DEDUCT_AVG_TIME = False
 AVG_CLUSTERING_TIME = 53  # 53: 7 frames; 17: 1 frame
 
 def remove_clustering_time(timings):
@@ -30,7 +30,7 @@ def remove_clustering_time(timings):
 plt.figure()
 
 # No FL results
-from non_fedlearn_7_frames.raw_non_fedlearn_7_frames_50 import results
+from non_fedlearn_7_frames.raw_non_fedlearn_7_frames_200 import results
 
 diffs = [(e, x['time']) for e, x in results.items()][:-1]
 diffs = list(sorted(diffs, key=lambda t: t[0])) # Order by epoch asc
@@ -54,7 +54,7 @@ for t in types:
              markersize=MARKER_SIZE)
 
 # IID results:
-from raw_5_clients_iid_7_frames import results
+from raw_5_clients_iid_7_frames_200_cr import results
 types = ['test-top1', 'test-top3']
 legend = {'test-top1': '5-clients-iid-top-1',
           'test-top3': '5-clients-iid-top-3'}
@@ -73,7 +73,7 @@ for t in types:
              markersize=MARKER_SIZE)
 
 # NON-IID results:
-from raw_5_clients_non_iid_7_frames import results
+from raw_5_clients_non_iid_7_frames_200_cr import results
 types = ['test-top1', 'test-top3']
 legend = {'test-top1': '5-clients-non-iid-top-1',
           'test-top3': '5-clients-non-iid-top-3'}
@@ -91,7 +91,7 @@ for t in types:
              markersize=MARKER_SIZE)
 
 # Legend
-plt.legend(loc=LEGEND_POS, prop={'size': LEGEND_SIZE})
+plt.legend(loc=LEGEND_POS)#, prop={'size': LEGEND_SIZE})
 
 # Limits
 plt.axis(ymin=0, ymax=100)

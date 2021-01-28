@@ -78,7 +78,7 @@ for t in types:
              markersize=MARKER_SIZE)
 
 # Legend
-plt.legend(loc=LEGEND_POS, prop={'size': LEGEND_SIZE})
+plt.legend(loc=LEGEND_POS)#, prop={'size': LEGEND_SIZE})
 
 
 # Limits

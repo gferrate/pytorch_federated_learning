@@ -6,7 +6,7 @@ sys.path.insert(0,'..')
 
 
 
-MARKER_SIZE=1
+MARKER_SIZE=0
 
 # Init
 plt.figure()

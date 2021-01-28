@@ -18,10 +18,9 @@ plt.figure()
 #        i+1, linewidth=0.5, color='black', linestyle='dotted', alpha=0.5)
 
 # No FL results
-from raw_non_fedlearn_1_frame import results
+from non_fedlearn_1_frame.raw_non_fedlearn_1_frame_200 import results
 types = ['test-top1', 'test-top3']
 legend = {'test-top1': 'no-fl-top-1', 'test-top3': 'no-fl-top-3'}
-### IMPORTANT!!!!!!! LAST EPOCH IS LAST TEST WITH BEST RESULT AND CLUSTERING
 epochs = len(results) - 1
 X_AXIS = list(map(lambda x: x+1, range(epochs)))
 for t in types:
@@ -32,12 +31,12 @@ for t in types:
     plt.legend(loc="upper right")
 
 # IID results:
-from raw_5_clients_iid_1_frame import results
+from raw_5_clients_iid_1_frame_200 import results
 epochs = len(results)
 X_AXIS = list(map(lambda x: x+1, range(epochs)))
 types = ['test-top1', 'test-top3']
-legend = {'test-top1': '9-clients-iid-top-1',
-          'test-top3': '9-clients-iid-top-3'}
+legend = {'test-top1': '5-clients-iid-top-1',
+          'test-top3': '5-clients-iid-top-3'}
 for t in types:
     y_values = [x['test_result'][t] for x in results]
     plt.plot(X_AXIS,
@@ -50,12 +49,12 @@ for t in types:
     plt.legend(loc="upper right")
 
 # NON-IID results:
-from raw_5_clients_non_iid_1_frame import results
+from raw_5_clients_non_iid_1_frame_200_cr import results
 epochs = len(results)
 X_AXIS = list(map(lambda x: x+1, range(epochs)))
 types = ['test-top1', 'test-top3']
-legend = {'test-top1': '9-clients-non-iid-top-1',
-          'test-top3': '9-clients-non-iid-top-3'}
+legend = {'test-top1': '5-clients-non-iid-top-1',
+          'test-top3': '5-clients-non-iid-top-3'}
 for t in types:
     y_values = [x['test_result'][t] for x in results]
     plt.plot(X_AXIS,

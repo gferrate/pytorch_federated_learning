@@ -9,9 +9,13 @@ MARKER_SIZE = 1
 USE_MARKERS = False
 LEGEND_POS  = 'lower right'
 LEGEND_SIZE = 7
+DEDUCT_AVG_TIME = True
 AVG_CLUSTERING_TIME = 53  # 53: 7 frames; 17: 1 frame
 
 def remove_clustering_time(timings):
+    if not DEDUCT_AVG_TIME:
+        print('NOT REMOVING TIME')
+        return timings
     diffs = [timings[0]]
     for i in range(1, len(timings)):
         diffs.append(timings[i] - timings[i-1])
@@ -53,8 +57,8 @@ for t in types:
 # IID results:
 from raw_9_clients_iid_7_frames_200 import results
 types = ['test-top1', 'test-top3']
-legend = {'test-top1': '5-clients-iid-top-1',
-          'test-top3': '5-clients-iid-top-3'}
+legend = {'test-top1': '9-clients-iid-top-1',
+          'test-top3': '9-clients-iid-top-3'}
 timings = [x['elapsed_time'] for x in results]
 timings = remove_clustering_time(timings)
 
@@ -72,8 +76,8 @@ for t in types:
 # NON-IID results:
 from raw_9_clients_non_iid_7_frames_200 import results
 types = ['test-top1', 'test-top3']
-legend = {'test-top1': '5-clients-non-iid-top-1',
-          'test-top3': '5-clients-non-iid-top-3'}
+legend = {'test-top1': '9-clients-non-iid-top-1',
+          'test-top3': '9-clients-non-iid-top-3'}
 marker = 's' if USE_MARKERS else None
 timings = [x['elapsed_time'] for x in results]
 timings = remove_clustering_time(timings)
@@ -88,7 +92,7 @@ for t in types:
              markersize=MARKER_SIZE)
 
 # Legend
-plt.legend(loc=LEGEND_POS, prop={'size': LEGEND_SIZE})
+plt.legend(loc=LEGEND_POS)#, prop={'size': LEGEND_SIZE})
 
 # Limits
 plt.axis(ymin=0, ymax=100)
@@ -99,4 +103,7 @@ plt.ylabel('Accuracy')
 plt.xlabel('Time (seconds)')
 
 # Save
-plt.savefig('result_xtime.png', dpi=400)
+if DEDUCT_AVG_TIME:
+    plt.savefig('result_xtime_deducted.png', dpi=400)
+else:
+    plt.savefig('result_xtime.png', dpi=400)
