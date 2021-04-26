@@ -94,6 +94,13 @@ class Trainer(object):
     def doSink(self):
         res = {}
 
+        # NEW: train in each iteration to know the loss of the global model
+        # with train data.
+        logging.info('RUNNING TRAIN TEST...')
+        train_loader = self.loadDatasets('train', True, False)
+        self.step(train_loader, -1, isTrain=False, sinkName='test_train')
+
+
         logging.info('Running test...')
         res['test-top1'], res['test-top3'] = self.step(
             self.val_loader, self.model.epoch,
