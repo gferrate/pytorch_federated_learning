@@ -57,12 +57,13 @@ class Trainer(object):
         self.initModel()
 
     def loadDatasets(self,
-                     split='train', shuffle=True, useClusterSampling=False):
+                     split='train', shuffle=True, useClusterSampling=False, metaFile=None):
+        meta_file = metaFile or self.metaFile
         return torch.utils.data.DataLoader(
             ObjectClusterDataset(
                 split=split, doAugment=(split == 'train'),
                 doFilter=doFilter, sequenceLength=self.n_frames,
-                metaFile=self.metaFile, useClusters=useClusterSampling
+                metaFile=meta_file, useClusters=useClusterSampling
             ),
             batch_size=batch_size,
             shuffle=shuffle,
@@ -97,7 +98,8 @@ class Trainer(object):
         # NEW: train in each iteration to know the loss of the global model
         # with train data.
         logging.info('RUNNING TRAIN TEST...')
-        train_loader = self.loadDatasets('train', True, False)
+        train_loader = self.loadDatasets('train', True, False,
+                                         'data/classification/metadata.mat')
         self.step(train_loader, -1, isTrain=False, sinkName='test_train')
 
 
