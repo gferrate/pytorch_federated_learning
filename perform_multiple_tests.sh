@@ -4,7 +4,7 @@ waitfortest()
 {
     while [ $FINISHED != "true" ]
     do
-        FINISHED=$(curl -s http://95.179.192.253:8002/ | jq '. | {finished_training}.finished_training')
+        FINISHED=$(curl -s http://209.250.231.139:8002/ | jq '. | {finished_training}.finished_training')
         echo "Still not finished..."
         sleep 30
     done
