@@ -1,0 +1,2211 @@
+2021-01-26 10:08:26,826  * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+2021-01-26 10:11:41,788 10.123.1.3 - - [26/Jan/2021 10:11:41] "[37mGET /pub_key HTTP/1.1[0m" 200 -
+2021-01-26 10:11:41,961 10.123.1.3 - - [26/Jan/2021 10:11:41] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:11:41,982 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:11:41,982 Getting key for host: 10.123.1.3 and port: 8008
+2021-01-26 10:11:42,164 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:11:42,164 Getting key for host: 10.123.1.3 and port: 8004
+2021-01-26 10:11:42,346 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:11:42,346 Getting key for host: 10.123.1.3 and port: 8005
+2021-01-26 10:11:42,526 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:11:42,526 Getting key for host: 10.123.1.3 and port: 8006
+2021-01-26 10:11:42,706 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:11:42,706 Getting key for host: 10.123.1.3 and port: 8007
+2021-01-26 10:11:42,889 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:11:42,889 Getting key for host: 10.123.1.2 and port: 8003
+2021-01-26 10:11:43,047 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:11:43,048 Getting key for host: 10.123.1.2 and port: 8004
+2021-01-26 10:11:43,195 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:11:43,195 Getting key for host: 10.123.1.2 and port: 8005
+2021-01-26 10:11:43,339 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:11:43,339 Getting key for host: 10.123.1.60 and port: 8003
+2021-01-26 10:11:43,540 10.123.1.3 - - [26/Jan/2021 10:11:43] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:13:58,573 10.123.1.3 - - [26/Jan/2021 10:13:58] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:13:58,600 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:13:58,782 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:13:58,971 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:13:59,156 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:13:59,346 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:13:59,533 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:13:59,691 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:13:59,835 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:13:59,981 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:14:00,188 10.123.1.3 - - [26/Jan/2021 10:14:00] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:16:16,363 10.123.1.3 - - [26/Jan/2021 10:16:16] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:16:16,392 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:16:16,573 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:16:16,760 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:16:16,944 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:16:17,138 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:16:17,325 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:16:17,488 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:16:17,633 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:16:17,781 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:16:17,976 10.123.1.3 - - [26/Jan/2021 10:16:17] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:18:33,497 10.123.1.3 - - [26/Jan/2021 10:18:33] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:18:33,519 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:18:33,699 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:18:33,882 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:18:34,054 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:18:34,229 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:18:34,407 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:18:34,557 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:18:34,701 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:18:34,847 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:18:35,049 10.123.1.3 - - [26/Jan/2021 10:18:35] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:20:50,597 10.123.1.3 - - [26/Jan/2021 10:20:50] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:20:50,625 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:20:50,810 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:20:50,997 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:20:51,182 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:20:51,366 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:20:51,553 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:20:51,706 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:20:51,853 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:20:52,006 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:20:52,209 10.123.1.3 - - [26/Jan/2021 10:20:52] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:23:08,685 10.123.1.3 - - [26/Jan/2021 10:23:08] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:23:08,714 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:23:08,899 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:23:09,085 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:23:09,259 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:23:09,433 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:23:09,607 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:23:09,763 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:23:09,902 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:23:10,043 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:23:10,239 10.123.1.3 - - [26/Jan/2021 10:23:10] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:25:27,309 10.123.1.3 - - [26/Jan/2021 10:25:27] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:25:27,337 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:25:27,519 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:25:27,706 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:25:27,900 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:25:28,086 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:25:28,272 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:25:28,434 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:25:28,585 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:25:28,734 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:25:28,935 10.123.1.3 - - [26/Jan/2021 10:25:28] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:27:44,625 10.123.1.3 - - [26/Jan/2021 10:27:44] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:27:44,655 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:27:44,838 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:27:45,022 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:27:45,205 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:27:45,391 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:27:45,578 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:27:45,738 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:27:45,891 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:27:46,038 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:27:46,244 10.123.1.3 - - [26/Jan/2021 10:27:46] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:30:02,134 10.123.1.3 - - [26/Jan/2021 10:30:02] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:30:02,161 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:30:02,350 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:30:02,537 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:30:02,726 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:30:02,901 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:30:03,085 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:30:03,240 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:30:03,387 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:30:03,532 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:30:03,729 10.123.1.3 - - [26/Jan/2021 10:30:03] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:32:20,708 10.123.1.3 - - [26/Jan/2021 10:32:20] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:32:20,735 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:32:20,922 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:32:21,112 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:32:21,298 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:32:21,484 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:32:21,670 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:32:21,827 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:32:21,972 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:32:22,126 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:32:22,344 10.123.1.3 - - [26/Jan/2021 10:32:22] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:34:39,496 10.123.1.3 - - [26/Jan/2021 10:34:39] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:34:39,522 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:34:39,714 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:34:39,890 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:34:40,066 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:34:40,245 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:34:40,421 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:34:40,574 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:34:40,720 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:34:40,858 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:34:41,055 10.123.1.3 - - [26/Jan/2021 10:34:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:36:56,047 10.123.1.3 - - [26/Jan/2021 10:36:56] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:36:56,073 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:36:56,256 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:36:56,443 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:36:56,628 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:36:56,814 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:36:57,001 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:36:57,166 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:36:57,315 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:36:57,463 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:36:57,667 10.123.1.3 - - [26/Jan/2021 10:36:57] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:39:15,197 10.123.1.3 - - [26/Jan/2021 10:39:15] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:39:15,223 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:39:15,406 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:39:15,591 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:39:15,775 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:39:15,967 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:39:16,142 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:39:16,297 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:39:16,442 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:39:16,584 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:39:16,778 10.123.1.3 - - [26/Jan/2021 10:39:16] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:41:32,975 10.123.1.3 - - [26/Jan/2021 10:41:32] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:41:33,001 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:41:33,185 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:41:33,374 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:41:33,558 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:41:33,745 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:41:33,936 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:41:34,097 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:41:34,246 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:41:34,392 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:41:34,588 10.123.1.3 - - [26/Jan/2021 10:41:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:43:50,337 10.123.1.3 - - [26/Jan/2021 10:43:50] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:43:50,364 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:43:50,546 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:43:50,734 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:43:50,918 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:43:51,103 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:43:51,289 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:43:51,449 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:43:51,598 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:43:51,745 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:43:51,940 10.123.1.3 - - [26/Jan/2021 10:43:51] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:46:08,274 10.123.1.3 - - [26/Jan/2021 10:46:08] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:46:08,298 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:46:08,476 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:46:08,655 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:46:08,842 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:46:09,027 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:46:09,215 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:46:09,373 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:46:09,520 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:46:09,666 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:46:09,869 10.123.1.3 - - [26/Jan/2021 10:46:09] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:48:26,025 10.123.1.3 - - [26/Jan/2021 10:48:26] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:48:26,053 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:48:26,236 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:48:26,427 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:48:26,623 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:48:26,811 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:48:26,998 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:48:27,154 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:48:27,298 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:48:27,444 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:48:27,644 10.123.1.3 - - [26/Jan/2021 10:48:27] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:50:44,308 10.123.1.3 - - [26/Jan/2021 10:50:44] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:50:44,371 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:50:44,555 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:50:44,743 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:50:44,930 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:50:45,104 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:50:45,281 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:50:45,432 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:50:45,581 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:50:45,723 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:50:45,920 10.123.1.3 - - [26/Jan/2021 10:50:45] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:53:02,437 10.123.1.3 - - [26/Jan/2021 10:53:02] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:53:02,463 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:53:02,647 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:53:02,834 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:53:03,018 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:53:03,205 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:53:03,391 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:53:03,550 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:53:03,696 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:53:03,840 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:53:04,026 10.123.1.3 - - [26/Jan/2021 10:53:04] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:55:20,963 10.123.1.3 - - [26/Jan/2021 10:55:20] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:55:20,990 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:55:21,174 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:55:21,361 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:55:21,546 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:55:21,736 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:55:21,912 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:55:22,075 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:55:22,217 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:55:22,358 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:55:22,553 10.123.1.3 - - [26/Jan/2021 10:55:22] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:57:38,217 10.123.1.3 - - [26/Jan/2021 10:57:38] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:57:38,244 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:57:38,426 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:57:38,612 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:57:38,794 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:57:38,989 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:57:39,205 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:57:39,374 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:57:39,528 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:57:39,674 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:57:39,877 10.123.1.3 - - [26/Jan/2021 10:57:39] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 10:59:56,979 10.123.1.3 - - [26/Jan/2021 10:59:56] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 10:59:57,006 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 10:59:57,191 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 10:59:57,378 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 10:59:57,562 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 10:59:57,751 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 10:59:57,926 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 10:59:58,082 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 10:59:58,226 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 10:59:58,373 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 10:59:58,573 10.123.1.3 - - [26/Jan/2021 10:59:58] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:02:14,762 10.123.1.3 - - [26/Jan/2021 11:02:14] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:02:14,791 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:02:14,975 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:02:15,162 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:02:15,352 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:02:15,540 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:02:15,728 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:02:15,886 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:02:16,032 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:02:16,194 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:02:16,399 10.123.1.3 - - [26/Jan/2021 11:02:16] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:04:33,101 10.123.1.3 - - [26/Jan/2021 11:04:33] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:04:33,129 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:04:33,311 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:04:33,499 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:04:33,685 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:04:33,872 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:04:34,060 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:04:34,224 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:04:34,374 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:04:34,523 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:04:34,724 10.123.1.3 - - [26/Jan/2021 11:04:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:06:52,658 10.123.1.3 - - [26/Jan/2021 11:06:52] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:06:52,685 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:06:52,870 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:06:53,061 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:06:53,245 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:06:53,431 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:06:53,617 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:06:53,786 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:06:53,947 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:06:54,108 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:06:54,306 10.123.1.3 - - [26/Jan/2021 11:06:54] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:09:11,494 10.123.1.3 - - [26/Jan/2021 11:09:11] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:09:11,522 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:09:11,725 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:09:11,914 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:09:12,099 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:09:12,285 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:09:12,472 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:09:12,629 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:09:12,780 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:09:12,923 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:09:13,131 10.123.1.3 - - [26/Jan/2021 11:09:13] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:11:28,987 10.123.1.3 - - [26/Jan/2021 11:11:28] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:11:29,010 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:11:29,185 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:11:29,360 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:11:29,534 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:11:29,709 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:11:29,885 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:11:30,039 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:11:30,185 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:11:30,325 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:11:30,537 10.123.1.3 - - [26/Jan/2021 11:11:30] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:13:48,418 10.123.1.3 - - [26/Jan/2021 11:13:48] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:13:48,443 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:13:48,626 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:13:48,812 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:13:48,997 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:13:49,185 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:13:49,372 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:13:49,535 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:13:49,683 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:13:49,833 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:13:50,027 10.123.1.3 - - [26/Jan/2021 11:13:50] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:16:05,406 10.123.1.3 - - [26/Jan/2021 11:16:05] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:16:05,429 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:16:05,605 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:16:05,782 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:16:05,955 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:16:06,133 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:16:06,309 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:16:06,457 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:16:06,596 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:16:06,738 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:16:06,924 10.123.1.3 - - [26/Jan/2021 11:16:06] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:18:23,411 10.123.1.3 - - [26/Jan/2021 11:18:23] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:18:23,438 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:18:23,621 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:18:23,809 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:18:23,995 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:18:24,182 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:18:24,369 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:18:24,521 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:18:24,662 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:18:24,806 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:18:25,013 10.123.1.3 - - [26/Jan/2021 11:18:25] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:20:43,352 10.123.1.3 - - [26/Jan/2021 11:20:43] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:20:43,374 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:20:43,553 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:20:43,735 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:20:43,909 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:20:44,089 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:20:44,275 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:20:44,430 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:20:44,577 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:20:44,724 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:20:44,931 10.123.1.3 - - [26/Jan/2021 11:20:44] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:23:02,189 10.123.1.3 - - [26/Jan/2021 11:23:02] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:23:02,217 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:23:02,400 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:23:02,586 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:23:02,787 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:23:02,973 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:23:03,160 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:23:03,312 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:23:03,454 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:23:03,596 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:23:03,797 10.123.1.3 - - [26/Jan/2021 11:23:03] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:25:20,521 10.123.1.3 - - [26/Jan/2021 11:25:20] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:25:20,543 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:25:20,718 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:25:20,894 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:25:21,070 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:25:21,251 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:25:21,428 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:25:21,585 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:25:21,730 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:25:21,873 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:25:22,076 10.123.1.3 - - [26/Jan/2021 11:25:22] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:27:38,281 10.123.1.3 - - [26/Jan/2021 11:27:38] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:27:38,317 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:27:38,501 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:27:38,700 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:27:38,912 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:27:39,102 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:27:39,288 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:27:39,442 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:27:39,590 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:27:39,738 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:27:39,919 10.123.1.3 - - [26/Jan/2021 11:27:39] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:29:55,988 10.123.1.3 - - [26/Jan/2021 11:29:55] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:29:56,014 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:29:56,198 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:29:56,385 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:29:56,570 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:29:56,763 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:29:56,942 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:29:57,099 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:29:57,245 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:29:57,387 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:29:57,586 10.123.1.3 - - [26/Jan/2021 11:29:57] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:32:13,364 10.123.1.3 - - [26/Jan/2021 11:32:13] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:32:13,390 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:32:13,578 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:32:14,022 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:32:14,208 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:32:14,395 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:32:14,584 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:32:14,750 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:32:14,900 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:32:15,047 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:32:15,249 10.123.1.3 - - [26/Jan/2021 11:32:15] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:34:32,463 10.123.1.3 - - [26/Jan/2021 11:34:32] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:34:32,490 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:34:32,672 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:34:32,859 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:34:33,047 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:34:33,236 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:34:33,412 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:34:33,564 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:34:33,703 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:34:33,842 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:34:34,040 10.123.1.3 - - [26/Jan/2021 11:34:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:36:51,423 10.123.1.3 - - [26/Jan/2021 11:36:51] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:36:51,449 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:36:51,648 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:36:51,876 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:36:52,062 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:36:52,266 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:36:52,456 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:36:52,628 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:36:52,776 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:36:52,925 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:36:53,133 10.123.1.3 - - [26/Jan/2021 11:36:53] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:39:09,537 10.123.1.3 - - [26/Jan/2021 11:39:09] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:39:09,563 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:39:09,749 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:39:09,936 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:39:10,109 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:39:10,285 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:39:10,462 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:39:10,627 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:39:10,773 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:39:10,915 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:39:11,111 10.123.1.3 - - [26/Jan/2021 11:39:11] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:41:26,242 10.123.1.3 - - [26/Jan/2021 11:41:26] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:41:26,269 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:41:26,450 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:41:26,638 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:41:26,822 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:41:27,008 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:41:27,211 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:41:27,375 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:41:27,521 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:41:27,667 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:41:27,872 10.123.1.3 - - [26/Jan/2021 11:41:27] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:43:44,284 10.123.1.3 - - [26/Jan/2021 11:43:44] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:43:44,314 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:43:44,499 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:43:44,704 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:43:44,895 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:43:45,096 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:43:45,278 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:43:45,464 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:43:45,608 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:43:45,750 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:43:45,941 10.123.1.3 - - [26/Jan/2021 11:43:45] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:46:02,139 10.123.1.3 - - [26/Jan/2021 11:46:02] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:46:02,167 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:46:02,365 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:46:02,553 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:46:02,738 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:46:02,924 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:46:03,109 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:46:03,263 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:46:03,405 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:46:03,547 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:46:03,751 10.123.1.3 - - [26/Jan/2021 11:46:03] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:48:21,200 10.123.1.3 - - [26/Jan/2021 11:48:21] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:48:21,226 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:48:21,407 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:48:21,601 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:48:21,788 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:48:21,970 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:48:22,164 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:48:22,319 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:48:22,471 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:48:22,613 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:48:22,812 10.123.1.3 - - [26/Jan/2021 11:48:22] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:50:40,203 10.123.1.3 - - [26/Jan/2021 11:50:40] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:50:40,230 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:50:40,416 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:50:40,603 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:50:40,786 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:50:40,987 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:50:41,176 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:50:41,330 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:50:41,476 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:50:41,621 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:50:41,817 10.123.1.3 - - [26/Jan/2021 11:50:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:52:57,744 10.123.1.3 - - [26/Jan/2021 11:52:57] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:52:57,770 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:52:57,957 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:52:58,143 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:52:58,326 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:52:58,516 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:52:58,693 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:52:58,846 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:52:58,992 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:52:59,136 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:52:59,330 10.123.1.3 - - [26/Jan/2021 11:52:59] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:55:16,128 10.123.1.3 - - [26/Jan/2021 11:55:16] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:55:16,155 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:55:16,338 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:55:16,532 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:55:16,715 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:55:16,901 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:55:17,088 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:55:17,248 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:55:17,395 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:55:17,548 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:55:17,739 10.123.1.3 - - [26/Jan/2021 11:55:17] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:57:35,421 10.123.1.3 - - [26/Jan/2021 11:57:35] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:57:35,444 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:57:35,620 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:57:35,795 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:57:35,972 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:57:36,168 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:57:36,369 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:57:36,547 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:57:36,728 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:57:36,873 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:57:37,059 10.123.1.3 - - [26/Jan/2021 11:57:37] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 11:59:53,572 10.123.1.3 - - [26/Jan/2021 11:59:53] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 11:59:53,599 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 11:59:53,788 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 11:59:53,978 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 11:59:54,164 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 11:59:54,351 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 11:59:54,546 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 11:59:54,700 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 11:59:54,848 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 11:59:54,993 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 11:59:55,197 10.123.1.3 - - [26/Jan/2021 11:59:55] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:02:11,812 10.123.1.3 - - [26/Jan/2021 12:02:11] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:02:11,838 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:02:12,036 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:02:12,223 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:02:12,424 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:02:12,622 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:02:12,811 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:02:12,964 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:02:13,107 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:02:13,249 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:02:13,446 10.123.1.3 - - [26/Jan/2021 12:02:13] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:04:31,228 10.123.1.3 - - [26/Jan/2021 12:04:31] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:04:31,254 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:04:31,452 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:04:31,644 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:04:31,831 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:04:32,025 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:04:32,218 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:04:32,375 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:04:32,539 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:04:32,687 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:04:32,888 10.123.1.3 - - [26/Jan/2021 12:04:32] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:06:49,798 10.123.1.3 - - [26/Jan/2021 12:06:49] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:06:49,825 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:06:50,016 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:06:50,220 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:06:50,415 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:06:50,603 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:06:50,812 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:06:50,977 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:06:51,122 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:06:51,266 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:06:51,457 10.123.1.3 - - [26/Jan/2021 12:06:51] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:09:08,096 10.123.1.3 - - [26/Jan/2021 12:09:08] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:09:08,126 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:09:08,314 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:09:08,505 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:09:08,692 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:09:08,883 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:09:09,071 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:09:09,234 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:09:09,380 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:09:09,533 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:09:09,733 10.123.1.3 - - [26/Jan/2021 12:09:09] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:11:27,045 10.123.1.3 - - [26/Jan/2021 12:11:27] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:11:27,093 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:11:27,278 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:11:27,464 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:11:27,661 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:11:27,846 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:11:28,038 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:11:28,207 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:11:28,358 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:11:28,519 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:11:28,713 10.123.1.3 - - [26/Jan/2021 12:11:28] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:13:46,475 10.123.1.3 - - [26/Jan/2021 12:13:46] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:13:46,501 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:13:46,688 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:13:46,877 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:13:47,082 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:13:47,285 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:13:47,472 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:13:47,656 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:13:47,810 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:13:47,966 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:13:48,173 10.123.1.3 - - [26/Jan/2021 12:13:48] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:16:04,796 10.123.1.3 - - [26/Jan/2021 12:16:04] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:16:04,822 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:16:05,005 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:16:05,188 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:16:05,372 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:16:05,560 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:16:05,748 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:16:05,907 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:16:06,055 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:16:06,200 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:16:06,412 10.123.1.3 - - [26/Jan/2021 12:16:06] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:18:22,994 10.123.1.3 - - [26/Jan/2021 12:18:22] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:18:23,015 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:18:23,200 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:18:23,386 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:18:23,566 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:18:23,752 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:18:23,936 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:18:24,095 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:18:24,239 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:18:24,382 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:18:24,585 10.123.1.3 - - [26/Jan/2021 12:18:24] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:20:42,432 10.123.1.3 - - [26/Jan/2021 12:20:42] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:20:42,458 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:20:42,646 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:20:42,834 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:20:43,027 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:20:43,213 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:20:43,402 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:20:43,554 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:20:43,699 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:20:43,844 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:20:44,315 10.123.1.3 - - [26/Jan/2021 12:20:44] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:23:00,702 10.123.1.3 - - [26/Jan/2021 12:23:00] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:23:00,729 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:23:00,911 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:23:01,098 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:23:01,282 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:23:01,469 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:23:01,657 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:23:01,814 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:23:01,967 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:23:02,115 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:23:02,361 10.123.1.3 - - [26/Jan/2021 12:23:02] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:25:18,442 10.123.1.3 - - [26/Jan/2021 12:25:18] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:25:18,470 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:25:18,654 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:25:18,842 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:25:19,026 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:25:19,221 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:25:19,407 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:25:19,562 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:25:19,708 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:25:19,855 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:25:20,883 10.123.1.3 - - [26/Jan/2021 12:25:20] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:27:37,619 10.123.1.3 - - [26/Jan/2021 12:27:37] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:27:37,643 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:27:37,827 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:27:38,016 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:27:38,204 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:27:38,393 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:27:38,588 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:27:38,748 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:27:38,893 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:27:39,037 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:27:39,253 10.123.1.3 - - [26/Jan/2021 12:27:39] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:29:55,196 10.123.1.3 - - [26/Jan/2021 12:29:55] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:29:55,222 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:29:55,415 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:29:55,603 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:29:55,788 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:29:55,993 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:29:56,183 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:29:56,343 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:29:56,491 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:29:56,636 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:29:56,845 10.123.1.3 - - [26/Jan/2021 12:29:56] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:32:14,118 10.123.1.3 - - [26/Jan/2021 12:32:14] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:32:14,139 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:32:14,315 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:32:14,491 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:32:14,663 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:32:14,839 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:32:15,017 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:32:15,167 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:32:15,308 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:32:15,451 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:32:15,660 10.123.1.3 - - [26/Jan/2021 12:32:15] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:34:32,581 10.123.1.3 - - [26/Jan/2021 12:34:32] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:34:32,612 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:34:32,801 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:34:32,997 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:34:33,182 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:34:33,366 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:34:33,554 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:34:33,710 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:34:33,857 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:34:33,999 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:34:34,190 10.123.1.3 - - [26/Jan/2021 12:34:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:36:50,693 10.123.1.3 - - [26/Jan/2021 12:36:50] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:36:50,713 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:36:50,886 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:36:51,063 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:36:51,235 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:36:51,414 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:36:51,589 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:36:51,743 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:36:51,883 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:36:52,021 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:36:52,228 10.123.1.3 - - [26/Jan/2021 12:36:52] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:39:09,055 10.123.1.3 - - [26/Jan/2021 12:39:09] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:39:09,081 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:39:09,268 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:39:09,498 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:39:09,683 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:39:09,885 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:39:10,072 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:39:10,230 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:39:10,375 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:39:10,519 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:39:10,719 10.123.1.3 - - [26/Jan/2021 12:39:10] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:41:26,233 10.123.1.3 - - [26/Jan/2021 12:41:26] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:41:26,260 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:41:26,445 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:41:26,632 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:41:26,814 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:41:27,000 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:41:27,187 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:41:27,346 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:41:27,492 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:41:27,635 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:41:27,837 10.123.1.3 - - [26/Jan/2021 12:41:27] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:43:44,200 10.123.1.3 - - [26/Jan/2021 12:43:44] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:43:44,221 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:43:44,398 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:43:44,584 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:43:44,779 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:43:44,978 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:43:45,165 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:43:45,337 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:43:45,483 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:43:45,631 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:43:45,832 10.123.1.3 - - [26/Jan/2021 12:43:45] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:46:03,635 10.123.1.3 - - [26/Jan/2021 12:46:03] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:46:03,661 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:46:03,845 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:46:04,044 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:46:04,242 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:46:04,428 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:46:04,614 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:46:04,773 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:46:04,918 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:46:05,073 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:46:05,275 10.123.1.3 - - [26/Jan/2021 12:46:05] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:48:21,844 10.123.1.3 - - [26/Jan/2021 12:48:21] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:48:21,869 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:48:22,047 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:48:22,222 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:48:22,397 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:48:22,573 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:48:22,750 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:48:22,928 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:48:23,077 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:48:23,226 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:48:23,430 10.123.1.3 - - [26/Jan/2021 12:48:23] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:50:39,722 10.123.1.3 - - [26/Jan/2021 12:50:39] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:50:39,751 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:50:39,935 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:50:40,121 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:50:40,320 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:50:40,518 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:50:40,720 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:50:40,877 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:50:41,019 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:50:41,166 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:50:41,392 10.123.1.3 - - [26/Jan/2021 12:50:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:52:57,371 10.123.1.3 - - [26/Jan/2021 12:52:57] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:52:57,398 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:52:57,581 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:52:57,768 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:52:57,951 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:52:58,140 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:52:58,324 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:52:58,472 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:52:58,614 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:52:58,755 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:52:58,949 10.123.1.3 - - [26/Jan/2021 12:52:58] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:55:13,211 10.123.1.3 - - [26/Jan/2021 12:55:13] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:55:13,238 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:55:13,421 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:55:13,609 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:55:13,795 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:55:13,974 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:55:14,151 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:55:14,300 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:55:14,441 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:55:14,587 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:55:14,783 10.123.1.3 - - [26/Jan/2021 12:55:14] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:57:30,318 10.123.1.3 - - [26/Jan/2021 12:57:30] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:57:30,345 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:57:30,523 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:57:30,697 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:57:30,880 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:57:31,065 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:57:31,252 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:57:31,409 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:57:31,554 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:57:31,700 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:57:31,901 10.123.1.3 - - [26/Jan/2021 12:57:31] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 12:59:47,783 10.123.1.3 - - [26/Jan/2021 12:59:47] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 12:59:47,809 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 12:59:47,991 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 12:59:48,177 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 12:59:48,362 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 12:59:48,549 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 12:59:48,736 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 12:59:48,892 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 12:59:49,038 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 12:59:49,182 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 12:59:49,386 10.123.1.3 - - [26/Jan/2021 12:59:49] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:02:04,401 10.123.1.3 - - [26/Jan/2021 13:02:04] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:02:04,429 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:02:04,612 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:02:04,804 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:02:04,990 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:02:05,177 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:02:05,376 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:02:05,537 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:02:05,688 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:02:05,837 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:02:06,036 10.123.1.3 - - [26/Jan/2021 13:02:06] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:04:21,743 10.123.1.3 - - [26/Jan/2021 13:04:21] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:04:21,773 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:04:21,964 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:04:22,138 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:04:22,313 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:04:22,492 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:04:22,673 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:04:22,834 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:04:22,975 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:04:23,121 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:04:23,319 10.123.1.3 - - [26/Jan/2021 13:04:23] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:06:37,391 10.123.1.3 - - [26/Jan/2021 13:06:37] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:06:37,416 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:06:37,601 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:06:37,778 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:06:37,968 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:06:38,147 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:06:38,330 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:06:38,487 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:06:38,637 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:06:38,787 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:06:38,991 10.123.1.3 - - [26/Jan/2021 13:06:38] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:08:53,972 10.123.1.3 - - [26/Jan/2021 13:08:53] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:08:53,999 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:08:54,180 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:08:54,374 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:08:54,559 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:08:54,748 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:08:54,934 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:08:55,090 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:08:55,237 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:08:55,382 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:08:55,570 10.123.1.3 - - [26/Jan/2021 13:08:55] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:11:11,021 10.123.1.3 - - [26/Jan/2021 13:11:11] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:11:11,048 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:11:11,231 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:11:11,418 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:11:11,603 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:11:11,788 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:11:11,978 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:11:12,158 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:11:12,302 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:11:12,446 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:11:12,649 10.123.1.3 - - [26/Jan/2021 13:11:12] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:13:28,701 10.123.1.3 - - [26/Jan/2021 13:13:28] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:13:28,723 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:13:28,898 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:13:29,079 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:13:29,254 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:13:29,443 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:13:29,628 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:13:29,782 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:13:29,929 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:13:30,070 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:13:30,270 10.123.1.3 - - [26/Jan/2021 13:13:30] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:15:45,160 10.123.1.3 - - [26/Jan/2021 13:15:45] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:15:45,187 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:15:45,371 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:15:45,556 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:15:45,741 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:15:45,929 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:15:46,118 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:15:46,276 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:15:46,423 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:15:46,566 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:15:46,750 10.123.1.3 - - [26/Jan/2021 13:15:46] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:18:02,030 10.123.1.3 - - [26/Jan/2021 13:18:02] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:18:02,057 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:18:02,241 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:18:02,428 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:18:02,617 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:18:02,830 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:18:03,020 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:18:03,189 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:18:03,338 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:18:03,485 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:18:03,688 10.123.1.3 - - [26/Jan/2021 13:18:03] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:20:19,394 10.123.1.3 - - [26/Jan/2021 13:20:19] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:20:19,421 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:20:19,623 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:20:19,809 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:20:19,997 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:20:20,174 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:20:20,349 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:20:20,504 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:20:20,646 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:20:20,787 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:20:20,982 10.123.1.3 - - [26/Jan/2021 13:20:20] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:22:36,089 10.123.1.3 - - [26/Jan/2021 13:22:36] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:22:36,110 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:22:36,288 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:22:36,463 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:22:36,635 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:22:36,814 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:22:36,991 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:22:37,146 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:22:37,291 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:22:37,436 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:22:37,637 10.123.1.3 - - [26/Jan/2021 13:22:37] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:24:53,668 10.123.1.3 - - [26/Jan/2021 13:24:53] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:24:53,695 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:24:53,877 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:24:54,061 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:24:54,247 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:24:54,441 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:24:54,627 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:24:54,789 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:24:54,934 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:24:55,074 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:24:55,275 10.123.1.3 - - [26/Jan/2021 13:24:55] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:27:09,773 10.123.1.3 - - [26/Jan/2021 13:27:09] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:27:09,801 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:27:09,984 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:27:10,170 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:27:10,353 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:27:10,551 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:27:10,752 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:27:10,910 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:27:11,061 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:27:11,208 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:27:11,410 10.123.1.3 - - [26/Jan/2021 13:27:11] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:29:26,532 10.123.1.3 - - [26/Jan/2021 13:29:26] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:29:26,558 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:29:26,748 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:29:26,935 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:29:27,135 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:29:27,320 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:29:27,522 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:29:27,677 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:29:27,818 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:29:27,957 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:29:28,153 10.123.1.3 - - [26/Jan/2021 13:29:28] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:31:43,163 10.123.1.3 - - [26/Jan/2021 13:31:43] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:31:43,190 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:31:43,375 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:31:43,561 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:31:43,747 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:31:43,924 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:31:44,101 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:31:44,250 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:31:44,398 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:31:44,538 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:31:44,733 10.123.1.3 - - [26/Jan/2021 13:31:44] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:33:59,176 10.123.1.3 - - [26/Jan/2021 13:33:59] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:33:59,198 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:33:59,393 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:33:59,576 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:33:59,761 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:33:59,947 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:34:00,138 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:34:00,302 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:34:00,445 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:34:00,609 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:34:00,810 10.123.1.3 - - [26/Jan/2021 13:34:00] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:36:15,835 10.123.1.3 - - [26/Jan/2021 13:36:15] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:36:15,862 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:36:16,046 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:36:16,234 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:36:16,420 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:36:16,610 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:36:16,797 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:36:16,954 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:36:17,102 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:36:17,247 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:36:17,449 10.123.1.3 - - [26/Jan/2021 13:36:17] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:38:32,165 10.123.1.3 - - [26/Jan/2021 13:38:32] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:38:32,193 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:38:32,383 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:38:32,571 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:38:32,760 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:38:32,948 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:38:33,137 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:38:33,298 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:38:33,442 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:38:33,587 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:38:33,783 10.123.1.3 - - [26/Jan/2021 13:38:33] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:40:49,763 10.123.1.3 - - [26/Jan/2021 13:40:49] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:40:49,790 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:40:49,973 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:40:50,158 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:40:50,340 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:40:50,527 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:40:50,715 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:40:50,871 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:40:51,016 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:40:51,160 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:40:51,363 10.123.1.3 - - [26/Jan/2021 13:40:51] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:43:07,029 10.123.1.3 - - [26/Jan/2021 13:43:07] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:43:07,058 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:43:07,244 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:43:07,432 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:43:07,619 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:43:07,804 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:43:07,991 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:43:08,146 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:43:08,288 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:43:08,431 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:43:08,636 10.123.1.3 - - [26/Jan/2021 13:43:08] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:45:23,586 10.123.1.3 - - [26/Jan/2021 13:45:23] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:45:23,612 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:45:23,795 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:45:23,969 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:45:24,141 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:45:24,316 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:45:24,494 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:45:24,642 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:45:24,781 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:45:24,922 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:45:25,118 10.123.1.3 - - [26/Jan/2021 13:45:25] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:47:39,774 10.123.1.3 - - [26/Jan/2021 13:47:39] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:47:39,803 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:47:39,987 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:47:40,173 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:47:40,357 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:47:40,545 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:47:40,737 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:47:40,904 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:47:41,050 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:47:41,203 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:47:41,405 10.123.1.3 - - [26/Jan/2021 13:47:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:49:57,523 10.123.1.3 - - [26/Jan/2021 13:49:57] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:49:57,550 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:49:57,733 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:49:57,919 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:49:58,105 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:49:58,300 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:49:58,488 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:49:58,652 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:49:58,796 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:49:58,942 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:49:59,127 10.123.1.3 - - [26/Jan/2021 13:49:59] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:52:13,756 10.123.1.3 - - [26/Jan/2021 13:52:13] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:52:13,782 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:52:13,966 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:52:14,153 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:52:14,342 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:52:14,529 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:52:14,720 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:52:14,872 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:52:15,015 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:52:15,162 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:52:15,361 10.123.1.3 - - [26/Jan/2021 13:52:15] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:54:30,604 10.123.1.3 - - [26/Jan/2021 13:54:30] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:54:30,626 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:54:30,803 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:54:30,985 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:54:31,160 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:54:31,348 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:54:31,534 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:54:31,693 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:54:31,840 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:54:31,985 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:54:32,185 10.123.1.3 - - [26/Jan/2021 13:54:32] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:56:47,316 10.123.1.3 - - [26/Jan/2021 13:56:47] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:56:47,343 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:56:47,526 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:56:47,713 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:56:47,912 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:56:48,109 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:56:48,295 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:56:48,460 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:56:48,606 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:56:48,751 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:56:48,950 10.123.1.3 - - [26/Jan/2021 13:56:48] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 13:59:04,154 10.123.1.3 - - [26/Jan/2021 13:59:04] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 13:59:04,180 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 13:59:04,366 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 13:59:04,550 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 13:59:04,735 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 13:59:04,940 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 13:59:05,127 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 13:59:05,286 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 13:59:05,434 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 13:59:05,581 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 13:59:05,763 10.123.1.3 - - [26/Jan/2021 13:59:05] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:01:19,834 10.123.1.3 - - [26/Jan/2021 14:01:19] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:01:19,861 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:01:20,046 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:01:20,240 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:01:20,440 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:01:20,640 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:01:20,840 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:01:20,997 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:01:21,145 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:01:21,290 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:01:21,490 10.123.1.3 - - [26/Jan/2021 14:01:21] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:03:36,199 10.123.1.3 - - [26/Jan/2021 14:03:36] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:03:36,225 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:03:36,407 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:03:36,594 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:03:36,779 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:03:36,966 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:03:37,155 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:03:37,335 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:03:37,485 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:03:37,637 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:03:37,843 10.123.1.3 - - [26/Jan/2021 14:03:37] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:05:51,894 10.123.1.3 - - [26/Jan/2021 14:05:51] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:05:51,921 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:05:52,104 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:05:52,291 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:05:52,477 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:05:52,664 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:05:52,856 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:05:53,019 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:05:53,166 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:05:53,313 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:05:53,517 10.123.1.3 - - [26/Jan/2021 14:05:53] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:08:08,278 10.123.1.3 - - [26/Jan/2021 14:08:08] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:08:08,307 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:08:08,498 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:08:08,683 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:08:08,855 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:08:09,032 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:08:09,208 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:08:09,387 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:08:09,529 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:08:09,662 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:08:09,861 10.123.1.3 - - [26/Jan/2021 14:08:09] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:10:24,536 10.123.1.3 - - [26/Jan/2021 14:10:24] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:10:24,562 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:10:24,747 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:10:24,932 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:10:25,118 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:10:25,301 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:10:25,495 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:10:25,656 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:10:25,802 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:10:25,955 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:10:26,156 10.123.1.3 - - [26/Jan/2021 14:10:26] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:12:42,633 10.123.1.3 - - [26/Jan/2021 14:12:42] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:12:42,659 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:12:42,842 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:12:43,034 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:12:43,209 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:12:43,385 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:12:43,564 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:12:43,719 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:12:43,865 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:12:44,008 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:12:44,205 10.123.1.3 - - [26/Jan/2021 14:12:44] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:14:58,164 10.123.1.3 - - [26/Jan/2021 14:14:58] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:14:58,185 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:14:58,360 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:14:58,544 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:14:58,727 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:14:58,913 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:14:59,101 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:14:59,262 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:14:59,408 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:14:59,548 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:14:59,750 10.123.1.3 - - [26/Jan/2021 14:14:59] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:17:16,094 10.123.1.3 - - [26/Jan/2021 14:17:16] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:17:16,120 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:17:16,301 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:17:16,488 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:17:16,671 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:17:16,863 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:17:17,051 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:17:17,209 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:17:17,352 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:17:17,488 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:17:17,668 10.123.1.3 - - [26/Jan/2021 14:17:17] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:19:31,850 10.123.1.3 - - [26/Jan/2021 14:19:31] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:19:31,876 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:19:32,061 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:19:32,246 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:19:32,422 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:19:32,601 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:19:32,790 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:19:32,947 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:19:33,091 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:19:33,250 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:19:33,446 10.123.1.3 - - [26/Jan/2021 14:19:33] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:21:47,510 10.123.1.3 - - [26/Jan/2021 14:21:47] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:21:47,531 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:21:47,705 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:21:47,879 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:21:48,053 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:21:48,237 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:21:48,416 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:21:48,575 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:21:48,720 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:21:48,862 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:21:49,045 10.123.1.3 - - [26/Jan/2021 14:21:49] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:24:03,317 10.123.1.3 - - [26/Jan/2021 14:24:03] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:24:03,338 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:24:03,515 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:24:03,693 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:24:03,878 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:24:04,064 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:24:04,251 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:24:04,413 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:24:04,562 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:24:04,711 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:24:04,913 10.123.1.3 - - [26/Jan/2021 14:24:04] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:26:20,468 10.123.1.3 - - [26/Jan/2021 14:26:20] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:26:20,494 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:26:20,691 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:26:20,878 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:26:21,060 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:26:21,248 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:26:21,437 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:26:21,593 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:26:21,741 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:26:21,882 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:26:22,093 10.123.1.3 - - [26/Jan/2021 14:26:22] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:28:37,531 10.123.1.3 - - [26/Jan/2021 14:28:37] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:28:37,559 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:28:37,741 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:28:37,927 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:28:38,102 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:28:38,288 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:28:38,476 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:28:38,634 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:28:38,781 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:28:38,923 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:28:39,125 10.123.1.3 - - [26/Jan/2021 14:28:39] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:30:55,158 10.123.1.3 - - [26/Jan/2021 14:30:55] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:30:55,184 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:30:55,368 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:30:55,553 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:30:55,728 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:30:55,903 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:30:56,082 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:30:56,234 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:30:56,372 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:30:56,514 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:30:56,715 10.123.1.3 - - [26/Jan/2021 14:30:56] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:33:11,681 10.123.1.3 - - [26/Jan/2021 14:33:11] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:33:11,708 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:33:11,893 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:33:12,078 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:33:12,272 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:33:12,461 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:33:12,647 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:33:12,802 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:33:12,947 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:33:13,084 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:33:13,286 10.123.1.3 - - [26/Jan/2021 14:33:13] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:35:28,571 10.123.1.3 - - [26/Jan/2021 14:35:28] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:35:28,597 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:35:28,777 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:35:28,964 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:35:29,155 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:35:29,340 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:35:29,527 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:35:29,690 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:35:29,837 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:35:29,982 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:35:30,182 10.123.1.3 - - [26/Jan/2021 14:35:30] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:37:43,773 10.123.1.3 - - [26/Jan/2021 14:37:43] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:37:43,800 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:37:43,981 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:37:44,166 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:37:44,350 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:37:44,536 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:37:44,727 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:37:44,878 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:37:45,022 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:37:45,160 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:37:45,362 10.123.1.3 - - [26/Jan/2021 14:37:45] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:40:00,311 10.123.1.3 - - [26/Jan/2021 14:40:00] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:40:00,338 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:40:00,525 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:40:00,712 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:40:00,903 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:40:01,084 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:40:01,265 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:40:01,417 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:40:01,560 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:40:01,697 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:40:01,896 10.123.1.3 - - [26/Jan/2021 14:40:01] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:42:15,901 10.123.1.3 - - [26/Jan/2021 14:42:15] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:42:15,923 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:42:16,101 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:42:16,280 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:42:16,456 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:42:16,637 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:42:16,818 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:42:16,969 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:42:17,112 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:42:17,260 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:42:17,463 10.123.1.3 - - [26/Jan/2021 14:42:17] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:44:32,773 10.123.1.3 - - [26/Jan/2021 14:44:32] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:44:32,800 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:44:32,981 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:44:33,166 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:44:33,360 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:44:33,547 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:44:33,738 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:44:33,897 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:44:34,044 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:44:34,189 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:44:34,456 10.123.1.3 - - [26/Jan/2021 14:44:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:46:48,968 10.123.1.3 - - [26/Jan/2021 14:46:48] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:46:48,996 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:46:49,179 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:46:49,366 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:46:49,549 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:46:49,737 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:46:49,926 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:46:50,079 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:46:50,221 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:46:50,367 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:46:50,571 10.123.1.3 - - [26/Jan/2021 14:46:50] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:49:05,266 10.123.1.3 - - [26/Jan/2021 14:49:05] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:49:05,293 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:49:05,476 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:49:05,664 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:49:05,849 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:49:06,035 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:49:06,223 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:49:06,385 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:49:06,539 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:49:06,695 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:49:06,921 10.123.1.3 - - [26/Jan/2021 14:49:06] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:51:21,091 10.123.1.3 - - [26/Jan/2021 14:51:21] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:51:21,128 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:51:21,312 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:51:21,501 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:51:21,686 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:51:21,873 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:51:22,064 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:51:22,227 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:51:22,380 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:51:22,528 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:51:22,753 10.123.1.3 - - [26/Jan/2021 14:51:22] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:53:37,514 10.123.1.3 - - [26/Jan/2021 14:53:37] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:53:37,544 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:53:37,732 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:53:37,911 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:53:38,084 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:53:38,258 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:53:38,444 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:53:38,628 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:53:38,804 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:53:38,981 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:53:39,179 10.123.1.3 - - [26/Jan/2021 14:53:39] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:55:53,869 10.123.1.3 - - [26/Jan/2021 14:55:53] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:55:53,897 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:55:54,084 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:55:54,275 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:55:54,460 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:55:56,593 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:55:56,782 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:55:56,940 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:55:57,086 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:55:57,230 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:55:57,431 10.123.1.3 - - [26/Jan/2021 14:55:57] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 14:58:12,202 10.123.1.3 - - [26/Jan/2021 14:58:12] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 14:58:12,229 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 14:58:14,257 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 14:58:16,287 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 14:58:18,761 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 14:58:18,949 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 14:58:20,716 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 14:58:20,873 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 14:58:21,018 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 14:58:21,159 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 14:58:21,358 10.123.1.3 - - [26/Jan/2021 14:58:21] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:00:36,454 10.123.1.3 - - [26/Jan/2021 15:00:36] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:00:36,481 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:00:36,665 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:00:36,852 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:00:37,038 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:00:37,225 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:00:37,414 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:00:37,569 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:00:37,715 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:00:37,861 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:00:38,046 10.123.1.3 - - [26/Jan/2021 15:00:38] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:02:53,832 10.123.1.3 - - [26/Jan/2021 15:02:53] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:02:53,859 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:02:54,042 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:02:54,232 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:02:54,405 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:02:54,584 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:02:54,760 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:02:54,913 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:02:55,058 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:02:55,200 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:02:55,389 10.123.1.3 - - [26/Jan/2021 15:02:55] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:05:09,064 10.123.1.3 - - [26/Jan/2021 15:05:09] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:05:09,086 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:05:09,259 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:05:09,434 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:05:09,612 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:05:09,790 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:05:09,966 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:05:10,117 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:05:10,262 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:05:10,403 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:05:10,608 10.123.1.3 - - [26/Jan/2021 15:05:10] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:07:25,330 10.123.1.3 - - [26/Jan/2021 15:07:25] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:07:25,361 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:07:25,546 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:07:25,733 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:07:25,920 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:07:26,105 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:07:26,294 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:07:26,468 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:07:26,610 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:07:26,754 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:07:26,957 10.123.1.3 - - [26/Jan/2021 15:07:26] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:09:40,771 10.123.1.3 - - [26/Jan/2021 15:09:40] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:09:40,798 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:09:40,984 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:09:41,169 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:09:41,355 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:09:41,541 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:09:41,727 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:09:41,925 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:09:42,069 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:09:42,216 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:09:42,418 10.123.1.3 - - [26/Jan/2021 15:09:42] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:11:57,187 10.123.1.3 - - [26/Jan/2021 15:11:57] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:11:57,214 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:11:57,417 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:11:57,653 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:11:57,844 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:11:58,033 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:11:58,217 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:11:58,373 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:11:58,518 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:11:58,657 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:11:58,853 10.123.1.3 - - [26/Jan/2021 15:11:58] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:14:14,998 10.123.1.3 - - [26/Jan/2021 15:14:14] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:14:15,022 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:14:15,196 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:14:15,384 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:14:15,570 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:14:15,754 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:14:15,941 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:14:16,099 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:14:16,243 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:14:16,387 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:14:16,588 10.123.1.3 - - [26/Jan/2021 15:14:16] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:16:32,276 10.123.1.3 - - [26/Jan/2021 15:16:32] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:16:32,304 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:16:32,485 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:16:32,670 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:16:32,857 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:16:33,046 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:16:33,247 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:16:33,413 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:16:33,568 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:16:33,723 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:16:33,930 10.123.1.3 - - [26/Jan/2021 15:16:33] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:18:46,992 10.123.1.3 - - [26/Jan/2021 15:18:46] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:18:47,020 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:18:47,206 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:18:47,392 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:18:47,578 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:18:47,764 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:18:47,953 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:18:48,111 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:18:48,262 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:18:48,406 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:18:48,609 10.123.1.3 - - [26/Jan/2021 15:18:48] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:21:03,809 10.123.1.3 - - [26/Jan/2021 15:21:03] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:21:03,835 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:21:04,020 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:21:04,209 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:21:04,394 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:21:04,582 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:21:04,774 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:21:04,920 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:21:05,055 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:21:05,199 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:21:05,395 10.123.1.3 - - [26/Jan/2021 15:21:05] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:23:19,956 10.123.1.3 - - [26/Jan/2021 15:23:19] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:23:19,977 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:23:20,153 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:23:20,328 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:23:20,502 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:23:20,678 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:23:20,853 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:23:21,006 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:23:21,148 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:23:21,295 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:23:21,492 10.123.1.3 - - [26/Jan/2021 15:23:21] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:25:36,566 10.123.1.3 - - [26/Jan/2021 15:25:36] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:25:36,592 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:25:36,774 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:25:36,961 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:25:37,146 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:25:37,332 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:25:37,518 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:25:37,675 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:25:37,821 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:25:37,973 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:25:38,181 10.123.1.3 - - [26/Jan/2021 15:25:38] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:27:53,019 10.123.1.3 - - [26/Jan/2021 15:27:53] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:27:53,047 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:27:53,230 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:27:53,439 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:27:53,628 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:27:53,816 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:27:54,005 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:27:54,165 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:27:54,313 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:27:54,458 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:27:54,632 10.123.1.3 - - [26/Jan/2021 15:27:54] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:30:09,525 10.123.1.3 - - [26/Jan/2021 15:30:09] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:30:09,547 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:30:09,722 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:30:09,900 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:30:10,085 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:30:10,270 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:30:10,445 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:30:10,597 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:30:10,742 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:30:10,882 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:30:11,060 10.123.1.3 - - [26/Jan/2021 15:30:11] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:32:25,135 10.123.1.3 - - [26/Jan/2021 15:32:25] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:32:25,158 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:32:25,346 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:32:25,532 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:32:25,716 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:32:25,904 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:32:26,090 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:32:26,247 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:32:26,393 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:32:26,542 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:32:26,747 10.123.1.3 - - [26/Jan/2021 15:32:26] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:34:39,764 10.123.1.3 - - [26/Jan/2021 15:34:39] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:34:39,786 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:34:39,960 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:34:40,139 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:34:40,313 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:34:40,515 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:34:40,707 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:34:40,857 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:34:41,000 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:34:41,144 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:34:41,348 10.123.1.3 - - [26/Jan/2021 15:34:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:36:54,980 10.123.1.3 - - [26/Jan/2021 15:36:54] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:36:55,003 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:36:55,194 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:36:55,410 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:36:55,596 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:36:55,786 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:36:55,974 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:36:56,132 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:36:56,281 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:36:56,428 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:36:56,631 10.123.1.3 - - [26/Jan/2021 15:36:56] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:39:11,503 10.123.1.3 - - [26/Jan/2021 15:39:11] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:39:11,532 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:39:11,716 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:39:11,902 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:39:12,087 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:39:12,288 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:39:12,497 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:39:12,665 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:39:12,815 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:39:12,961 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:39:13,163 10.123.1.3 - - [26/Jan/2021 15:39:13] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:41:26,917 10.123.1.3 - - [26/Jan/2021 15:41:26] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:41:26,943 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:41:27,125 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:41:27,326 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:41:27,513 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:41:27,707 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:41:27,898 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:41:28,070 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:41:28,217 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:41:28,364 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:41:28,568 10.123.1.3 - - [26/Jan/2021 15:41:28] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:43:44,033 10.123.1.3 - - [26/Jan/2021 15:43:44] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:43:44,064 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:43:44,261 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:43:44,456 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:43:44,643 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:43:44,824 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:43:45,010 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:43:45,185 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:43:45,332 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:43:45,482 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:43:45,677 10.123.1.3 - - [26/Jan/2021 15:43:45] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:45:59,576 10.123.1.3 - - [26/Jan/2021 15:45:59] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:45:59,598 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:45:59,779 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:45:59,970 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:46:00,166 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:46:00,353 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:46:00,541 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:46:00,703 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:46:00,848 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:46:00,995 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:46:01,197 10.123.1.3 - - [26/Jan/2021 15:46:01] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:48:16,725 10.123.1.3 - - [26/Jan/2021 15:48:16] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:48:16,752 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:48:16,936 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:48:17,123 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:48:17,306 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:48:17,496 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:48:17,684 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:48:17,849 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:48:17,999 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:48:18,143 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:48:18,344 10.123.1.3 - - [26/Jan/2021 15:48:18] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:50:33,810 10.123.1.3 - - [26/Jan/2021 15:50:33] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:50:33,838 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:50:34,024 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:50:34,198 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:50:34,371 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:50:34,549 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:50:34,724 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:50:34,887 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:50:35,033 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:50:35,173 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:50:35,365 10.123.1.3 - - [26/Jan/2021 15:50:35] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:52:49,783 10.123.1.3 - - [26/Jan/2021 15:52:49] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:52:49,810 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:52:49,994 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:52:50,184 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:52:50,384 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:52:50,576 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:52:50,778 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:52:50,938 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:52:51,083 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:52:51,229 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:52:51,436 10.123.1.3 - - [26/Jan/2021 15:52:51] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:55:06,393 10.123.1.3 - - [26/Jan/2021 15:55:06] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:55:06,423 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:55:06,611 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:55:06,799 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:55:06,987 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:55:07,174 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:55:07,360 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:55:07,518 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:55:07,661 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:55:07,807 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:55:08,007 10.123.1.3 - - [26/Jan/2021 15:55:08] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:57:23,013 10.123.1.3 - - [26/Jan/2021 15:57:23] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:57:23,039 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:57:23,222 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:57:23,416 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:57:23,602 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:57:23,802 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:57:23,998 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:57:24,157 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:57:24,308 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:57:24,456 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:57:24,658 10.123.1.3 - - [26/Jan/2021 15:57:24] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 15:59:39,162 10.123.1.3 - - [26/Jan/2021 15:59:39] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 15:59:39,189 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 15:59:39,372 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 15:59:39,559 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 15:59:39,752 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 15:59:39,931 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 15:59:40,105 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 15:59:40,256 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 15:59:40,398 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 15:59:40,542 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 15:59:40,720 10.123.1.3 - - [26/Jan/2021 15:59:40] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:01:55,162 10.123.1.3 - - [26/Jan/2021 16:01:55] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:01:55,184 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:01:55,357 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:01:55,541 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:01:55,714 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:01:55,911 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:01:56,102 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:01:56,287 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:01:56,431 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:01:56,576 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:01:56,774 10.123.1.3 - - [26/Jan/2021 16:01:56] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:04:10,914 10.123.1.3 - - [26/Jan/2021 16:04:10] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:04:10,939 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:04:11,113 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:04:11,295 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:04:11,481 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:04:11,668 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:04:11,871 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:04:12,032 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:04:12,180 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:04:12,330 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:04:12,531 10.123.1.3 - - [26/Jan/2021 16:04:12] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:06:27,731 10.123.1.3 - - [26/Jan/2021 16:06:27] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:06:27,759 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:06:27,941 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:06:28,126 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:06:28,312 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:06:28,501 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:06:28,687 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:06:28,848 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:06:28,994 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:06:29,147 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:06:29,343 10.123.1.3 - - [26/Jan/2021 16:06:29] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:08:43,679 10.123.1.3 - - [26/Jan/2021 16:08:43] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:08:43,706 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:08:43,890 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:08:44,085 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:08:44,270 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:08:44,456 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:08:44,644 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:08:44,801 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:08:44,946 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:08:45,091 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:08:45,285 10.123.1.3 - - [26/Jan/2021 16:08:45] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:10:59,991 10.123.1.3 - - [26/Jan/2021 16:10:59] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:11:00,019 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:11:00,204 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:11:00,392 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:11:00,571 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:11:00,749 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:11:00,928 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:11:01,076 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:11:01,217 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:11:01,357 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:11:01,537 10.123.1.3 - - [26/Jan/2021 16:11:01] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:13:15,731 10.123.1.3 - - [26/Jan/2021 16:13:15] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:13:15,754 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:13:15,929 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:13:16,118 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:13:16,292 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:13:16,468 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:13:16,669 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:13:16,838 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:13:16,986 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:13:17,126 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:13:17,333 10.123.1.3 - - [26/Jan/2021 16:13:17] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:15:32,453 10.123.1.3 - - [26/Jan/2021 16:15:32] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:15:32,478 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:15:32,662 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:15:32,845 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:15:33,031 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:15:33,224 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:15:33,421 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:15:33,579 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:15:33,730 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:15:33,880 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:15:34,079 10.123.1.3 - - [26/Jan/2021 16:15:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:17:49,152 10.123.1.3 - - [26/Jan/2021 16:17:49] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:17:49,178 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:17:49,362 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:17:49,547 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:17:49,736 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:17:49,940 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:17:50,123 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:17:50,277 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:17:50,417 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:17:50,559 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:17:50,757 10.123.1.3 - - [26/Jan/2021 16:17:50] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:20:03,789 10.123.1.3 - - [26/Jan/2021 16:20:03] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:20:03,815 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:20:04,002 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:20:04,189 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:20:04,380 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:20:04,573 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:20:04,765 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:20:04,921 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:20:05,067 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:20:05,212 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:20:05,409 10.123.1.3 - - [26/Jan/2021 16:20:05] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:22:20,232 10.123.1.3 - - [26/Jan/2021 16:22:20] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:22:20,254 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:22:20,431 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:22:20,608 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:22:20,782 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:22:20,960 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:22:21,135 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:22:21,292 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:22:21,436 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:22:21,585 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:22:21,784 10.123.1.3 - - [26/Jan/2021 16:22:21] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:24:36,547 10.123.1.3 - - [26/Jan/2021 16:24:36] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:24:36,574 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:24:36,772 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:24:36,972 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:24:37,158 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:24:37,346 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:24:37,532 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:24:37,706 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:24:37,856 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:24:38,003 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:24:38,206 10.123.1.3 - - [26/Jan/2021 16:24:38] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:26:53,277 10.123.1.3 - - [26/Jan/2021 16:26:53] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:26:53,304 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:26:53,486 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:26:53,673 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:26:53,858 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:26:54,045 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:26:54,231 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:26:54,399 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:26:54,546 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:26:54,691 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:26:54,900 10.123.1.3 - - [26/Jan/2021 16:26:54] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:29:10,220 10.123.1.3 - - [26/Jan/2021 16:29:10] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:29:10,244 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:29:10,418 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:29:10,593 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:29:10,774 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:29:10,972 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:29:11,159 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:29:11,337 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:29:11,484 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:29:11,631 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:29:11,828 10.123.1.3 - - [26/Jan/2021 16:29:11] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:31:26,355 10.123.1.3 - - [26/Jan/2021 16:31:26] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:31:26,376 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:31:26,551 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:31:26,734 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:31:26,923 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:31:27,108 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:31:27,301 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:31:27,460 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:31:27,603 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:31:27,749 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:31:27,950 10.123.1.3 - - [26/Jan/2021 16:31:27] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:33:42,645 10.123.1.3 - - [26/Jan/2021 16:33:42] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:33:42,670 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:33:42,863 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:33:43,055 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:33:43,239 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:33:43,425 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:33:43,623 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:33:43,780 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:33:43,933 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:33:44,080 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:33:44,280 10.123.1.3 - - [26/Jan/2021 16:33:44] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:35:59,630 10.123.1.3 - - [26/Jan/2021 16:35:59] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:35:59,657 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:35:59,839 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:36:00,026 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:36:00,213 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:36:00,387 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:36:00,565 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:36:00,743 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:36:00,883 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:36:01,023 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:36:01,220 10.123.1.3 - - [26/Jan/2021 16:36:01] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:38:15,370 10.123.1.3 - - [26/Jan/2021 16:38:15] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:38:15,397 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:38:15,576 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:38:15,750 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:38:15,924 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:38:16,102 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:38:16,278 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:38:16,424 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:38:16,560 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:38:16,700 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:38:16,897 10.123.1.3 - - [26/Jan/2021 16:38:16] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:40:30,365 10.123.1.3 - - [26/Jan/2021 16:40:30] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:40:30,392 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:40:30,575 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:40:30,763 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:40:30,952 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:40:31,131 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:40:31,309 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:40:31,462 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:40:31,608 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:40:31,750 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:40:31,946 10.123.1.3 - - [26/Jan/2021 16:40:31] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:42:46,111 10.123.1.3 - - [26/Jan/2021 16:42:46] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:42:46,131 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:42:46,305 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:42:46,488 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:42:46,665 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:42:46,843 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:42:47,019 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:42:47,174 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:42:47,322 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:42:47,471 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:42:47,671 10.123.1.3 - - [26/Jan/2021 16:42:47] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:45:02,301 10.123.1.3 - - [26/Jan/2021 16:45:02] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:45:02,327 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:45:02,510 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:45:02,695 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:45:02,878 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:45:03,063 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:45:03,250 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:45:03,409 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:45:03,556 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:45:03,706 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:45:03,908 10.123.1.3 - - [26/Jan/2021 16:45:03] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:47:18,936 10.123.1.3 - - [26/Jan/2021 16:47:18] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:47:18,962 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:47:19,144 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:47:19,346 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:47:19,540 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:47:19,729 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:47:19,915 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:47:20,072 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:47:20,211 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:47:20,357 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:47:20,555 10.123.1.3 - - [26/Jan/2021 16:47:20] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:49:36,136 10.123.1.3 - - [26/Jan/2021 16:49:36] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:49:36,163 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:49:36,345 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:49:36,536 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:49:36,722 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:49:36,909 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:49:37,095 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:49:37,241 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:49:37,378 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:49:37,569 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:49:37,746 10.123.1.3 - - [26/Jan/2021 16:49:37] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:51:51,122 10.123.1.3 - - [26/Jan/2021 16:51:51] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:51:51,149 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:51:51,346 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:51:51,533 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:51:51,717 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:51:51,911 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:51:52,112 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:51:52,268 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:51:52,424 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:51:52,571 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:51:52,762 10.123.1.3 - - [26/Jan/2021 16:51:52] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:54:07,739 10.123.1.3 - - [26/Jan/2021 16:54:07] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:54:07,765 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:54:07,948 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:54:08,144 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:54:08,330 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:54:08,527 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:54:08,720 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:54:08,883 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:54:09,033 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:54:09,175 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:54:09,375 10.123.1.3 - - [26/Jan/2021 16:54:09] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:56:24,046 10.123.1.3 - - [26/Jan/2021 16:56:24] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:56:24,072 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:56:24,268 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:56:24,457 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:56:24,630 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:56:24,808 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:56:24,983 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:56:25,170 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:56:25,315 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:56:25,457 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:56:25,645 10.123.1.3 - - [26/Jan/2021 16:56:25] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 16:58:40,340 10.123.1.3 - - [26/Jan/2021 16:58:40] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 16:58:40,367 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 16:58:40,550 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 16:58:40,737 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 16:58:40,922 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 16:58:41,110 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 16:58:41,297 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 16:58:41,462 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 16:58:41,620 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 16:58:41,772 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 16:58:41,972 10.123.1.3 - - [26/Jan/2021 16:58:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:00:58,273 10.123.1.3 - - [26/Jan/2021 17:00:58] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:00:58,299 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:00:58,481 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:00:58,667 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:00:58,852 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:00:59,042 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:00:59,216 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:00:59,370 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:00:59,514 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:00:59,654 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:00:59,849 10.123.1.3 - - [26/Jan/2021 17:00:59] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:03:15,265 10.123.1.3 - - [26/Jan/2021 17:03:15] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:03:15,286 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:03:15,462 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:03:15,648 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:03:15,831 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:03:16,017 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:03:16,203 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:03:16,361 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:03:16,510 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:03:16,659 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:03:16,860 10.123.1.3 - - [26/Jan/2021 17:03:16] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:05:31,251 10.123.1.3 - - [26/Jan/2021 17:05:31] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:05:31,279 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:05:31,464 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:05:31,652 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:05:31,840 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:05:32,026 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:05:32,212 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:05:32,369 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:05:32,517 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:05:32,660 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:05:32,860 10.123.1.3 - - [26/Jan/2021 17:05:32] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:07:47,941 10.123.1.3 - - [26/Jan/2021 17:07:47] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:07:47,968 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:07:48,154 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:07:48,356 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:07:48,542 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:07:48,725 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:07:48,910 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:07:49,073 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:07:49,219 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:07:49,367 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:07:49,572 10.123.1.3 - - [26/Jan/2021 17:07:49] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:10:04,200 10.123.1.3 - - [26/Jan/2021 17:10:04] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:10:04,227 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:10:04,416 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:10:04,620 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:10:04,808 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:10:04,993 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:10:05,181 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:10:05,332 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:10:05,473 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:10:05,617 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:10:05,823 10.123.1.3 - - [26/Jan/2021 17:10:05] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:12:20,411 10.123.1.3 - - [26/Jan/2021 17:12:20] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:12:20,439 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:12:20,622 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:12:20,809 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:12:20,995 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:12:21,182 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:12:21,368 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:12:21,522 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:12:21,668 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:12:21,811 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:12:22,012 10.123.1.3 - - [26/Jan/2021 17:12:22] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:14:37,086 10.123.1.3 - - [26/Jan/2021 17:14:37] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:14:37,114 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:14:37,298 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:14:37,485 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:14:37,669 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:14:37,855 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:14:38,043 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:14:38,200 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:14:38,344 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:14:38,488 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:14:38,685 10.123.1.3 - - [26/Jan/2021 17:14:38] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:16:52,981 10.123.1.3 - - [26/Jan/2021 17:16:52] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:16:53,003 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:16:53,190 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:16:53,371 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:16:53,544 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:16:53,725 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:16:53,908 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:16:54,060 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:16:54,201 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:16:54,340 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:16:54,535 10.123.1.3 - - [26/Jan/2021 17:16:54] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:19:09,587 10.123.1.3 - - [26/Jan/2021 17:19:09] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:19:09,612 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:19:09,798 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:19:09,984 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:19:10,168 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:19:10,355 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:19:10,542 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:19:10,701 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:19:10,847 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:19:10,993 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:19:11,195 10.123.1.3 - - [26/Jan/2021 17:19:11] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:21:27,223 10.123.1.3 - - [26/Jan/2021 17:21:27] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:21:27,250 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:21:27,433 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:21:27,619 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:21:27,802 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:21:27,988 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:21:28,175 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:21:28,334 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:21:28,483 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:21:28,623 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:21:28,819 10.123.1.3 - - [26/Jan/2021 17:21:28] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:23:45,492 10.123.1.3 - - [26/Jan/2021 17:23:45] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:23:45,520 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:23:45,711 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:23:45,895 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:23:46,080 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:23:46,264 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:23:46,451 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:23:46,605 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:23:46,753 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:23:46,895 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:23:47,094 10.123.1.3 - - [26/Jan/2021 17:23:47] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:26:02,014 10.123.1.3 - - [26/Jan/2021 17:26:02] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:26:02,040 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:26:02,223 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:26:02,420 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:26:02,608 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:26:02,796 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:26:02,982 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:26:03,138 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:26:03,286 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:26:03,424 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:26:03,625 10.123.1.3 - - [26/Jan/2021 17:26:03] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:28:19,190 10.123.1.3 - - [26/Jan/2021 17:28:19] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:28:19,211 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:28:19,384 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:28:19,559 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:28:19,731 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:28:19,909 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:28:20,083 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:28:20,236 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:28:20,384 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:28:20,528 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:28:20,728 10.123.1.3 - - [26/Jan/2021 17:28:20] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:30:35,691 10.123.1.3 - - [26/Jan/2021 17:30:35] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:30:35,717 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:30:35,899 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:30:36,084 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:30:36,273 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:30:36,458 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:30:36,645 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:30:36,801 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:30:36,946 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:30:37,094 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:30:37,295 10.123.1.3 - - [26/Jan/2021 17:30:37] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:32:53,205 10.123.1.3 - - [26/Jan/2021 17:32:53] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:32:53,232 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:32:53,415 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:32:53,601 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:32:53,787 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:32:53,973 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:32:54,159 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:32:54,317 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:32:54,458 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:32:54,599 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:32:54,793 10.123.1.3 - - [26/Jan/2021 17:32:54] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:35:08,437 10.123.1.3 - - [26/Jan/2021 17:35:08] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:35:08,463 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:35:08,646 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:35:08,833 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:35:09,022 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:35:09,198 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:35:09,372 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:35:09,522 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:35:09,661 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:35:09,802 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:35:09,996 10.123.1.3 - - [26/Jan/2021 17:35:09] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:37:24,658 10.123.1.3 - - [26/Jan/2021 17:37:24] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:37:24,685 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:37:24,871 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:37:25,057 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:37:25,240 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:37:25,428 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:37:25,617 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:37:25,777 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:37:25,925 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:37:26,072 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:37:26,280 10.123.1.3 - - [26/Jan/2021 17:37:26] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:39:41,953 10.123.1.3 - - [26/Jan/2021 17:39:41] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:39:41,982 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:39:42,190 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:39:42,378 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:39:42,565 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:39:42,753 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:39:42,941 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:39:43,096 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:39:43,241 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:39:43,379 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:39:43,576 10.123.1.3 - - [26/Jan/2021 17:39:43] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:41:57,744 10.123.1.3 - - [26/Jan/2021 17:41:57] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:41:57,770 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:41:57,953 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:41:58,139 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:41:58,338 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:41:58,523 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:41:58,710 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:41:58,879 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:41:59,023 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:41:59,168 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:41:59,363 10.123.1.3 - - [26/Jan/2021 17:41:59] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:44:14,240 10.123.1.3 - - [26/Jan/2021 17:44:14] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:44:14,267 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:44:14,458 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:44:14,657 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:44:14,834 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:44:15,008 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:44:15,182 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:44:15,335 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:44:15,477 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:44:15,617 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:44:15,817 10.123.1.3 - - [26/Jan/2021 17:44:15] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-26 17:46:31,257 10.123.1.3 - - [26/Jan/2021 17:46:31] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-26 17:46:31,280 Sending agg model to http://10.123.1.3:8008/aggmodel
+2021-01-26 17:46:31,454 Sending agg model to http://10.123.1.3:8004/aggmodel
+2021-01-26 17:46:31,640 Sending agg model to http://10.123.1.3:8005/aggmodel
+2021-01-26 17:46:31,823 Sending agg model to http://10.123.1.3:8006/aggmodel
+2021-01-26 17:46:32,008 Sending agg model to http://10.123.1.3:8007/aggmodel
+2021-01-26 17:46:32,206 Sending agg model to http://10.123.1.2:8003/aggmodel
+2021-01-26 17:46:32,401 Sending agg model to http://10.123.1.2:8004/aggmodel
+2021-01-26 17:46:32,554 Sending agg model to http://10.123.1.2:8005/aggmodel
+2021-01-26 17:46:32,701 Sending agg model to http://10.123.1.60:8003/aggmodel
+2021-01-26 17:46:32,903 10.123.1.3 - - [26/Jan/2021 17:46:32] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -

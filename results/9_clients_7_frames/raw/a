@@ -1,0 +1,3 @@
+mv logs/client_8003.log logs_non_iid/client_8009.log
+mv logs/client_8004.log logs_non_iid/client_8010.log
+mv logs/client_8005.log logs_non_iid/client_8011.log

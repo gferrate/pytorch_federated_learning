@@ -1,0 +1,1407 @@
+2021-01-23 22:59:18,482  * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+2021-01-23 23:03:05,487 127.0.0.1 - - [23/Jan/2021 23:03:05] "[37mGET /pub_key HTTP/1.1[0m" 200 -
+2021-01-23 23:03:05,667 127.0.0.1 - - [23/Jan/2021 23:03:05] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:03:05,695 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:03:05,695 Getting key for host: localhost and port: 8008
+2021-01-23 23:03:05,888 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:03:05,888 Getting key for host: localhost and port: 8004
+2021-01-23 23:03:06,081 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:03:06,081 Getting key for host: localhost and port: 8005
+2021-01-23 23:03:06,275 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:03:06,275 Getting key for host: localhost and port: 8006
+2021-01-23 23:03:06,472 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:03:06,472 Getting key for host: localhost and port: 8007
+2021-01-23 23:03:06,683 127.0.0.1 - - [23/Jan/2021 23:03:06] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:05:54,989 127.0.0.1 - - [23/Jan/2021 23:05:54] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:05:55,016 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:05:55,206 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:05:55,390 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:05:55,576 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:05:55,770 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:05:55,965 127.0.0.1 - - [23/Jan/2021 23:05:55] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:08:43,599 127.0.0.1 - - [23/Jan/2021 23:08:43] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:08:43,629 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:08:43,814 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:08:44,000 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:08:44,188 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:08:44,374 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:08:44,570 127.0.0.1 - - [23/Jan/2021 23:08:44] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:11:33,601 127.0.0.1 - - [23/Jan/2021 23:11:33] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:11:33,628 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:11:33,812 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:11:34,000 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:11:34,187 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:11:34,387 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:11:34,584 127.0.0.1 - - [23/Jan/2021 23:11:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:14:23,584 127.0.0.1 - - [23/Jan/2021 23:14:23] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:14:23,615 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:14:23,800 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:14:23,992 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:14:24,176 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:14:24,367 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:14:24,565 127.0.0.1 - - [23/Jan/2021 23:14:24] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:17:12,725 127.0.0.1 - - [23/Jan/2021 23:17:12] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:17:12,752 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:17:12,936 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:17:13,122 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:17:13,307 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:17:13,496 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:17:13,694 127.0.0.1 - - [23/Jan/2021 23:17:13] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:20:02,807 127.0.0.1 - - [23/Jan/2021 23:20:02] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:20:02,836 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:20:04,679 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:20:04,861 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:20:05,048 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:20:05,238 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:20:05,436 127.0.0.1 - - [23/Jan/2021 23:20:05] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:22:53,967 127.0.0.1 - - [23/Jan/2021 23:22:53] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:22:53,997 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:22:54,180 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:22:54,366 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:22:54,552 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:22:54,741 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:22:54,938 127.0.0.1 - - [23/Jan/2021 23:22:54] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:25:43,423 127.0.0.1 - - [23/Jan/2021 23:25:43] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:25:43,450 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:25:43,635 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:25:43,821 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:25:44,008 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:25:44,197 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:25:44,395 127.0.0.1 - - [23/Jan/2021 23:25:44] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:28:33,480 127.0.0.1 - - [23/Jan/2021 23:28:33] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:28:33,507 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:28:33,690 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:28:33,882 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:28:34,070 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:28:34,258 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:28:34,463 127.0.0.1 - - [23/Jan/2021 23:28:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:31:23,034 127.0.0.1 - - [23/Jan/2021 23:31:23] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:31:23,062 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:31:23,248 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:31:23,434 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:31:23,620 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:31:23,809 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:31:24,007 127.0.0.1 - - [23/Jan/2021 23:31:24] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:34:12,736 127.0.0.1 - - [23/Jan/2021 23:34:12] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:34:12,765 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:34:12,951 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:34:13,139 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:34:13,325 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:34:13,514 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:34:13,714 127.0.0.1 - - [23/Jan/2021 23:34:13] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:37:01,584 127.0.0.1 - - [23/Jan/2021 23:37:01] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:37:01,614 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:37:01,799 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:37:01,988 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:37:02,176 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:37:02,362 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:37:02,560 127.0.0.1 - - [23/Jan/2021 23:37:02] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:39:50,919 127.0.0.1 - - [23/Jan/2021 23:39:50] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:39:50,946 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:39:51,129 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:39:51,316 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:39:51,503 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:39:51,692 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:39:51,889 127.0.0.1 - - [23/Jan/2021 23:39:51] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:42:39,116 127.0.0.1 - - [23/Jan/2021 23:42:39] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:42:39,142 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:42:39,328 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:42:39,516 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:42:39,705 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:42:39,897 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:42:40,101 127.0.0.1 - - [23/Jan/2021 23:42:40] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:45:28,771 127.0.0.1 - - [23/Jan/2021 23:45:28] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:45:28,797 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:45:28,991 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:45:29,178 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:45:29,365 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:45:29,553 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:45:29,748 127.0.0.1 - - [23/Jan/2021 23:45:29] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:48:18,706 127.0.0.1 - - [23/Jan/2021 23:48:18] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:48:18,734 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:48:18,921 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:48:19,106 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:48:19,291 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:48:19,477 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:48:19,677 127.0.0.1 - - [23/Jan/2021 23:48:19] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:51:08,677 127.0.0.1 - - [23/Jan/2021 23:51:08] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:51:08,706 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:51:08,892 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:51:09,079 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:51:09,265 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:51:09,455 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:51:09,660 127.0.0.1 - - [23/Jan/2021 23:51:09] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:53:58,404 127.0.0.1 - - [23/Jan/2021 23:53:58] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:53:58,429 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:53:59,368 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:53:59,549 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:53:59,735 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:53:59,925 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:54:00,115 127.0.0.1 - - [23/Jan/2021 23:54:00] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:56:48,478 127.0.0.1 - - [23/Jan/2021 23:56:48] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:56:48,509 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:56:49,302 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:56:49,497 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:56:49,674 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:56:49,852 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:56:50,045 127.0.0.1 - - [23/Jan/2021 23:56:50] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-23 23:59:38,421 127.0.0.1 - - [23/Jan/2021 23:59:38] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-23 23:59:38,443 Sending agg model to http://localhost:8008/aggmodel
+2021-01-23 23:59:38,620 Sending agg model to http://localhost:8004/aggmodel
+2021-01-23 23:59:38,796 Sending agg model to http://localhost:8005/aggmodel
+2021-01-23 23:59:38,980 Sending agg model to http://localhost:8006/aggmodel
+2021-01-23 23:59:39,158 Sending agg model to http://localhost:8007/aggmodel
+2021-01-23 23:59:39,346 127.0.0.1 - - [23/Jan/2021 23:59:39] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:02:27,353 127.0.0.1 - - [24/Jan/2021 00:02:27] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:02:27,375 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:02:27,550 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:02:27,726 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:02:27,906 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:02:28,082 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:02:28,270 127.0.0.1 - - [24/Jan/2021 00:02:28] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:05:17,773 127.0.0.1 - - [24/Jan/2021 00:05:17] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:05:17,794 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:05:19,629 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:05:19,808 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:05:20,000 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:05:20,189 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:05:20,384 127.0.0.1 - - [24/Jan/2021 00:05:20] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:08:09,474 127.0.0.1 - - [24/Jan/2021 00:08:09] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:08:09,501 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:08:09,687 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:08:09,872 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:08:10,056 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:08:10,245 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:08:10,441 127.0.0.1 - - [24/Jan/2021 00:08:10] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:10:58,449 127.0.0.1 - - [24/Jan/2021 00:10:58] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:10:58,480 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:10:58,663 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:10:58,851 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:10:59,034 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:10:59,238 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:10:59,439 127.0.0.1 - - [24/Jan/2021 00:10:59] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:13:47,962 127.0.0.1 - - [24/Jan/2021 00:13:47] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:13:47,989 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:13:48,186 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:13:48,391 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:13:48,586 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:13:48,773 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:13:48,971 127.0.0.1 - - [24/Jan/2021 00:13:48] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:16:39,178 127.0.0.1 - - [24/Jan/2021 00:16:39] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:16:39,205 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:16:39,390 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:16:39,577 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:16:39,762 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:16:39,951 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:16:40,148 127.0.0.1 - - [24/Jan/2021 00:16:40] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:19:30,024 127.0.0.1 - - [24/Jan/2021 00:19:30] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:19:30,051 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:19:30,240 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:19:30,429 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:19:30,603 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:19:30,792 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:19:30,975 127.0.0.1 - - [24/Jan/2021 00:19:30] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:22:19,650 127.0.0.1 - - [24/Jan/2021 00:22:19] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:22:19,670 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:22:19,847 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:22:20,026 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:22:20,228 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:22:20,428 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:22:20,631 127.0.0.1 - - [24/Jan/2021 00:22:20] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:25:09,596 127.0.0.1 - - [24/Jan/2021 00:25:09] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:25:09,622 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:25:09,815 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:25:10,007 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:25:10,195 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:25:10,382 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:25:10,585 127.0.0.1 - - [24/Jan/2021 00:25:10] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:27:59,488 127.0.0.1 - - [24/Jan/2021 00:27:59] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:27:59,514 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:27:59,701 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:27:59,888 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:28:00,074 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:28:00,263 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:28:00,460 127.0.0.1 - - [24/Jan/2021 00:28:00] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:30:50,409 127.0.0.1 - - [24/Jan/2021 00:30:50] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:30:50,436 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:30:50,638 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:30:50,824 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:30:51,011 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:30:51,200 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:30:51,397 127.0.0.1 - - [24/Jan/2021 00:30:51] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:33:40,299 127.0.0.1 - - [24/Jan/2021 00:33:40] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:33:40,327 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:33:40,528 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:33:40,725 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:33:40,913 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:33:41,105 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:33:41,301 127.0.0.1 - - [24/Jan/2021 00:33:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:36:27,755 127.0.0.1 - - [24/Jan/2021 00:36:27] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:36:27,781 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:36:27,973 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:36:28,160 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:36:28,349 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:36:28,537 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:36:28,734 127.0.0.1 - - [24/Jan/2021 00:36:28] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:39:17,526 127.0.0.1 - - [24/Jan/2021 00:39:17] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:39:17,554 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:39:17,750 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:39:17,952 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:39:18,151 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:39:18,360 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:39:18,568 127.0.0.1 - - [24/Jan/2021 00:39:18] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:42:06,133 127.0.0.1 - - [24/Jan/2021 00:42:06] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:42:06,160 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:42:06,345 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:42:06,531 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:42:06,717 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:42:06,906 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:42:07,105 127.0.0.1 - - [24/Jan/2021 00:42:07] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:44:53,259 127.0.0.1 - - [24/Jan/2021 00:44:53] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:44:53,287 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:44:53,475 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:44:53,662 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:44:53,849 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:44:56,004 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:44:56,198 127.0.0.1 - - [24/Jan/2021 00:44:56] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:47:44,523 127.0.0.1 - - [24/Jan/2021 00:47:44] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:47:44,550 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:47:44,732 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:47:44,920 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:47:45,106 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:47:45,295 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:47:45,511 127.0.0.1 - - [24/Jan/2021 00:47:45] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:50:33,827 127.0.0.1 - - [24/Jan/2021 00:50:33] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:50:33,855 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:50:34,040 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:50:34,226 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:50:34,411 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:50:34,599 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:50:34,803 127.0.0.1 - - [24/Jan/2021 00:50:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:53:24,113 127.0.0.1 - - [24/Jan/2021 00:53:24] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:53:24,142 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:53:24,325 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:53:24,517 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:53:24,706 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:53:24,893 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:53:25,092 127.0.0.1 - - [24/Jan/2021 00:53:25] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:56:12,821 127.0.0.1 - - [24/Jan/2021 00:56:12] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:56:12,849 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:56:13,032 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:56:13,227 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:56:13,438 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:56:13,626 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:56:13,824 127.0.0.1 - - [24/Jan/2021 00:56:13] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 00:59:02,382 127.0.0.1 - - [24/Jan/2021 00:59:02] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 00:59:02,409 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 00:59:02,596 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 00:59:02,782 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 00:59:02,969 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 00:59:03,161 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 00:59:03,357 127.0.0.1 - - [24/Jan/2021 00:59:03] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:01:50,974 127.0.0.1 - - [24/Jan/2021 01:01:50] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:01:51,002 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:01:51,193 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:01:51,381 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:01:51,568 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:01:51,758 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:01:51,959 127.0.0.1 - - [24/Jan/2021 01:01:51] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:04:40,070 127.0.0.1 - - [24/Jan/2021 01:04:40] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:04:40,100 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:04:40,283 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:04:40,470 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:04:40,656 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:04:40,844 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:04:41,042 127.0.0.1 - - [24/Jan/2021 01:04:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:07:29,746 127.0.0.1 - - [24/Jan/2021 01:07:29] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:07:29,773 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:07:30,136 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:07:30,316 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:07:30,501 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:07:30,690 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:07:30,903 127.0.0.1 - - [24/Jan/2021 01:07:30] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:10:19,480 127.0.0.1 - - [24/Jan/2021 01:10:19] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:10:19,506 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:10:19,692 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:10:19,878 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:10:20,072 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:10:20,267 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:10:20,462 127.0.0.1 - - [24/Jan/2021 01:10:20] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:13:08,892 127.0.0.1 - - [24/Jan/2021 01:13:08] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:13:08,919 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:13:09,104 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:13:09,291 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:13:09,483 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:13:09,674 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:13:09,872 127.0.0.1 - - [24/Jan/2021 01:13:09] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:15:58,165 127.0.0.1 - - [24/Jan/2021 01:15:58] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:15:58,191 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:15:58,376 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:15:58,561 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:15:58,748 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:15:58,937 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:15:59,150 127.0.0.1 - - [24/Jan/2021 01:15:59] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:18:48,025 127.0.0.1 - - [24/Jan/2021 01:18:48] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:18:48,051 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:18:48,236 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:18:48,423 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:18:48,613 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:18:48,802 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:18:49,000 127.0.0.1 - - [24/Jan/2021 01:18:49] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:21:37,741 127.0.0.1 - - [24/Jan/2021 01:21:37] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:21:37,767 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:21:37,950 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:21:38,138 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:21:38,342 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:21:38,530 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:21:38,725 127.0.0.1 - - [24/Jan/2021 01:21:38] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:24:26,543 127.0.0.1 - - [24/Jan/2021 01:24:26] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:24:26,569 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:24:26,753 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:24:26,941 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:24:27,127 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:24:27,332 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:24:27,529 127.0.0.1 - - [24/Jan/2021 01:24:27] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:27:16,277 127.0.0.1 - - [24/Jan/2021 01:27:16] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:27:16,304 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:27:16,489 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:27:16,679 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:27:16,866 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:27:17,052 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:27:17,249 127.0.0.1 - - [24/Jan/2021 01:27:17] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:30:04,310 127.0.0.1 - - [24/Jan/2021 01:30:04] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:30:04,337 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:30:04,522 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:30:04,708 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:30:04,894 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:30:05,081 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:30:05,280 127.0.0.1 - - [24/Jan/2021 01:30:05] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:32:54,175 127.0.0.1 - - [24/Jan/2021 01:32:54] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:32:54,202 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:32:54,388 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:32:54,573 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:32:54,759 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:32:54,948 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:32:55,147 127.0.0.1 - - [24/Jan/2021 01:32:55] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:35:42,948 127.0.0.1 - - [24/Jan/2021 01:35:42] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:35:42,975 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:35:43,160 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:35:43,345 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:35:43,531 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:35:43,738 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:35:43,945 127.0.0.1 - - [24/Jan/2021 01:35:43] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:38:33,564 127.0.0.1 - - [24/Jan/2021 01:38:33] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:38:33,591 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:38:33,783 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:38:33,970 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:38:34,172 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:38:34,362 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:38:34,558 127.0.0.1 - - [24/Jan/2021 01:38:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:41:23,450 127.0.0.1 - - [24/Jan/2021 01:41:23] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:41:23,476 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:41:23,663 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:41:23,849 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:41:24,038 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:41:24,214 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:41:24,398 127.0.0.1 - - [24/Jan/2021 01:41:24] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:44:13,434 127.0.0.1 - - [24/Jan/2021 01:44:13] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:44:13,456 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:44:13,633 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:44:13,808 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:44:14,000 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:44:14,201 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:44:14,405 127.0.0.1 - - [24/Jan/2021 01:44:14] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:47:04,260 127.0.0.1 - - [24/Jan/2021 01:47:04] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:47:04,290 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:47:04,475 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:47:04,663 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:47:04,851 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:47:05,039 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:47:05,237 127.0.0.1 - - [24/Jan/2021 01:47:05] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:49:52,800 127.0.0.1 - - [24/Jan/2021 01:49:52] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:49:52,827 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:49:53,012 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:49:53,199 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:49:53,386 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:49:53,573 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:49:53,772 127.0.0.1 - - [24/Jan/2021 01:49:53] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:52:40,612 127.0.0.1 - - [24/Jan/2021 01:52:40] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:52:40,638 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:52:40,823 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:52:41,021 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:52:41,207 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:52:41,400 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:52:41,596 127.0.0.1 - - [24/Jan/2021 01:52:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:55:29,742 127.0.0.1 - - [24/Jan/2021 01:55:29] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:55:29,769 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:55:29,966 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:55:30,165 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:55:30,350 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:55:30,537 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:55:30,732 127.0.0.1 - - [24/Jan/2021 01:55:30] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 01:58:19,540 127.0.0.1 - - [24/Jan/2021 01:58:19] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 01:58:19,568 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 01:58:19,856 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 01:58:20,053 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 01:58:20,247 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 01:58:20,444 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 01:58:20,647 127.0.0.1 - - [24/Jan/2021 01:58:20] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:01:09,211 127.0.0.1 - - [24/Jan/2021 02:01:09] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:01:09,238 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:01:09,425 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:01:09,611 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:01:09,799 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:01:09,986 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:01:10,202 127.0.0.1 - - [24/Jan/2021 02:01:10] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:03:57,827 127.0.0.1 - - [24/Jan/2021 02:03:57] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:03:57,854 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:03:58,043 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:03:58,229 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:03:58,416 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:03:58,603 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:03:58,795 127.0.0.1 - - [24/Jan/2021 02:03:58] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:06:47,388 127.0.0.1 - - [24/Jan/2021 02:06:47] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:06:47,416 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:06:47,615 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:06:47,801 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:06:47,988 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:06:48,184 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:06:48,382 127.0.0.1 - - [24/Jan/2021 02:06:48] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:09:37,943 127.0.0.1 - - [24/Jan/2021 02:09:37] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:09:37,978 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:09:38,165 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:09:38,369 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:09:38,559 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:09:38,750 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:09:38,949 127.0.0.1 - - [24/Jan/2021 02:09:38] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:12:27,582 127.0.0.1 - - [24/Jan/2021 02:12:27] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:12:27,609 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:12:27,811 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:12:28,009 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:12:28,196 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:12:28,381 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:12:28,594 127.0.0.1 - - [24/Jan/2021 02:12:28] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:15:17,360 127.0.0.1 - - [24/Jan/2021 02:15:17] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:15:17,386 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:15:17,573 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:15:17,758 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:15:19,898 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:15:20,080 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:15:20,266 127.0.0.1 - - [24/Jan/2021 02:15:20] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:18:06,998 127.0.0.1 - - [24/Jan/2021 02:18:06] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:18:07,024 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:18:07,212 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:18:07,399 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:18:07,585 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:18:07,775 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:18:07,972 127.0.0.1 - - [24/Jan/2021 02:18:07] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:20:56,135 127.0.0.1 - - [24/Jan/2021 02:20:56] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:20:56,162 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:20:56,347 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:20:56,534 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:20:56,720 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:20:56,909 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:20:57,114 127.0.0.1 - - [24/Jan/2021 02:20:57] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:23:45,134 127.0.0.1 - - [24/Jan/2021 02:23:45] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:23:45,160 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:23:45,359 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:23:45,546 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:23:45,731 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:23:45,923 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:23:46,134 127.0.0.1 - - [24/Jan/2021 02:23:46] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:26:34,200 127.0.0.1 - - [24/Jan/2021 02:26:34] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:26:34,226 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:26:34,410 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:26:34,598 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:26:34,787 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:26:34,974 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:26:35,174 127.0.0.1 - - [24/Jan/2021 02:26:35] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:29:23,290 127.0.0.1 - - [24/Jan/2021 02:29:23] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:29:23,316 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:29:23,507 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:29:23,693 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:29:23,880 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:29:24,079 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:29:24,281 127.0.0.1 - - [24/Jan/2021 02:29:24] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:32:12,387 127.0.0.1 - - [24/Jan/2021 02:32:12] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:32:12,416 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:32:12,615 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:32:12,803 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:32:13,000 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:32:13,213 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:32:13,410 127.0.0.1 - - [24/Jan/2021 02:32:13] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:35:00,535 127.0.0.1 - - [24/Jan/2021 02:35:00] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:35:00,562 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:35:00,748 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:35:00,934 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:35:01,121 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:35:01,311 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:35:01,508 127.0.0.1 - - [24/Jan/2021 02:35:01] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:37:48,362 127.0.0.1 - - [24/Jan/2021 02:37:48] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:37:48,385 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:37:48,568 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:37:48,754 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:37:48,951 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:37:49,137 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:37:49,334 127.0.0.1 - - [24/Jan/2021 02:37:49] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:40:38,665 127.0.0.1 - - [24/Jan/2021 02:40:38] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:40:38,692 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:40:39,939 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:40:40,121 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:40:40,308 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:40:40,497 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:40:40,695 127.0.0.1 - - [24/Jan/2021 02:40:40] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:43:28,201 127.0.0.1 - - [24/Jan/2021 02:43:28] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:43:28,229 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:43:28,421 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:43:28,607 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:43:28,794 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:43:28,982 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:43:29,180 127.0.0.1 - - [24/Jan/2021 02:43:29] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:46:17,272 127.0.0.1 - - [24/Jan/2021 02:46:17] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:46:17,299 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:46:17,484 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:46:17,670 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:46:17,856 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:46:18,059 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:46:18,257 127.0.0.1 - - [24/Jan/2021 02:46:18] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:49:06,462 127.0.0.1 - - [24/Jan/2021 02:49:06] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:49:06,489 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:49:06,677 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:49:06,874 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:49:07,060 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:49:07,249 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:49:07,445 127.0.0.1 - - [24/Jan/2021 02:49:07] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:51:55,802 127.0.0.1 - - [24/Jan/2021 02:51:55] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:51:55,828 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:51:56,019 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:51:56,212 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:51:56,406 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:51:56,594 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:51:56,794 127.0.0.1 - - [24/Jan/2021 02:51:56] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:54:44,516 127.0.0.1 - - [24/Jan/2021 02:54:44] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:54:44,542 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:54:44,728 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:54:44,915 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:54:45,100 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:54:45,290 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:54:45,487 127.0.0.1 - - [24/Jan/2021 02:54:45] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 02:57:33,362 127.0.0.1 - - [24/Jan/2021 02:57:33] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 02:57:33,389 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 02:57:33,574 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 02:57:33,758 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 02:57:33,946 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 02:57:34,133 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 02:57:34,330 127.0.0.1 - - [24/Jan/2021 02:57:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:00:22,539 127.0.0.1 - - [24/Jan/2021 03:00:22] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:00:22,566 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:00:22,752 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:00:22,939 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:00:23,124 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:00:23,315 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:00:23,527 127.0.0.1 - - [24/Jan/2021 03:00:23] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:03:12,278 127.0.0.1 - - [24/Jan/2021 03:03:12] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:03:12,306 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:03:12,490 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:03:12,676 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:03:12,874 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:03:13,062 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:03:13,259 127.0.0.1 - - [24/Jan/2021 03:03:13] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:06:00,699 127.0.0.1 - - [24/Jan/2021 03:06:00] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:06:00,727 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:06:00,911 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:06:01,098 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:06:01,282 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:06:01,467 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:06:01,662 127.0.0.1 - - [24/Jan/2021 03:06:01] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:08:48,971 127.0.0.1 - - [24/Jan/2021 03:08:48] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:08:48,998 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:08:49,183 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:08:49,372 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:08:49,558 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:08:49,747 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:08:49,951 127.0.0.1 - - [24/Jan/2021 03:08:49] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:11:37,532 127.0.0.1 - - [24/Jan/2021 03:11:37] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:11:37,562 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:11:37,748 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:11:39,803 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:11:39,986 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:11:40,174 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:11:40,370 127.0.0.1 - - [24/Jan/2021 03:11:40] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:14:28,609 127.0.0.1 - - [24/Jan/2021 03:14:28] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:14:28,636 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:14:28,821 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:14:29,010 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:14:29,196 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:14:29,383 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:14:29,581 127.0.0.1 - - [24/Jan/2021 03:14:29] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:17:18,427 127.0.0.1 - - [24/Jan/2021 03:17:18] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:17:18,453 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:17:18,642 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:17:18,827 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:17:20,895 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:17:21,074 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:17:21,265 127.0.0.1 - - [24/Jan/2021 03:17:21] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:20:08,605 127.0.0.1 - - [24/Jan/2021 03:20:08] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:20:08,632 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:20:08,818 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:20:09,004 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:20:09,190 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:20:09,379 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:20:09,576 127.0.0.1 - - [24/Jan/2021 03:20:09] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:22:58,047 127.0.0.1 - - [24/Jan/2021 03:22:58] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:22:58,075 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:22:58,258 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:22:58,445 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:22:58,632 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:22:58,821 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:22:59,017 127.0.0.1 - - [24/Jan/2021 03:22:59] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:25:47,858 127.0.0.1 - - [24/Jan/2021 03:25:47] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:25:47,882 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:25:48,086 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:25:48,275 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:25:48,462 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:25:48,656 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:25:48,853 127.0.0.1 - - [24/Jan/2021 03:25:48] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:28:38,592 127.0.0.1 - - [24/Jan/2021 03:28:38] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:28:38,618 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:28:38,806 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:28:38,994 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:28:39,179 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:28:39,366 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:28:39,566 127.0.0.1 - - [24/Jan/2021 03:28:39] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:31:28,163 127.0.0.1 - - [24/Jan/2021 03:31:28] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:31:28,190 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:31:28,377 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:31:28,562 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:31:28,748 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:31:28,937 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:31:29,133 127.0.0.1 - - [24/Jan/2021 03:31:29] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:34:17,927 127.0.0.1 - - [24/Jan/2021 03:34:17] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:34:17,954 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:34:18,138 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:34:18,324 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:34:18,512 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:34:18,701 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:34:18,898 127.0.0.1 - - [24/Jan/2021 03:34:18] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:37:07,828 127.0.0.1 - - [24/Jan/2021 03:37:07] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:37:07,855 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:37:08,038 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:37:08,225 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:37:08,411 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:37:10,647 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:37:10,852 127.0.0.1 - - [24/Jan/2021 03:37:10] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:39:59,166 127.0.0.1 - - [24/Jan/2021 03:39:59] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:39:59,193 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:39:59,378 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:39:59,565 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:39:59,749 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:39:59,937 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:40:00,145 127.0.0.1 - - [24/Jan/2021 03:40:00] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:42:48,221 127.0.0.1 - - [24/Jan/2021 03:42:48] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:42:48,248 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:42:48,431 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:42:48,617 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:42:48,807 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:42:48,996 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:42:49,193 127.0.0.1 - - [24/Jan/2021 03:42:49] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:45:38,263 127.0.0.1 - - [24/Jan/2021 03:45:38] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:45:38,290 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:45:38,475 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:45:38,661 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:45:38,850 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:45:39,043 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:45:39,241 127.0.0.1 - - [24/Jan/2021 03:45:39] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:48:28,203 127.0.0.1 - - [24/Jan/2021 03:48:28] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:48:28,229 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:48:28,413 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:48:28,602 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:48:28,789 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:48:28,979 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:48:29,179 127.0.0.1 - - [24/Jan/2021 03:48:29] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:51:16,750 127.0.0.1 - - [24/Jan/2021 03:51:16] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:51:16,775 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:51:17,896 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:51:18,082 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:51:18,268 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:51:18,457 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:51:18,655 127.0.0.1 - - [24/Jan/2021 03:51:18] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:54:08,360 127.0.0.1 - - [24/Jan/2021 03:54:08] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:54:08,386 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:54:08,574 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:54:08,759 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:54:08,946 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:54:09,134 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:54:09,324 127.0.0.1 - - [24/Jan/2021 03:54:09] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:56:57,593 127.0.0.1 - - [24/Jan/2021 03:56:57] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:56:57,619 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:56:58,217 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:56:58,404 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:56:58,581 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:56:58,757 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:56:58,942 127.0.0.1 - - [24/Jan/2021 03:56:58] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 03:59:46,738 127.0.0.1 - - [24/Jan/2021 03:59:46] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 03:59:46,765 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 03:59:46,949 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 03:59:47,134 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 03:59:47,322 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 03:59:47,516 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 03:59:47,714 127.0.0.1 - - [24/Jan/2021 03:59:47] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:02:36,337 127.0.0.1 - - [24/Jan/2021 04:02:36] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:02:36,358 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:02:36,534 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:02:36,709 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:02:36,883 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:02:37,061 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:02:37,256 127.0.0.1 - - [24/Jan/2021 04:02:37] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:05:25,273 127.0.0.1 - - [24/Jan/2021 04:05:25] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:05:25,295 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:05:25,476 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:05:25,655 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:05:25,829 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:05:26,006 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:05:26,224 127.0.0.1 - - [24/Jan/2021 04:05:26] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:08:14,438 127.0.0.1 - - [24/Jan/2021 04:08:14] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:08:14,465 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:08:14,651 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:08:14,840 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:08:15,048 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:08:15,239 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:08:15,439 127.0.0.1 - - [24/Jan/2021 04:08:15] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:11:03,563 127.0.0.1 - - [24/Jan/2021 04:11:03] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:11:03,590 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:11:03,772 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:11:03,959 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:11:04,143 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:11:04,330 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:11:04,526 127.0.0.1 - - [24/Jan/2021 04:11:04] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:13:51,932 127.0.0.1 - - [24/Jan/2021 04:13:51] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:13:51,959 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:13:52,144 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:13:52,330 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:13:52,516 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:13:52,706 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:13:52,911 127.0.0.1 - - [24/Jan/2021 04:13:52] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:16:39,538 127.0.0.1 - - [24/Jan/2021 04:16:39] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:16:39,562 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:16:39,763 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:16:39,984 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:16:40,174 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:16:40,373 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:16:40,584 127.0.0.1 - - [24/Jan/2021 04:16:40] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:19:29,074 127.0.0.1 - - [24/Jan/2021 04:19:29] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:19:29,101 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:19:29,286 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:19:29,472 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:19:29,657 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:19:29,848 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:19:30,048 127.0.0.1 - - [24/Jan/2021 04:19:30] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:22:18,012 127.0.0.1 - - [24/Jan/2021 04:22:18] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:22:18,038 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:22:18,994 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:22:19,177 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:22:19,364 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:22:19,554 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:22:19,751 127.0.0.1 - - [24/Jan/2021 04:22:19] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:25:07,210 127.0.0.1 - - [24/Jan/2021 04:25:07] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:25:07,244 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:25:07,430 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:25:07,629 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:25:07,818 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:25:08,006 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:25:08,205 127.0.0.1 - - [24/Jan/2021 04:25:08] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:27:57,318 127.0.0.1 - - [24/Jan/2021 04:27:57] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:27:57,344 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:27:57,543 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:27:57,732 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:27:57,920 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:27:58,115 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:27:58,314 127.0.0.1 - - [24/Jan/2021 04:27:58] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:30:46,456 127.0.0.1 - - [24/Jan/2021 04:30:46] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:30:46,484 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:30:46,680 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:30:46,873 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:30:47,058 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:30:47,249 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:30:47,450 127.0.0.1 - - [24/Jan/2021 04:30:47] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:33:35,976 127.0.0.1 - - [24/Jan/2021 04:33:35] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:33:36,003 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:33:36,194 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:33:36,395 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:33:36,578 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:33:36,766 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:33:36,965 127.0.0.1 - - [24/Jan/2021 04:33:36] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:36:24,572 127.0.0.1 - - [24/Jan/2021 04:36:24] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:36:24,600 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:36:24,791 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:36:24,981 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:36:25,169 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:36:25,360 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:36:25,567 127.0.0.1 - - [24/Jan/2021 04:36:25] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:39:13,377 127.0.0.1 - - [24/Jan/2021 04:39:13] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:39:13,403 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:39:13,593 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:39:13,779 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:39:13,964 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:39:14,153 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:39:14,351 127.0.0.1 - - [24/Jan/2021 04:39:14] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:42:01,748 127.0.0.1 - - [24/Jan/2021 04:42:01] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:42:01,776 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:42:01,959 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:42:02,146 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:42:02,334 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:42:02,522 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:42:02,721 127.0.0.1 - - [24/Jan/2021 04:42:02] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:44:51,251 127.0.0.1 - - [24/Jan/2021 04:44:51] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:44:51,278 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:44:51,469 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:44:51,667 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:44:51,862 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:44:52,071 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:44:52,269 127.0.0.1 - - [24/Jan/2021 04:44:52] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:47:40,202 127.0.0.1 - - [24/Jan/2021 04:47:40] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:47:40,230 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:47:40,422 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:47:40,610 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:47:40,796 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:47:40,983 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:47:41,182 127.0.0.1 - - [24/Jan/2021 04:47:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:50:29,389 127.0.0.1 - - [24/Jan/2021 04:50:29] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:50:29,417 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:50:29,941 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:50:30,121 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:50:30,310 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:50:30,502 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:50:30,706 127.0.0.1 - - [24/Jan/2021 04:50:30] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:53:18,593 127.0.0.1 - - [24/Jan/2021 04:53:18] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:53:18,620 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:53:21,348 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:53:23,420 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:53:25,893 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:53:27,843 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:53:29,682 127.0.0.1 - - [24/Jan/2021 04:53:29] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:56:18,581 127.0.0.1 - - [24/Jan/2021 04:56:18] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:56:18,613 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:56:18,802 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:56:19,003 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:56:19,200 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:56:19,401 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:56:19,598 127.0.0.1 - - [24/Jan/2021 04:56:19] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 04:59:07,145 127.0.0.1 - - [24/Jan/2021 04:59:07] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 04:59:07,172 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 04:59:07,358 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 04:59:07,544 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 04:59:07,729 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 04:59:07,919 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 04:59:08,116 127.0.0.1 - - [24/Jan/2021 04:59:08] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:01:57,070 127.0.0.1 - - [24/Jan/2021 05:01:57] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:01:57,099 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:01:57,686 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:01:57,873 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:01:58,058 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:01:58,248 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:01:58,446 127.0.0.1 - - [24/Jan/2021 05:01:58] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:04:47,953 127.0.0.1 - - [24/Jan/2021 05:04:47] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:04:47,980 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:04:48,165 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:04:48,353 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:04:48,541 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:04:48,731 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:04:48,929 127.0.0.1 - - [24/Jan/2021 05:04:48] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:07:37,760 127.0.0.1 - - [24/Jan/2021 05:07:37] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:07:37,789 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:07:37,974 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:07:38,176 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:07:38,364 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:07:38,553 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:07:38,762 127.0.0.1 - - [24/Jan/2021 05:07:38] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:10:27,044 127.0.0.1 - - [24/Jan/2021 05:10:27] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:10:27,071 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:10:28,295 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:10:28,477 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:10:28,665 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:10:28,868 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:10:29,063 127.0.0.1 - - [24/Jan/2021 05:10:29] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:13:18,673 127.0.0.1 - - [24/Jan/2021 05:13:18] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:13:18,700 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:13:18,888 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:13:19,070 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:13:19,245 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:13:19,437 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:13:19,623 127.0.0.1 - - [24/Jan/2021 05:13:19] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:16:08,725 127.0.0.1 - - [24/Jan/2021 05:16:08] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:16:08,747 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:16:09,430 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:16:09,614 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:16:09,790 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:16:09,973 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:16:10,172 127.0.0.1 - - [24/Jan/2021 05:16:10] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:18:58,166 127.0.0.1 - - [24/Jan/2021 05:18:58] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:18:58,187 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:18:58,366 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:18:58,551 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:18:58,738 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:18:58,927 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:18:59,124 127.0.0.1 - - [24/Jan/2021 05:18:59] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:21:47,890 127.0.0.1 - - [24/Jan/2021 05:21:47] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:21:47,919 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:21:48,103 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:21:48,289 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:21:48,475 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:21:48,664 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:21:48,863 127.0.0.1 - - [24/Jan/2021 05:21:48] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:24:37,392 127.0.0.1 - - [24/Jan/2021 05:24:37] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:24:37,419 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:24:37,606 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:24:37,794 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:24:37,982 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:24:38,184 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:24:38,382 127.0.0.1 - - [24/Jan/2021 05:24:38] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:27:26,892 127.0.0.1 - - [24/Jan/2021 05:27:26] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:27:26,920 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:27:27,109 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:27:27,297 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:27:27,483 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:27:27,673 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:27:27,871 127.0.0.1 - - [24/Jan/2021 05:27:27] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:30:16,018 127.0.0.1 - - [24/Jan/2021 05:30:16] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:30:16,045 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:30:16,229 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:30:16,414 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:30:16,602 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:30:16,808 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:30:17,004 127.0.0.1 - - [24/Jan/2021 05:30:17] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:33:04,529 127.0.0.1 - - [24/Jan/2021 05:33:04] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:33:04,556 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:33:06,199 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:33:06,377 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:33:06,564 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:33:06,752 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:33:06,949 127.0.0.1 - - [24/Jan/2021 05:33:06] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:35:54,654 127.0.0.1 - - [24/Jan/2021 05:35:54] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:35:54,682 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:35:54,869 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:35:55,054 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:35:55,238 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:35:55,427 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:35:55,623 127.0.0.1 - - [24/Jan/2021 05:35:55] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:38:43,315 127.0.0.1 - - [24/Jan/2021 05:38:43] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:38:43,344 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:38:43,533 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:38:43,720 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:38:43,907 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:38:44,103 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:38:44,301 127.0.0.1 - - [24/Jan/2021 05:38:44] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:41:33,984 127.0.0.1 - - [24/Jan/2021 05:41:33] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:41:34,012 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:41:34,195 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:41:34,381 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:41:34,572 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:41:34,760 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:41:34,957 127.0.0.1 - - [24/Jan/2021 05:41:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:44:23,697 127.0.0.1 - - [24/Jan/2021 05:44:23] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:44:23,723 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:44:23,906 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:44:24,094 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:44:24,280 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:44:24,482 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:44:24,681 127.0.0.1 - - [24/Jan/2021 05:44:24] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:47:15,177 127.0.0.1 - - [24/Jan/2021 05:47:15] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:47:15,204 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:47:15,404 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:47:15,597 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:47:15,801 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:47:16,002 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:47:16,204 127.0.0.1 - - [24/Jan/2021 05:47:16] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:50:03,309 127.0.0.1 - - [24/Jan/2021 05:50:03] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:50:03,337 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:50:04,316 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:50:04,500 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:50:04,686 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:50:04,881 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:50:05,077 127.0.0.1 - - [24/Jan/2021 05:50:05] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:52:53,870 127.0.0.1 - - [24/Jan/2021 05:52:53] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:52:53,897 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:52:54,088 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:52:54,280 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:52:54,472 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:52:54,661 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:52:54,864 127.0.0.1 - - [24/Jan/2021 05:52:54] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:55:43,113 127.0.0.1 - - [24/Jan/2021 05:55:43] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:55:43,142 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:55:43,339 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:55:43,535 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:55:43,711 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:55:43,889 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:55:44,075 127.0.0.1 - - [24/Jan/2021 05:55:44] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 05:58:31,855 127.0.0.1 - - [24/Jan/2021 05:58:31] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 05:58:31,883 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 05:58:32,066 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 05:58:32,254 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 05:58:32,441 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 05:58:32,630 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 05:58:32,827 127.0.0.1 - - [24/Jan/2021 05:58:32] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:01:21,434 127.0.0.1 - - [24/Jan/2021 06:01:21] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:01:21,462 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:01:21,648 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:01:21,848 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:01:22,033 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:01:22,223 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:01:22,421 127.0.0.1 - - [24/Jan/2021 06:01:22] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:04:10,456 127.0.0.1 - - [24/Jan/2021 06:04:10] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:04:10,486 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:04:11,171 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:04:11,371 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:04:11,570 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:04:11,768 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:04:11,975 127.0.0.1 - - [24/Jan/2021 06:04:11] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:07:00,402 127.0.0.1 - - [24/Jan/2021 06:07:00] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:07:00,429 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:07:00,614 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:07:00,801 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:07:00,990 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:07:01,177 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:07:01,375 127.0.0.1 - - [24/Jan/2021 06:07:01] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:09:49,718 127.0.0.1 - - [24/Jan/2021 06:09:49] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:09:49,744 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:09:49,930 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:09:50,133 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:09:50,320 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:09:50,510 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:09:50,705 127.0.0.1 - - [24/Jan/2021 06:09:50] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:12:40,057 127.0.0.1 - - [24/Jan/2021 06:12:40] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:12:40,083 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:12:40,266 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:12:40,453 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:12:40,645 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:12:40,833 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:12:41,028 127.0.0.1 - - [24/Jan/2021 06:12:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:15:29,961 127.0.0.1 - - [24/Jan/2021 06:15:29] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:15:29,988 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:15:31,346 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:15:31,524 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:15:31,702 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:15:31,894 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:15:32,080 127.0.0.1 - - [24/Jan/2021 06:15:32] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:18:21,311 127.0.0.1 - - [24/Jan/2021 06:18:21] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:18:21,337 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:18:21,523 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:18:21,711 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:18:21,898 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:18:22,087 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:18:22,288 127.0.0.1 - - [24/Jan/2021 06:18:22] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:21:10,648 127.0.0.1 - - [24/Jan/2021 06:21:10] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:21:10,675 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:21:10,860 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:21:11,049 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:21:11,236 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:21:11,425 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:21:11,624 127.0.0.1 - - [24/Jan/2021 06:21:11] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:24:00,499 127.0.0.1 - - [24/Jan/2021 06:24:00] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:24:00,525 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:24:00,709 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:24:00,894 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:24:01,080 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:24:01,266 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:24:01,464 127.0.0.1 - - [24/Jan/2021 06:24:01] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:26:50,248 127.0.0.1 - - [24/Jan/2021 06:26:50] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:26:50,276 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:26:50,461 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:26:50,648 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:26:50,834 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:26:51,022 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:26:51,220 127.0.0.1 - - [24/Jan/2021 06:26:51] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:29:40,356 127.0.0.1 - - [24/Jan/2021 06:29:40] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:29:40,383 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:29:40,570 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:29:40,759 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:29:40,950 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:29:41,156 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:29:41,356 127.0.0.1 - - [24/Jan/2021 06:29:41] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:32:30,389 127.0.0.1 - - [24/Jan/2021 06:32:30] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:32:30,415 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:32:30,599 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:32:30,781 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:32:30,967 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:32:31,154 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:32:31,351 127.0.0.1 - - [24/Jan/2021 06:32:31] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:35:18,216 127.0.0.1 - - [24/Jan/2021 06:35:18] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:35:18,245 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:35:18,429 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:35:18,616 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:35:18,802 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:35:18,993 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:35:19,192 127.0.0.1 - - [24/Jan/2021 06:35:19] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:38:06,786 127.0.0.1 - - [24/Jan/2021 06:38:06] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:38:06,813 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:38:06,999 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:38:07,187 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:38:07,375 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:38:07,562 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:38:07,760 127.0.0.1 - - [24/Jan/2021 06:38:07] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:40:55,067 127.0.0.1 - - [24/Jan/2021 06:40:55] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:40:55,096 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:40:55,286 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:40:55,472 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:40:55,661 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:40:55,850 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:40:56,049 127.0.0.1 - - [24/Jan/2021 06:40:56] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:43:44,794 127.0.0.1 - - [24/Jan/2021 06:43:44] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:43:44,822 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:43:45,009 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:43:45,198 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:43:45,399 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:43:45,591 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:43:45,792 127.0.0.1 - - [24/Jan/2021 06:43:45] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:46:33,127 127.0.0.1 - - [24/Jan/2021 06:46:33] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:46:33,157 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:46:33,351 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:46:33,540 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:46:33,727 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:46:33,914 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:46:34,127 127.0.0.1 - - [24/Jan/2021 06:46:34] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:49:24,608 127.0.0.1 - - [24/Jan/2021 06:49:24] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:49:24,636 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:49:24,821 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:49:25,006 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:49:25,192 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:49:25,382 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:49:25,578 127.0.0.1 - - [24/Jan/2021 06:49:25] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:52:12,543 127.0.0.1 - - [24/Jan/2021 06:52:12] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:52:12,570 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:52:12,756 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:52:12,943 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:52:13,129 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:52:13,317 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:52:13,515 127.0.0.1 - - [24/Jan/2021 06:52:13] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:55:03,130 127.0.0.1 - - [24/Jan/2021 06:55:03] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:55:03,157 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:55:03,342 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:55:03,530 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:55:03,716 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:55:03,905 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:55:04,105 127.0.0.1 - - [24/Jan/2021 06:55:04] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 06:57:52,943 127.0.0.1 - - [24/Jan/2021 06:57:52] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 06:57:52,973 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 06:57:53,163 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 06:57:53,349 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 06:57:53,535 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 06:57:53,723 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 06:57:53,921 127.0.0.1 - - [24/Jan/2021 06:57:53] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:00:41,350 127.0.0.1 - - [24/Jan/2021 07:00:41] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:00:41,377 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:00:41,562 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:00:41,749 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:00:41,937 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:00:42,132 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:00:42,329 127.0.0.1 - - [24/Jan/2021 07:00:42] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:03:30,938 127.0.0.1 - - [24/Jan/2021 07:03:30] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:03:30,968 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:03:31,151 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:03:31,339 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:03:31,538 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:03:31,735 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:03:31,937 127.0.0.1 - - [24/Jan/2021 07:03:31] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:06:20,486 127.0.0.1 - - [24/Jan/2021 07:06:20] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:06:20,513 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:06:21,172 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:06:21,353 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:06:21,546 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:06:21,734 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:06:21,934 127.0.0.1 - - [24/Jan/2021 07:06:21] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:09:10,388 127.0.0.1 - - [24/Jan/2021 07:09:10] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:09:10,417 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:09:10,605 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:09:10,793 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:09:10,980 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:09:11,169 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:09:11,365 127.0.0.1 - - [24/Jan/2021 07:09:11] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:11:59,551 127.0.0.1 - - [24/Jan/2021 07:11:59] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:11:59,577 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:11:59,775 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:11:59,958 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:12:00,144 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:12:00,333 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:12:00,528 127.0.0.1 - - [24/Jan/2021 07:12:00] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:14:48,482 127.0.0.1 - - [24/Jan/2021 07:14:48] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:14:48,510 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:14:48,692 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:14:50,844 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:14:51,035 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:14:51,217 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:14:51,401 127.0.0.1 - - [24/Jan/2021 07:14:51] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:17:38,855 127.0.0.1 - - [24/Jan/2021 07:17:38] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:17:38,883 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:17:39,068 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:17:39,256 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:17:39,443 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:17:39,630 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:17:39,828 127.0.0.1 - - [24/Jan/2021 07:17:39] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:20:29,238 127.0.0.1 - - [24/Jan/2021 07:20:29] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:20:29,261 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:20:29,459 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:20:29,634 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:20:29,819 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:20:30,000 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:20:30,196 127.0.0.1 - - [24/Jan/2021 07:20:30] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:23:20,400 127.0.0.1 - - [24/Jan/2021 07:23:20] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:23:20,428 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:23:20,614 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:23:20,800 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:23:20,987 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:23:21,180 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:23:21,379 127.0.0.1 - - [24/Jan/2021 07:23:21] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:26:10,007 127.0.0.1 - - [24/Jan/2021 07:26:10] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:26:10,033 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:26:10,217 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:26:10,402 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:26:10,589 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:26:10,779 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:26:10,976 127.0.0.1 - - [24/Jan/2021 07:26:10] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:28:59,207 127.0.0.1 - - [24/Jan/2021 07:28:59] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:28:59,234 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:29:00,047 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:29:00,230 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:29:00,425 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:29:00,617 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:29:00,815 127.0.0.1 - - [24/Jan/2021 07:29:00] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:31:48,987 127.0.0.1 - - [24/Jan/2021 07:31:48] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:31:49,013 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:31:49,199 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:31:49,387 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:31:49,575 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:31:49,763 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:31:49,967 127.0.0.1 - - [24/Jan/2021 07:31:49] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:34:38,290 127.0.0.1 - - [24/Jan/2021 07:34:38] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:34:38,317 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:34:38,505 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:34:38,693 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:34:38,878 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:34:39,068 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:34:39,264 127.0.0.1 - - [24/Jan/2021 07:34:39] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:37:29,671 127.0.0.1 - - [24/Jan/2021 07:37:29] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:37:29,699 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:37:29,886 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:37:30,073 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:37:30,260 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:37:30,448 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:37:30,644 127.0.0.1 - - [24/Jan/2021 07:37:30] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:40:18,674 127.0.0.1 - - [24/Jan/2021 07:40:18] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:40:18,701 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:40:18,886 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:40:19,085 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:40:19,274 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:40:19,466 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:40:19,652 127.0.0.1 - - [24/Jan/2021 07:40:19] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:43:08,518 127.0.0.1 - - [24/Jan/2021 07:43:08] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:43:08,547 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:43:08,920 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:43:09,099 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:43:09,274 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:43:09,453 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:43:09,636 127.0.0.1 - - [24/Jan/2021 07:43:09] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:45:57,073 127.0.0.1 - - [24/Jan/2021 07:45:57] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:45:57,100 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:45:57,296 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:45:57,487 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:45:57,662 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:45:57,839 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:45:58,022 127.0.0.1 - - [24/Jan/2021 07:45:58] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:48:45,985 127.0.0.1 - - [24/Jan/2021 07:48:45] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:48:46,007 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:48:46,193 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:48:46,368 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:48:46,543 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:48:46,720 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:48:46,905 127.0.0.1 - - [24/Jan/2021 07:48:46] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:51:35,136 127.0.0.1 - - [24/Jan/2021 07:51:35] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:51:35,158 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:51:35,336 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:51:35,514 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:51:35,691 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:51:35,873 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:51:36,064 127.0.0.1 - - [24/Jan/2021 07:51:36] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:54:24,284 127.0.0.1 - - [24/Jan/2021 07:54:24] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:54:24,308 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:54:24,487 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:54:24,671 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:54:24,845 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:54:25,026 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:54:25,211 127.0.0.1 - - [24/Jan/2021 07:54:25] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 07:57:13,602 127.0.0.1 - - [24/Jan/2021 07:57:13] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 07:57:13,628 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 07:57:13,814 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 07:57:14,004 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 07:57:14,195 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 07:57:14,387 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 07:57:14,585 127.0.0.1 - - [24/Jan/2021 07:57:14] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 08:00:02,751 127.0.0.1 - - [24/Jan/2021 08:00:02] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 08:00:02,779 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 08:00:02,965 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 08:00:03,156 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 08:00:03,342 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 08:00:03,544 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 08:00:03,749 127.0.0.1 - - [24/Jan/2021 08:00:03] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 08:02:51,771 127.0.0.1 - - [24/Jan/2021 08:02:51] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 08:02:51,797 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 08:02:51,982 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 08:02:52,170 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 08:02:52,360 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 08:02:52,564 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 08:02:52,762 127.0.0.1 - - [24/Jan/2021 08:02:52] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 08:05:41,864 127.0.0.1 - - [24/Jan/2021 08:05:41] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 08:05:41,885 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 08:05:42,060 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 08:05:42,247 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 08:05:42,433 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 08:05:42,620 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 08:05:42,818 127.0.0.1 - - [24/Jan/2021 08:05:42] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 08:08:31,191 127.0.0.1 - - [24/Jan/2021 08:08:31] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 08:08:31,220 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 08:08:31,406 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 08:08:31,595 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 08:08:31,792 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 08:08:31,984 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 08:08:32,185 127.0.0.1 - - [24/Jan/2021 08:08:32] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 08:11:20,177 127.0.0.1 - - [24/Jan/2021 08:11:20] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 08:11:20,204 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 08:11:20,388 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 08:11:20,574 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 08:11:20,760 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 08:11:20,949 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 08:11:21,148 127.0.0.1 - - [24/Jan/2021 08:11:21] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 08:14:09,377 127.0.0.1 - - [24/Jan/2021 08:14:09] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 08:14:09,401 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 08:14:11,461 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 08:14:11,657 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 08:14:11,836 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 08:14:12,015 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 08:14:12,202 127.0.0.1 - - [24/Jan/2021 08:14:12] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 08:17:01,215 127.0.0.1 - - [24/Jan/2021 08:17:01] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 08:17:01,239 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 08:17:01,433 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 08:17:01,609 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 08:17:01,790 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 08:17:01,967 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 08:17:02,152 127.0.0.1 - - [24/Jan/2021 08:17:02] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 08:19:50,584 127.0.0.1 - - [24/Jan/2021 08:19:50] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 08:19:50,606 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 08:19:50,781 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 08:19:50,973 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 08:19:51,149 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 08:19:51,336 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 08:19:51,534 127.0.0.1 - - [24/Jan/2021 08:19:51] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 08:22:38,609 127.0.0.1 - - [24/Jan/2021 08:22:38] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 08:22:38,633 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 08:22:38,808 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 08:22:38,991 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 08:22:39,169 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 08:22:39,361 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 08:22:39,558 127.0.0.1 - - [24/Jan/2021 08:22:39] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
+2021-01-24 08:25:27,289 127.0.0.1 - - [24/Jan/2021 08:25:27] "[37mPOST /secagg_model HTTP/1.1[0m" 200 -
+2021-01-24 08:25:27,312 Sending agg model to http://localhost:8008/aggmodel
+2021-01-24 08:25:28,580 Sending agg model to http://localhost:8004/aggmodel
+2021-01-24 08:25:28,774 Sending agg model to http://localhost:8005/aggmodel
+2021-01-24 08:25:28,961 Sending agg model to http://localhost:8006/aggmodel
+2021-01-24 08:25:29,148 Sending agg model to http://localhost:8007/aggmodel
+2021-01-24 08:25:29,345 127.0.0.1 - - [24/Jan/2021 08:25:29] "[37mGET /send_model_clients HTTP/1.1[0m" 200 -
