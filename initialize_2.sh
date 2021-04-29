@@ -41,6 +41,7 @@ fi
 screen -dmS client_0 bash -c "$PYTHON_PATH client/app.py -p 8003 -n 5 $TO_APPEND $N_FRAMES_APPEND"
 screen -dmS client_1 bash -c "$PYTHON_PATH client/app.py -p 8004 -n 6 $TO_APPEND $N_FRAMES_APPEND"
 screen -dmS client_2 bash -c "$PYTHON_PATH client/app.py -p 8005 -n 7 $TO_APPEND $N_FRAMES_APPEND"
+screen -dmS client_3 bash -c "$PYTHON_PATH client/app.py -p 8006 -n 8 $TO_APPEND $N_FRAMES_APPEND"
 #screen -dmS client_3 bash -c "$PYTHON_PATH client/app.py -p 8006 -n 3 $TO_APPEND"
 #screen -dmS client_4 bash -c "$PYTHON_PATH client/app.py -p 8007 -n 4 $TO_APPEND"
 
