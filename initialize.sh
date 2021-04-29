@@ -48,7 +48,7 @@ else
 fi
 
 # Restart the frontend
-curl http://95.179.192.253:8002/restart
+curl http://209.250.231.139:8002/restart
 
 # Start main server in a new screen.
 screen -dmS main_server bash -c "$PYTHON_PATH main_server/app.py -p 8000"
@@ -57,7 +57,7 @@ screen -dmS main_server bash -c "$PYTHON_PATH main_server/app.py -p 8000"
 screen -dmS secure_aggregator bash -c "$PYTHON_PATH secure_aggregator/app.py -p 8001 $TO_APPEND $N_FRAMES_APPEND"
 
 # Start N clients in new screens. Add or comment lines as wanted.
-screen -dmS client_0 bash -c "$PYTHON_PATH client/app.py -p 8003 -n 0 $TO_APPEND $N_FRAMES_APPEND"
+screen -dmS client_0 bash -c "$PYTHON_PATH client/app.py -p 8008 -n 0 $TO_APPEND $N_FRAMES_APPEND"
 screen -dmS client_1 bash -c "$PYTHON_PATH client/app.py -p 8004 -n 1 $TO_APPEND $N_FRAMES_APPEND"
 screen -dmS client_2 bash -c "$PYTHON_PATH client/app.py -p 8005 -n 2 $TO_APPEND $N_FRAMES_APPEND"
 screen -dmS client_3 bash -c "$PYTHON_PATH client/app.py -p 8006 -n 3 $TO_APPEND $N_FRAMES_APPEND"

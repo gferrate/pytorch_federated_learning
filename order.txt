@@ -1,0 +1,9 @@
+1. #############################################################################
+echo "Doing iid 7 frame 9 clients 200 CR"
+DELETE_OLD_LOGS=1 RESTART_SCREEN=0 SPLIT_TYPE=iid N_FRAMES=7 COMM_ROUNDS=200 ./initialize.sh
+tar -czvf 9_clients_iid_7_frames_200_cr.tar.gz logs/*.log
+
+2. #############################################################################
+echo "Doing non-iid 7 frame 9 clients 200 CR"
+DELETE_OLD_LOGS=1 RESTART_SCREEN=0 SPLIT_TYPE=non-iid N_FRAMES=7 COMM_ROUNDS=200 ./initialize.sh
+tar -czvf 9_non_clients_iid_7_frames_200_cr.tar.gz logs/*.log
