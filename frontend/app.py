@@ -139,5 +139,5 @@ def get_state():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8002, debug=False, use_reloader=False)
+    app.run(host='0.0.0.0', port=8888, debug=False, use_reloader=False)
 
