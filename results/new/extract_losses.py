@@ -1,4 +1,4 @@
-from plot import make_plot
+from plot import Plotter
 from copy import deepcopy
 
 
@@ -79,7 +79,9 @@ if __name__ == '__main__':
         ('plots/9_clients_7_frames_non_iid.png', '9_clients_non_iid_7_frames_200_cr/logs/{}', 'sec_agg.log', 9),
     )
 
-    datas = []
+    plotter = Plotter(export_type='png', smooth=False)
+
+    all_datas = []
     for name, base_fn, secagg_file, n_clients in filenames:
         datas = []
         # Training data
@@ -90,8 +92,9 @@ if __name__ == '__main__':
         secagg_path = base_fn.format(secagg_file)
         validation_data = get_all_val_data(secagg_path)
         datas.append((validation_data, 'validation'))
+        all_datas.append(datas)
 
         for _type in ('loss', 'acc'):
             _name = name.replace('.png', f'_{_type}.png')
             #print(_name, datas)
-            make_plot(_name, datas, _type)
+            plotter.make_plot(_name, datas, _type)
