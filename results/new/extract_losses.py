@@ -13,9 +13,11 @@ def extract_training_results(fn):
             if 'Test: [-1]' in l:
                 s = l.split('\t')
                 loss = float(s[3].split(' ')[1])
-                acc = float(s[4].split(' ')[1])
+                top_1 = float(s[4].split(' ')[1])
+                top_3 = float(s[5].split(' ')[1])
                 data.setdefault(epoch, {}).setdefault('loss', []).append(loss)
-                data.setdefault(epoch, {}).setdefault('acc', []).append(acc)
+                data.setdefault(epoch, {}).setdefault('acc-top-1', []).append(top_1)
+                data.setdefault(epoch, {}).setdefault('acc-top-3', []).append(top_3)
     return data
 
 
@@ -37,11 +39,12 @@ def extract_val_results(fn):
                 loss = float(s[-3].split(' ')[1])
                 if clustering:
                     data.setdefault(epoch, {}).setdefault('loss-clustering', []).append(loss)
-                    data.setdefault(epoch, {}).setdefault('acc-clustering', []).append(top_1)
+                    data.setdefault(epoch, {}).setdefault('acc-clustering-top-1', []).append(top_1)
+                    data.setdefault(epoch, {}).setdefault('acc-clustering-top-3', []).append(top_3)
                 else:
                     data.setdefault(epoch, {}).setdefault('loss', []).append(loss)
-                    data.setdefault(epoch, {}).setdefault('acc', []).append(top_1)
-                    #data[epoch].setdefault('test-top3', []).append(top_3)
+                    data.setdefault(epoch, {}).setdefault('acc-top-1', []).append(top_1)
+                    data.setdefault(epoch, {}).setdefault('acc-top-3', []).append(top_3)
 
                 if len(data[epoch].get('loss-clustering', [])) == 1612 and clustering:
                     epoch += 1
@@ -55,10 +58,12 @@ def avg(_list):
 def average_epochs(data):
     for epoch, d in data.items():
         d['loss'] = avg(d['loss'])
-        d['acc'] = avg(d['acc'])
+        d['acc-top-1'] = avg(d['acc-top-1'])
+        d['acc-top-3'] = avg(d['acc-top-3'])
         if 'loss-clustering' in d:
             d['loss-clustering'] = avg(d['loss-clustering'])
-            d['acc-clustering'] = avg(d['acc-clustering'])
+            d['acc-clustering-top-1'] = avg(d['acc-clustering-top-1'])
+            d['acc-clustering-top-3'] = avg(d['acc-clustering-top-3'])
     return data
 
 def get_all_val_data(fn):
@@ -79,7 +84,7 @@ if __name__ == '__main__':
         ('plots/9_clients_7_frames_non_iid.png', '9_clients_non_iid_7_frames_200_cr/logs/{}', 'sec_agg.log', 9),
     )
 
-    plotter = Plotter(export_type='png', smooth=False)
+    plotter = Plotter(export_type='png', smooth=True)
 
     all_datas = []
     for name, base_fn, secagg_file, n_clients in filenames:
@@ -94,7 +99,7 @@ if __name__ == '__main__':
         datas.append((validation_data, 'validation'))
         all_datas.append(datas)
 
-        for _type in ('loss', 'acc'):
+        for _type in ('loss', 'acc-top-1', 'acc-top-3'):
             _name = name.replace('.png', f'_{_type}.png')
             #print(_name, datas)
             plotter.make_plot(_name, datas, _type)

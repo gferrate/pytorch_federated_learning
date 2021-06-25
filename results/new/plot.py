@@ -26,7 +26,7 @@ class Plotter:
             })
         self.smooth = smooth
 
-    # _type = acc, loss
+    # _type = acc-top-1, acc-top-3, loss
     def make_plot(self, name, datas, _type):
         if self.smooth:
             name = name.replace('.png', '_smooth.png')
